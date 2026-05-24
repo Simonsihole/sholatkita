@@ -75,7 +75,3 @@ def prayer(
             status_code=400,
             detail=str(e)
         )
-
-
-# Vercel handler
-handler = Mangum(app)
