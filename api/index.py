@@ -5,15 +5,16 @@ import os
 
 app = FastAPI()
 
-# Path ke shalat_locations_clean.json (di root project)
+# Fix path untuk Vercel
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(BASE_DIR)
 
-with open(
-    os.path.join(PROJECT_ROOT, "shalat_locations_clean.json"),
-    "r",
-    encoding="utf-8"
-) as f:
+json_path = os.path.join(PROJECT_ROOT, "shalat_locations_clean.json")
+if not os.path.exists(json_path):
+    # Fallback untuk Vercel serverless
+    json_path = os.path.join(BASE_DIR, "shalat_locations_clean.json")
+
+with open(json_path, "r", encoding="utf-8") as f:
     LOCATIONS = json.load(f)
 
 
