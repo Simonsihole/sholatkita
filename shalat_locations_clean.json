@@ -1,0 +1,2274 @@
+{
+  "ACEH": {
+    "name": "ACEH",
+    "hash": "c4ca4238a0b923820dcc509a6f75849b",
+    "cities": {
+      "KAB_ACEH_BARAT": {
+        "name": "KAB. ACEH BARAT",
+        "hash": "c4ca4238a0b923820dcc509a6f75849b"
+      },
+      "KAB_ACEH_BARAT_DAYA": {
+        "name": "KAB. ACEH BARAT DAYA",
+        "hash": "c81e728d9d4c2f636f067f89cc14862c"
+      },
+      "KAB_ACEH_BESAR": {
+        "name": "KAB. ACEH BESAR",
+        "hash": "eccbc87e4b5ce2fe28308fd9f2a7baf3"
+      },
+      "KAB_ACEH_JAYA": {
+        "name": "KAB. ACEH JAYA",
+        "hash": "a87ff679a2f3e71d9181a67b7542122c"
+      },
+      "KAB_ACEH_SELATAN": {
+        "name": "KAB. ACEH SELATAN",
+        "hash": "e4da3b7fbbce2345d7772b0674a318d5"
+      },
+      "KAB_ACEH_SINGKIL": {
+        "name": "KAB. ACEH SINGKIL",
+        "hash": "1679091c5a880faf6fb5e6087eb1b2dc"
+      },
+      "KAB_ACEH_TAMIANG": {
+        "name": "KAB. ACEH TAMIANG",
+        "hash": "8f14e45fceea167a5a36dedd4bea2543"
+      },
+      "KAB_ACEH_TENGAH": {
+        "name": "KAB. ACEH TENGAH",
+        "hash": "c9f0f895fb98ab9159f51fd0297e236d"
+      },
+      "KAB_ACEH_TENGGARA": {
+        "name": "KAB. ACEH TENGGARA",
+        "hash": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+      },
+      "KAB_ACEH_TIMUR": {
+        "name": "KAB. ACEH TIMUR",
+        "hash": "d3d9446802a44259755d38e6d163e820"
+      },
+      "KAB_ACEH_UTARA": {
+        "name": "KAB. ACEH UTARA",
+        "hash": "6512bd43d9caa6e02c990b0a82652dca"
+      },
+      "KAB_BENER_MERIAH": {
+        "name": "KAB. BENER MERIAH",
+        "hash": "c20ad4d76fe97759aa27a0c99bff6710"
+      },
+      "KAB_BIREUEN": {
+        "name": "KAB. BIREUEN",
+        "hash": "c51ce410c124a10e0db5e4b97fc2af39"
+      },
+      "KAB_GAYO_LUES": {
+        "name": "KAB. GAYO LUES",
+        "hash": "aab3238922bcc25a6f606eb525ffdc56"
+      },
+      "KAB_NAGAN_RAYA": {
+        "name": "KAB. NAGAN RAYA",
+        "hash": "9bf31c7ff062936a96d3c8bd1f8f2ff3"
+      },
+      "KAB_PIDIE": {
+        "name": "KAB. PIDIE",
+        "hash": "c74d97b01eae257e44aa9d5bade97baf"
+      },
+      "KAB_PIDIE_JAYA": {
+        "name": "KAB. PIDIE JAYA",
+        "hash": "70efdf2ec9b086079795c442636b55fb"
+      },
+      "KAB_SIMEULUE": {
+        "name": "KAB. SIMEULUE",
+        "hash": "6f4922f45568161a8cdf4ad2299f6d23"
+      },
+      "KOTA_BANDA_ACEH": {
+        "name": "KOTA BANDA ACEH",
+        "hash": "1f0e3dad99908345f7439f8ffabdffc4"
+      },
+      "KOTA_LANGSA": {
+        "name": "KOTA LANGSA",
+        "hash": "98f13708210194c475687be6106a3b84"
+      },
+      "KOTA_LHOKSEUMAWE": {
+        "name": "KOTA LHOKSEUMAWE",
+        "hash": "3c59dc048e8850243be8079a5c74d079"
+      },
+      "KOTA_SABANG": {
+        "name": "KOTA SABANG",
+        "hash": "b6d767d2f8ed5d21a44b0e5886680cb9"
+      },
+      "KOTA_SUBULUSSALAM": {
+        "name": "KOTA SUBULUSSALAM",
+        "hash": "37693cfc748049e45d87b8c7d8b9aacd"
+      }
+    }
+  },
+  "SUMATERA_UTARA": {
+    "name": "SUMATERA UTARA",
+    "hash": "c81e728d9d4c2f636f067f89cc14862c",
+    "cities": {
+      "KAB_ASAHAN": {
+        "name": "KAB. ASAHAN",
+        "hash": "1ff1de774005f8da13f42943881c655f"
+      },
+      "KAB_BATU_BARA": {
+        "name": "KAB. BATU BARA",
+        "hash": "8e296a067a37563370ded05f5a3bf3ec"
+      },
+      "KAB_DAIRI": {
+        "name": "KAB. DAIRI",
+        "hash": "4e732ced3463d06de0ca9a15b6153677"
+      },
+      "KAB_DELI_SERDANG": {
+        "name": "KAB. DELI SERDANG",
+        "hash": "02e74f10e0327ad868d138f2b4fdd6f0"
+      },
+      "KAB_HUMBANG_HASUNDUTAN": {
+        "name": "KAB. HUMBANG HASUNDUTAN",
+        "hash": "33e75ff09dd601bbe69f351039152189"
+      },
+      "KAB_KARO": {
+        "name": "KAB. KARO",
+        "hash": "6ea9ab1baa0efb9e19094440c317e21b"
+      },
+      "KAB_LABUHANBATU": {
+        "name": "KAB. LABUHANBATU",
+        "hash": "34173cb38f07f89ddbebc2ac9128303f"
+      },
+      "KAB_LABUHANBATU_SELATAN": {
+        "name": "KAB. LABUHANBATU SELATAN",
+        "hash": "c16a5320fa475530d9583c34fd356ef5"
+      },
+      "KAB_LABUHANBATU_UTARA": {
+        "name": "KAB. LABUHANBATU UTARA",
+        "hash": "6364d3f0f495b6ab9dcf8d3b5c6e0b01"
+      },
+      "KAB_LANGKAT": {
+        "name": "KAB. LANGKAT",
+        "hash": "182be0c5cdcd5072bb1864cdee4d3d6e"
+      },
+      "KAB_MANDAILING_NATAL": {
+        "name": "KAB. MANDAILING NATAL",
+        "hash": "e369853df766fa44e1ed0ff613f563bd"
+      },
+      "KAB_NIAS": {
+        "name": "KAB. NIAS",
+        "hash": "1c383cd30b7c298ab50293adfecb7b18"
+      },
+      "KAB_NIAS_BARAT": {
+        "name": "KAB. NIAS BARAT",
+        "hash": "19ca14e7ea6328a42e0eb13d585e4c22"
+      },
+      "KAB_NIAS_SELATAN": {
+        "name": "KAB. NIAS SELATAN",
+        "hash": "a5bfc9e07964f8dddeb95fc584cd965d"
+      },
+      "KAB_NIAS_UTARA": {
+        "name": "KAB. NIAS UTARA",
+        "hash": "a5771bce93e200c36f7cd9dfd0e5deaa"
+      },
+      "KAB_PADANG_LAWAS": {
+        "name": "KAB. PADANG LAWAS",
+        "hash": "d67d8ab4f4c10bf22aa353e27879133c"
+      },
+      "KAB_PADANG_LAWAS_UTARA": {
+        "name": "KAB. PADANG LAWAS UTARA",
+        "hash": "d645920e395fedad7bbbed0eca3fe2e0"
+      },
+      "KAB_PAKPAK_BHARAT": {
+        "name": "KAB. PAKPAK BHARAT",
+        "hash": "3416a75f4cea9109507cacd8e2f2aefc"
+      },
+      "KAB_SAMOSIR": {
+        "name": "KAB. SAMOSIR",
+        "hash": "a1d0c6e83f027327d8461063f4ac58a6"
+      },
+      "KAB_SERDANG_BEDAGAI": {
+        "name": "KAB. SERDANG BEDAGAI",
+        "hash": "17e62166fc8586dfa4d1bc0e1742c08b"
+      },
+      "KAB_SIMALUNGUN": {
+        "name": "KAB. SIMALUNGUN",
+        "hash": "f7177163c833dff4b38fc8d2872f1ec6"
+      },
+      "KAB_TAPANULI_SELATAN": {
+        "name": "KAB. TAPANULI SELATAN",
+        "hash": "6c8349cc7260ae62e3b1396831a8398f"
+      },
+      "KAB_TAPANULI_TENGAH": {
+        "name": "KAB. TAPANULI TENGAH",
+        "hash": "d9d4f495e875a2e075a1a4a6e1b9770f"
+      },
+      "KAB_TAPANULI_UTARA": {
+        "name": "KAB. TAPANULI UTARA",
+        "hash": "67c6a1e7ce56d3d6fa748ab6d9af3fd7"
+      },
+      "KAB_TOBA_SAMOSIR": {
+        "name": "KAB. TOBA SAMOSIR",
+        "hash": "642e92efb79421734881b53e1e1b18b6"
+      },
+      "KOTA_BINJAI": {
+        "name": "KOTA BINJAI",
+        "hash": "f457c545a9ded88f18ecee47145a72c0"
+      },
+      "KOTA_GUNUNGSITOLI": {
+        "name": "KOTA GUNUNGSITOLI",
+        "hash": "c0c7c76d30bd3dcaefc96f40275bdc0a"
+      },
+      "KOTA_MEDAN": {
+        "name": "KOTA MEDAN",
+        "hash": "2838023a778dfaecdc212708f721b788"
+      },
+      "KOTA_PADANGSIDEMPUAN": {
+        "name": "KOTA PADANGSIDEMPUAN",
+        "hash": "9a1158154dfa42caddbd0694a4e9bdc8"
+      },
+      "KOTA_PEMATANGSIANTAR": {
+        "name": "KOTA PEMATANGSIANTAR",
+        "hash": "d82c8d1619ad8176d665453cfb2e55f0"
+      },
+      "KOTA_SIBOLGA": {
+        "name": "KOTA SIBOLGA",
+        "hash": "a684eceee76fc522773286a895bc8436"
+      },
+      "KOTA_TANJUNGBALAI": {
+        "name": "KOTA TANJUNGBALAI",
+        "hash": "b53b3a3d6ab90ce0268229151c9bde11"
+      },
+      "KOTA_TEBING_TINGGI": {
+        "name": "KOTA TEBING TINGGI",
+        "hash": "9f61408e3afb633e50cdf1b20de6f466"
+      }
+    }
+  },
+  "SUMATERA_BARAT": {
+    "name": "SUMATERA BARAT",
+    "hash": "eccbc87e4b5ce2fe28308fd9f2a7baf3",
+    "cities": {
+      "KAB_AGAM": {
+        "name": "KAB. AGAM",
+        "hash": "72b32a1f754ba1c09b3695e0cb6cde7f"
+      },
+      "KAB_DHARMASRAYA": {
+        "name": "KAB. DHARMASRAYA",
+        "hash": "66f041e16a60928b05a7e228a89c3799"
+      },
+      "KAB_KEPULAUAN_MENTAWAI": {
+        "name": "KAB. KEPULAUAN MENTAWAI",
+        "hash": "093f65e080a295f8076b1c5722a46aa2"
+      },
+      "KAB_LIMA_PULUH_KOTA": {
+        "name": "KAB. LIMA PULUH KOTA",
+        "hash": "072b030ba126b2f4b2374f342be9ed44"
+      },
+      "KAB_PADANG_PARIAMAN": {
+        "name": "KAB. PADANG PARIAMAN",
+        "hash": "7f39f8317fbdb1988ef4c628eba02591"
+      },
+      "KAB_PASAMAN": {
+        "name": "KAB. PASAMAN",
+        "hash": "44f683a84163b3523afe57c2e008bc8c"
+      },
+      "KAB_PASAMAN_BARAT": {
+        "name": "KAB. PASAMAN BARAT",
+        "hash": "03afdbd66e7929b125f8597834fa83a4"
+      },
+      "KAB_PESISIR_SELATAN": {
+        "name": "KAB. PESISIR SELATAN",
+        "hash": "ea5d2f1c4608232e07d3aa3d998e5135"
+      },
+      "KAB_SIJUNJUNG": {
+        "name": "KAB. SIJUNJUNG",
+        "hash": "fc490ca45c00b1249bbe3554a4fdf6fb"
+      },
+      "KAB_SOLOK": {
+        "name": "KAB. SOLOK",
+        "hash": "3295c76acbf4caaed33c36b1b5fc2cb1"
+      },
+      "KAB_SOLOK_SELATAN": {
+        "name": "KAB. SOLOK SELATAN",
+        "hash": "735b90b4568125ed6c3f678819b6e058"
+      },
+      "KAB_TANAH_DATAR": {
+        "name": "KAB. TANAH DATAR",
+        "hash": "a3f390d88e4c41f2747bfa2f1b5f87db"
+      },
+      "KOTA_BUKITTINGGI": {
+        "name": "KOTA BUKITTINGGI",
+        "hash": "14bfa6bb14875e45bba028a21ed38046"
+      },
+      "KOTA_PADANG": {
+        "name": "KOTA PADANG",
+        "hash": "7cbbc409ec990f19c78c75bd1e06f215"
+      },
+      "KOTA_PADANGPANJANG": {
+        "name": "KOTA PADANGPANJANG",
+        "hash": "e2c420d928d4bf8ce0ff2ec19b371514"
+      },
+      "KOTA_PARIAMAN": {
+        "name": "KOTA PARIAMAN",
+        "hash": "32bb90e8976aab5298d5da10fe66f21d"
+      },
+      "KOTA_PAYAKUMBUH": {
+        "name": "KOTA PAYAKUMBUH",
+        "hash": "d2ddea18f00665ce8623e36bd4e3c7c5"
+      },
+      "KOTA_SAWAHLUNTO": {
+        "name": "KOTA SAWAHLUNTO",
+        "hash": "ad61ab143223efbc24c7d2583be69251"
+      },
+      "KOTA_SOLOK": {
+        "name": "KOTA SOLOK",
+        "hash": "d09bf41544a3365a46c9077ebb5e35c3"
+      }
+    }
+  },
+  "RIAU": {
+    "name": "RIAU",
+    "hash": "a87ff679a2f3e71d9181a67b7542122c",
+    "cities": {
+      "KAB_BENGKALIS": {
+        "name": "KAB. BENGKALIS",
+        "hash": "fbd7939d674997cdb4692d34de8633c4"
+      },
+      "KAB_INDRAGIRI_HILIR": {
+        "name": "KAB. INDRAGIRI HILIR",
+        "hash": "28dd2c7955ce926456240b2ff0100bde"
+      },
+      "KAB_INDRAGIRI_HULU": {
+        "name": "KAB. INDRAGIRI HULU",
+        "hash": "35f4a8d465e6e1edc05f3d8ab658c551"
+      },
+      "KAB_KAMPAR": {
+        "name": "KAB. KAMPAR",
+        "hash": "d1fe173d08e959397adf34b1d77e88d7"
+      },
+      "KAB_KEPULAUAN_MERANTI": {
+        "name": "KAB. KEPULAUAN MERANTI",
+        "hash": "f033ab37c30201f73f142449d037028d"
+      },
+      "KAB_KUANTAN_SINGINGI": {
+        "name": "KAB. KUANTAN SINGINGI",
+        "hash": "43ec517d68b6edd3015b3edc9a11367b"
+      },
+      "KAB_PELALAWAN": {
+        "name": "KAB. PELALAWAN",
+        "hash": "9778d5d219c5080b9a6a17bef029331c"
+      },
+      "KAB_ROKAN_HILIR": {
+        "name": "KAB. ROKAN HILIR",
+        "hash": "fe9fc289c3ff0af142b6d3bead98a923"
+      },
+      "KAB_ROKAN_HULU": {
+        "name": "KAB. ROKAN HULU",
+        "hash": "68d30a9594728bc39aa24be94b319d21"
+      },
+      "KAB_SIAK": {
+        "name": "KAB. SIAK",
+        "hash": "3ef815416f775098fe977004015c6193"
+      },
+      "KOTA_DUMAI": {
+        "name": "KOTA DUMAI",
+        "hash": "93db85ed909c13838ff95ccfa94cebd9"
+      },
+      "KOTA_PEKANBARU": {
+        "name": "KOTA PEKANBARU",
+        "hash": "c7e1249ffc03eb9ded908c236bd1996d"
+      }
+    }
+  },
+  "KEPULAUAN_RIAU": {
+    "name": "KEPULAUAN RIAU",
+    "hash": "e4da3b7fbbce2345d7772b0674a318d5",
+    "cities": {
+      "KAB_BINTAN": {
+        "name": "KAB. BINTAN",
+        "hash": "2a38a4a9316c49e5a833517c45d31070"
+      },
+      "KAB_KARIMUN": {
+        "name": "KAB. KARIMUN",
+        "hash": "7647966b7343c29048673252e490f736"
+      },
+      "KAB_KEPULAUAN_ANAMBAS": {
+        "name": "KAB. KEPULAUAN ANAMBAS",
+        "hash": "8613985ec49eb8f757ae6439e879bb2a"
+      },
+      "KAB_LINGGA": {
+        "name": "KAB. LINGGA",
+        "hash": "54229abfcfa5649e7003b83dd4755294"
+      },
+      "KAB_NATUNA": {
+        "name": "KAB. NATUNA",
+        "hash": "92cc227532d17e56e07902b254dfad10"
+      },
+      "KOTA_BATAM": {
+        "name": "KOTA BATAM",
+        "hash": "98dce83da57b0395e163467c9dae521b"
+      },
+      "KOTA_TANJUNG_PINANG": {
+        "name": "KOTA TANJUNG PINANG",
+        "hash": "f4b9ec30ad9f68f89b29639786cb62ef"
+      },
+      "PULAU_TAMBELAN_KAB_BINTAN": {
+        "name": "PULAU TAMBELAN KAB. BINTAN",
+        "hash": "f3f27a324736617f20abbf2ffd806f6d"
+      },
+      "PEKAJANG_KAB_LINGGA": {
+        "name": "PEKAJANG KAB. LINGGA",
+        "hash": "38913e1d6a7b94cb0f55994f679f5956"
+      },
+      "PULAU_SERASAN_KAB_NATUNA": {
+        "name": "PULAU SERASAN KAB. NATUNA",
+        "hash": "ebd9629fc3ae5e9f6611e2ee05a31cef"
+      },
+      "PULAU_MIDAI_KAB_NATUNA": {
+        "name": "PULAU MIDAI KAB. NATUNA",
+        "hash": "63538fe6ef330c13a05a3ed7e599d5f7"
+      },
+      "PULAU_LAUT_KAB_NATUNA": {
+        "name": "PULAU LAUT KAB. NATUNA",
+        "hash": "cf67355a3333e6e143439161adc2d82e"
+      }
+    }
+  },
+  "JAMBI": {
+    "name": "JAMBI",
+    "hash": "1679091c5a880faf6fb5e6087eb1b2dc",
+    "cities": {
+      "KAB_BATANGHARI": {
+        "name": "KAB. BATANGHARI",
+        "hash": "812b4ba287f5ee0bc9d43bbf5bbe87fb"
+      },
+      "KAB_BUNGO": {
+        "name": "KAB. BUNGO",
+        "hash": "26657d5ff9020d2abefe558796b99584"
+      },
+      "KAB_KERINCI": {
+        "name": "KAB. KERINCI",
+        "hash": "e2ef524fbf3d9fe611d5a8e90fefdc9c"
+      },
+      "KAB_MERANGIN": {
+        "name": "KAB. MERANGIN",
+        "hash": "ed3d2c21991e3bef5e069713af9fa6ca"
+      },
+      "KAB_MUARO_JAMBI": {
+        "name": "KAB. MUARO JAMBI",
+        "hash": "ac627ab1ccbdb62ec96e702f07f6425b"
+      },
+      "KAB_SAROLANGUN": {
+        "name": "KAB. SAROLANGUN",
+        "hash": "f899139df5e1059396431415e770c6dd"
+      },
+      "KAB_TANJUNG_JABUNG_BARAT": {
+        "name": "KAB. TANJUNG JABUNG BARAT",
+        "hash": "38b3eff8baf56627478ec76a704e9b52"
+      },
+      "KAB_TANJUNG_JABUNG_TIMUR": {
+        "name": "KAB. TANJUNG JABUNG TIMUR",
+        "hash": "ec8956637a99787bd197eacd77acce5e"
+      },
+      "KAB_TEBO": {
+        "name": "KAB. TEBO",
+        "hash": "6974ce5ac660610b44d9b9fed0ff9548"
+      },
+      "KOTA_JAMBI": {
+        "name": "KOTA JAMBI",
+        "hash": "c9e1074f5b3f9fc8ea15d152add07294"
+      },
+      "KOTA_SUNGAI_PENUH": {
+        "name": "KOTA SUNGAI PENUH",
+        "hash": "65b9eea6e1cc6bb9f0cd2a47751a186f"
+      }
+    }
+  },
+  "BENGKULU": {
+    "name": "BENGKULU",
+    "hash": "8f14e45fceea167a5a36dedd4bea2543",
+    "cities": {
+      "KAB_BENGKULU_SELATAN": {
+        "name": "KAB. BENGKULU SELATAN",
+        "hash": "f0935e4cd5920aa6c7c996a5ee53a70f"
+      },
+      "KAB_BENGKULU_TENGAH": {
+        "name": "KAB. BENGKULU TENGAH",
+        "hash": "a97da629b098b75c294dffdc3e463904"
+      },
+      "KAB_BENGKULU_UTARA": {
+        "name": "KAB. BENGKULU UTARA",
+        "hash": "a3c65c2974270fd093ee8a9bf8ae7d0b"
+      },
+      "KAB_KAUR": {
+        "name": "KAB. KAUR",
+        "hash": "2723d092b63885e0d7c260cc007e8b9d"
+      },
+      "KAB_KEPAHIANG": {
+        "name": "KAB. KEPAHIANG",
+        "hash": "5f93f983524def3dca464469d2cf9f3e"
+      },
+      "KAB_LEBONG": {
+        "name": "KAB. LEBONG",
+        "hash": "698d51a19d8a121ce581499d7b701668"
+      },
+      "KAB_MUKOMUKO": {
+        "name": "KAB. MUKOMUKO",
+        "hash": "7f6ffaa6bb0b408017b62254211691b5"
+      },
+      "KAB_REJANG_LEBONG": {
+        "name": "KAB. REJANG LEBONG",
+        "hash": "73278a4a86960eeb576a8fd4c9ec6997"
+      },
+      "KAB_SELUMA": {
+        "name": "KAB. SELUMA",
+        "hash": "5fd0b37cd7dbbb00f97ba6ce92bf5add"
+      },
+      "KOTA_BENGKULU": {
+        "name": "KOTA BENGKULU",
+        "hash": "2b44928ae11fb9384c4cf38708677c48"
+      }
+    }
+  },
+  "SUMATERA_SELATAN": {
+    "name": "SUMATERA SELATAN",
+    "hash": "c9f0f895fb98ab9159f51fd0297e236d",
+    "cities": {
+      "KAB_BANYUASIN": {
+        "name": "KAB. BANYUASIN",
+        "hash": "c45147dee729311ef5b5c3003946c48f"
+      },
+      "KAB_EMPAT_LAWANG": {
+        "name": "KAB. EMPAT LAWANG",
+        "hash": "eb160de1de89d9058fcb0b968dbbbd68"
+      },
+      "KAB_LAHAT": {
+        "name": "KAB. LAHAT",
+        "hash": "5ef059938ba799aaa845e1c2e8a762bd"
+      },
+      "KAB_MUARA_ENIM": {
+        "name": "KAB. MUARA ENIM",
+        "hash": "07e1cd7dca89a1678042477183b7ac3f"
+      },
+      "KAB_MUSI_BANYUASIN": {
+        "name": "KAB. MUSI BANYUASIN",
+        "hash": "da4fb5c6e93e74d3df8527599fa62642"
+      },
+      "KAB_MUSI_RAWAS": {
+        "name": "KAB. MUSI RAWAS",
+        "hash": "4c56ff4ce4aaf9573aa5dff913df997a"
+      },
+      "KAB_MUSI_RAWAS_UTARA": {
+        "name": "KAB. MUSI RAWAS UTARA",
+        "hash": "a0a080f42e6f13b3a2df133f073095dd"
+      },
+      "KAB_OGAN_ILIR": {
+        "name": "KAB. OGAN ILIR",
+        "hash": "202cb962ac59075b964b07152d234b70"
+      },
+      "KAB_OGAN_KOMERING_ILIR": {
+        "name": "KAB. OGAN KOMERING ILIR",
+        "hash": "c8ffe9a587b126f152ed3d89a146b445"
+      },
+      "KAB_OGAN_KOMERING_ULU": {
+        "name": "KAB. OGAN KOMERING ULU",
+        "hash": "3def184ad8f4755ff269862ea77393dd"
+      },
+      "KAB_OGAN_KOMERING_ULU_SELATAN": {
+        "name": "KAB. OGAN KOMERING ULU SELATAN",
+        "hash": "069059b7ef840f0c74a814ec9237b6ec"
+      },
+      "KAB_OGAN_KOMERING_ULU_TIMUR": {
+        "name": "KAB. OGAN KOMERING ULU TIMUR",
+        "hash": "ec5decca5ed3d6b8079e2e7e7bacc9f2"
+      },
+      "KAB_PENUKAL_ABAB_LEMATANG_ILIR": {
+        "name": "KAB. PENUKAL ABAB LEMATANG ILIR",
+        "hash": "76dc611d6ebaafc66cc0879c71b5db5c"
+      },
+      "KOTA_LUBUKLINGGAU": {
+        "name": "KOTA LUBUKLINGGAU",
+        "hash": "d1f491a404d6854880943e5c3cd9ca25"
+      },
+      "KOTA_PAGAR_ALAM": {
+        "name": "KOTA PAGAR ALAM",
+        "hash": "9b8619251a19057cff70779273e95aa6"
+      },
+      "KOTA_PALEMBANG": {
+        "name": "KOTA PALEMBANG",
+        "hash": "1afa34a7f984eeabdbb0a7d494132ee5"
+      },
+      "KOTA_PRABUMULIH": {
+        "name": "KOTA PRABUMULIH",
+        "hash": "65ded5353c5ee48d0b7d48c591b8f430"
+      }
+    }
+  },
+  "KEPULAUAN_BANGKA_BELITUNG": {
+    "name": "KEPULAUAN BANGKA BELITUNG",
+    "hash": "45c48cce2e2d7fbdea1afc51c7c6ad26",
+    "cities": {
+      "KAB_BANGKA": {
+        "name": "KAB. BANGKA",
+        "hash": "9fc3d7152ba9336a670e36d0ed79bc43"
+      },
+      "KAB_BANGKA_BARAT": {
+        "name": "KAB. BANGKA BARAT",
+        "hash": "02522a2b2726fb0a03bb19f2d8d9524d"
+      },
+      "KAB_BANGKA_SELATAN": {
+        "name": "KAB. BANGKA SELATAN",
+        "hash": "7f1de29e6da19d22b51c68001e7e0e54"
+      },
+      "KAB_BANGKA_TENGAH": {
+        "name": "KAB. BANGKA TENGAH",
+        "hash": "42a0e188f5033bc65bf8d78622277c4e"
+      },
+      "KAB_BELITUNG": {
+        "name": "KAB. BELITUNG",
+        "hash": "3988c7f88ebcb58c6ce932b957b6f332"
+      },
+      "KAB_BELITUNG_TIMUR": {
+        "name": "KAB. BELITUNG TIMUR",
+        "hash": "013d407166ec4fa56eb1e1f8cbe183b9"
+      },
+      "KOTA_PANGKAL_PINANG": {
+        "name": "KOTA PANGKAL PINANG",
+        "hash": "e00da03b685a0dd18fb6a08af0923de0"
+      }
+    }
+  },
+  "LAMPUNG": {
+    "name": "LAMPUNG",
+    "hash": "d3d9446802a44259755d38e6d163e820",
+    "cities": {
+      "KAB_LAMPUNG_TENGAH": {
+        "name": "KAB. LAMPUNG TENGAH",
+        "hash": "1385974ed5904a438616ff7bdb3f7439"
+      },
+      "KAB_LAMPUNG_UTARA": {
+        "name": "KAB. LAMPUNG UTARA",
+        "hash": "0f28b5d49b3020afeecd95b4009adf4c"
+      },
+      "KAB_LAMPUNG_SELATAN": {
+        "name": "KAB. LAMPUNG SELATAN",
+        "hash": "a8baa56554f96369ab93e4f3bb068c22"
+      },
+      "KAB_LAMPUNG_BARAT": {
+        "name": "KAB. LAMPUNG BARAT",
+        "hash": "903ce9225fca3e988c2af215d4e544d3"
+      },
+      "KAB_LAMPUNG_TIMUR": {
+        "name": "KAB. LAMPUNG TIMUR",
+        "hash": "0a09c8844ba8f0936c20bd791130d6b6"
+      },
+      "KAB_MESUJI": {
+        "name": "KAB. MESUJI",
+        "hash": "2b24d495052a8ce66358eb576b8912c8"
+      },
+      "KAB_PESAWARAN": {
+        "name": "KAB. PESAWARAN",
+        "hash": "a5e00132373a7031000fd987a3c9f87b"
+      },
+      "KAB_PESISIR_BARAT": {
+        "name": "KAB. PESISIR BARAT",
+        "hash": "8d5e957f297893487bd98fa830fa6413"
+      },
+      "KAB_PRINGSEWU": {
+        "name": "KAB. PRINGSEWU",
+        "hash": "47d1e990583c9c67424d369f3414728e"
+      },
+      "KAB_TULANG_BAWANG": {
+        "name": "KAB. TULANG BAWANG",
+        "hash": "f2217062e9a397a1dca429e7d70bc6ca"
+      },
+      "KAB_TULANG_BAWANG_BARAT": {
+        "name": "KAB. TULANG BAWANG BARAT",
+        "hash": "7ef605fc8dba5425d6965fbd4c8fbe1f"
+      },
+      "KAB_TANGGAMUS": {
+        "name": "KAB. TANGGAMUS",
+        "hash": "a8f15eda80c50adb0e71943adc8015cf"
+      },
+      "KAB_WAY_KANAN": {
+        "name": "KAB. WAY KANAN",
+        "hash": "37a749d808e46495a8da1e5352d03cae"
+      },
+      "KOTA_BANDAR_LAMPUNG": {
+        "name": "KOTA BANDAR LAMPUNG",
+        "hash": "b3e3e393c77e35a4a3f3cbd1e429b5dc"
+      },
+      "KOTA_METRO": {
+        "name": "KOTA METRO",
+        "hash": "1d7f7abc18fcb43975065399b0d1e48e"
+      }
+    }
+  },
+  "BANTEN": {
+    "name": "BANTEN",
+    "hash": "6512bd43d9caa6e02c990b0a82652dca",
+    "cities": {
+      "KAB_LEBAK": {
+        "name": "KAB. LEBAK",
+        "hash": "2a79ea27c279e471f4d180b08d62b00a"
+      },
+      "KAB_PANDEGLANG": {
+        "name": "KAB. PANDEGLANG",
+        "hash": "1c9ac0159c94d8d0cbedc973445af2da"
+      },
+      "KAB_SERANG": {
+        "name": "KAB. SERANG",
+        "hash": "6c4b761a28b734fe93831e3fb400ce87"
+      },
+      "KAB_TANGERANG": {
+        "name": "KAB. TANGERANG",
+        "hash": "06409663226af2f3114485aa4e0a23b4"
+      },
+      "KOTA_CILEGON": {
+        "name": "KOTA CILEGON",
+        "hash": "140f6969d5213fd0ece03148e62e461e"
+      },
+      "KOTA_SERANG": {
+        "name": "KOTA SERANG",
+        "hash": "b73ce398c39f506af761d2277d853a92"
+      },
+      "KOTA_TANGERANG": {
+        "name": "KOTA TANGERANG",
+        "hash": "bd4c9ab730f5513206b999ec0d90d1fb"
+      },
+      "KOTA_TANGERANG_SELATAN": {
+        "name": "KOTA TANGERANG SELATAN",
+        "hash": "82aa4b0af34c2313a562076992e50aa3"
+      }
+    }
+  },
+  "JAWA_BARAT": {
+    "name": "JAWA BARAT",
+    "hash": "c20ad4d76fe97759aa27a0c99bff6710",
+    "cities": {
+      "KAB_BANDUNG": {
+        "name": "KAB. BANDUNG",
+        "hash": "0777d5c17d4066b82ab86dff8a46af6f"
+      },
+      "KAB_BANDUNG_BARAT": {
+        "name": "KAB. BANDUNG BARAT",
+        "hash": "fa7cdfad1a5aaf8370ebeda47a1ff1c3"
+      },
+      "KAB_BEKASI": {
+        "name": "KAB. BEKASI",
+        "hash": "9766527f2b5d3e95d4a733fcfb77bd7e"
+      },
+      "KAB_BOGOR": {
+        "name": "KAB. BOGOR",
+        "hash": "7e7757b1e12abcb736ab9a754ffb617a"
+      },
+      "KAB_CIAMIS": {
+        "name": "KAB. CIAMIS",
+        "hash": "5878a7ab84fb43402106c575658472fa"
+      },
+      "KAB_CIANJUR": {
+        "name": "KAB. CIANJUR",
+        "hash": "006f52e9102a8d3be2fe5614f42ba989"
+      },
+      "KAB_CIREBON": {
+        "name": "KAB. CIREBON",
+        "hash": "3636638817772e42b59d74cff571fbb3"
+      },
+      "KAB_GARUT": {
+        "name": "KAB. GARUT",
+        "hash": "149e9677a5989fd342ae44213df68868"
+      },
+      "KAB_INDRAMAYU": {
+        "name": "KAB. INDRAMAYU",
+        "hash": "a4a042cf4fd6bfb47701cbc8a1653ada"
+      },
+      "KAB_KARAWANG": {
+        "name": "KAB. KARAWANG",
+        "hash": "1ff8a7b5dc7a7d1f0ed65aaa29c04b1e"
+      },
+      "KAB_KUNINGAN": {
+        "name": "KAB. KUNINGAN",
+        "hash": "f7e6c85504ce6e82442c770f7c8606f0"
+      },
+      "KAB_MAJALENGKA": {
+        "name": "KAB. MAJALENGKA",
+        "hash": "bf8229696f7a3bb4700cfddef19fa23f"
+      },
+      "KAB_PANGANDARAN": {
+        "name": "KAB. PANGANDARAN",
+        "hash": "82161242827b703e6acf9c726942a1e4"
+      },
+      "KAB_PURWAKARTA": {
+        "name": "KAB. PURWAKARTA",
+        "hash": "38af86134b65d0f10fe33d30dd76442e"
+      },
+      "KAB_SUBANG": {
+        "name": "KAB. SUBANG",
+        "hash": "96da2f590cd7246bbde0051047b0d6f7"
+      },
+      "KAB_SUKABUMI": {
+        "name": "KAB. SUKABUMI",
+        "hash": "8f85517967795eeef66c225f7883bdcb"
+      },
+      "KAB_SUMEDANG": {
+        "name": "KAB. SUMEDANG",
+        "hash": "8f53295a73878494e9bc8dd6c3c7104f"
+      },
+      "KAB_TASIKMALAYA": {
+        "name": "KAB. TASIKMALAYA",
+        "hash": "045117b0e0a11a242b9765e79cbf113f"
+      },
+      "KOTA_BANDUNG": {
+        "name": "KOTA BANDUNG",
+        "hash": "fc221309746013ac554571fbd180e1c8"
+      },
+      "KOTA_BANJAR": {
+        "name": "KOTA BANJAR",
+        "hash": "4c5bde74a8f110656874902f07378009"
+      },
+      "KOTA_BEKASI": {
+        "name": "KOTA BEKASI",
+        "hash": "cedebb6e872f539bef8c3f919874e9d7"
+      },
+      "KOTA_BOGOR": {
+        "name": "KOTA BOGOR",
+        "hash": "6cdd60ea0045eb7a6ec44c54d29ed402"
+      },
+      "KOTA_CIMAHI": {
+        "name": "KOTA CIMAHI",
+        "hash": "eecca5b6365d9607ee5a9d336962c534"
+      },
+      "KOTA_CIREBON": {
+        "name": "KOTA CIREBON",
+        "hash": "9872ed9fc22fc182d371c3e9ed316094"
+      },
+      "KOTA_DEPOK": {
+        "name": "KOTA DEPOK",
+        "hash": "31fefc0e570cb3860f2a6d4b38c6490d"
+      },
+      "KOTA_SUKABUMI": {
+        "name": "KOTA SUKABUMI",
+        "hash": "9dcb88e0137649590b755372b040afad"
+      },
+      "KOTA_TASIKMALAYA": {
+        "name": "KOTA TASIKMALAYA",
+        "hash": "a2557a7b2e94197ff767970b67041697"
+      }
+    }
+  },
+  "DKI_JAKARTA": {
+    "name": "DKI JAKARTA",
+    "hash": "c51ce410c124a10e0db5e4b97fc2af39",
+    "cities": {
+      "KOTA_JAKARTA": {
+        "name": "KOTA JAKARTA",
+        "hash": "58a2fc6ed39fd083f55d4182bf88826d"
+      },
+      "KAB_KEPULAUAN_SERIBU": {
+        "name": "KAB. KEPULAUAN SERIBU",
+        "hash": "cfecdb276f634854f3ef915e2e980c31"
+      }
+    }
+  },
+  "JAWA_TENGAH": {
+    "name": "JAWA TENGAH",
+    "hash": "aab3238922bcc25a6f606eb525ffdc56",
+    "cities": {
+      "KAB_BANJARNEGARA": {
+        "name": "KAB. BANJARNEGARA",
+        "hash": "084b6fbb10729ed4da8c3d3f5a3ae7c9"
+      },
+      "KAB_BANYUMAS": {
+        "name": "KAB. BANYUMAS",
+        "hash": "85d8ce590ad8981ca2c8286f79f59954"
+      },
+      "KAB_BATANG": {
+        "name": "KAB. BATANG",
+        "hash": "0e65972dce68dad4d52d063967f0a705"
+      },
+      "KAB_BLORA": {
+        "name": "KAB. BLORA",
+        "hash": "84d9ee44e457ddef7f2c4f25dc8fa865"
+      },
+      "KAB_BOYOLALI": {
+        "name": "KAB. BOYOLALI",
+        "hash": "3644a684f98ea8fe223c713b77189a77"
+      },
+      "KAB_BREBES": {
+        "name": "KAB. BREBES",
+        "hash": "757b505cfd34c64c85ca5b5690ee5293"
+      },
+      "KAB_CILACAP": {
+        "name": "KAB. CILACAP",
+        "hash": "854d6fae5ee42911677c739ee1734486"
+      },
+      "KAB_DEMAK": {
+        "name": "KAB. DEMAK",
+        "hash": "e2c0be24560d78c5e599c2a9c9d0bbd2"
+      },
+      "KAB_GROBOGAN": {
+        "name": "KAB. GROBOGAN",
+        "hash": "274ad4786c3abca69fa097b85867d9a4"
+      },
+      "KAB_JEPARA": {
+        "name": "KAB. JEPARA",
+        "hash": "eae27d77ca20db309e056e3d2dcd7d69"
+      },
+      "KAB_KARANGANYAR": {
+        "name": "KAB. KARANGANYAR",
+        "hash": "7eabe3a1649ffa2b3ff8c02ebfd5659f"
+      },
+      "KAB_KEBUMEN": {
+        "name": "KAB. KEBUMEN",
+        "hash": "69adc1e107f7f7d035d7baf04342e1ca"
+      },
+      "KAB_KENDAL": {
+        "name": "KAB. KENDAL",
+        "hash": "091d584fced301b442654dd8c23b3fc9"
+      },
+      "KAB_KLATEN": {
+        "name": "KAB. KLATEN",
+        "hash": "b1d10e7bafa4421218a51b1e1f1b0ba2"
+      },
+      "KAB_KUDUS": {
+        "name": "KAB. KUDUS",
+        "hash": "6f3ef77ac0e3619e98159e9b6febf557"
+      },
+      "KAB_MAGELANG": {
+        "name": "KAB. MAGELANG",
+        "hash": "eb163727917cbba1eea208541a643e74"
+      },
+      "KAB_PATI": {
+        "name": "KAB. PATI",
+        "hash": "1534b76d325a8f591b52d302e7181331"
+      },
+      "KAB_PEKALONGAN": {
+        "name": "KAB. PEKALONGAN",
+        "hash": "979d472a84804b9f647bc185a877a8b5"
+      },
+      "KAB_PEMALANG": {
+        "name": "KAB. PEMALANG",
+        "hash": "ca46c1b9512a7a8315fa3c5a946e8265"
+      },
+      "KAB_PURBALINGGA": {
+        "name": "KAB. PURBALINGGA",
+        "hash": "3b8a614226a953a8cd9526fca6fe9ba5"
+      },
+      "KAB_PURWOREJO": {
+        "name": "KAB. PURWOREJO",
+        "hash": "45fbc6d3e05ebd93369ce542e8f2322d"
+      },
+      "KAB_REMBANG": {
+        "name": "KAB. REMBANG",
+        "hash": "63dc7ed1010d3c3b8269faf0ba7491d4"
+      },
+      "KAB_SEMARANG": {
+        "name": "KAB. SEMARANG",
+        "hash": "e96ed478dab8595a7dbda4cbcbee168f"
+      },
+      "KAB_SRAGEN": {
+        "name": "KAB. SRAGEN",
+        "hash": "c0e190d8267e36708f955d7ab048990d"
+      },
+      "KAB_SUKOHARJO": {
+        "name": "KAB. SUKOHARJO",
+        "hash": "ec8ce6abb3e952a85b8551ba726a1227"
+      },
+      "KAB_TEGAL": {
+        "name": "KAB. TEGAL",
+        "hash": "060ad92489947d410d897474079c1477"
+      },
+      "KAB_TEMANGGUNG": {
+        "name": "KAB. TEMANGGUNG",
+        "hash": "bcbe3365e6ac95ea2c0343a2395834dd"
+      },
+      "KAB_WONOGIRI": {
+        "name": "KAB. WONOGIRI",
+        "hash": "115f89503138416a242f40fb7d7f338e"
+      },
+      "KAB_WONOSOBO": {
+        "name": "KAB. WONOSOBO",
+        "hash": "13fe9d84310e77f13a6d184dbf1232f3"
+      },
+      "KOTA_MAGELANG": {
+        "name": "KOTA MAGELANG",
+        "hash": "d1c38a09acc34845c6be3a127a5aacaf"
+      },
+      "KOTA_PEKALONGAN": {
+        "name": "KOTA PEKALONGAN",
+        "hash": "9cfdf10e8fc047a44b08ed031e1f0ed1"
+      },
+      "KOTA_SALATIGA": {
+        "name": "KOTA SALATIGA",
+        "hash": "705f2172834666788607efbfca35afb3"
+      },
+      "KOTA_SEMARANG": {
+        "name": "KOTA SEMARANG",
+        "hash": "74db120f0a8e5646ef5a30154e9f6deb"
+      },
+      "KOTA_SURAKARTA": {
+        "name": "KOTA SURAKARTA",
+        "hash": "57aeee35c98205091e18d1140e9f38cf"
+      },
+      "KOTA_TEGAL": {
+        "name": "KOTA TEGAL",
+        "hash": "6da9003b743b65f4c0ccd295cc484e57"
+      }
+    }
+  },
+  "DI_YOGYAKARTA": {
+    "name": "D.I. YOGYAKARTA",
+    "hash": "9bf31c7ff062936a96d3c8bd1f8f2ff3",
+    "cities": {
+      "KAB_BANTUL": {
+        "name": "KAB. BANTUL",
+        "hash": "9b04d152845ec0a378394003c96da594"
+      },
+      "KAB_GUNUNGKIDUL": {
+        "name": "KAB. GUNUNGKIDUL",
+        "hash": "be83ab3ecd0db773eb2dc1b0a17836a1"
+      },
+      "KAB_KULON_PROGO": {
+        "name": "KAB. KULON PROGO",
+        "hash": "e165421110ba03099a1c0393373c5b43"
+      },
+      "KAB_SLEMAN": {
+        "name": "KAB. SLEMAN",
+        "hash": "289dff07669d7a23de0ef88d2f7129e7"
+      },
+      "KOTA_YOGYAKARTA": {
+        "name": "KOTA YOGYAKARTA",
+        "hash": "577ef1154f3240ad5b9b413aa7346a1e"
+      }
+    }
+  },
+  "JAWA_TIMUR": {
+    "name": "JAWA TIMUR",
+    "hash": "c74d97b01eae257e44aa9d5bade97baf",
+    "cities": {
+      "KAB_BANGKALAN": {
+        "name": "KAB. BANGKALAN",
+        "hash": "01161aaa0b6d1345dd8fe4e481144d84"
+      },
+      "KAB_BANYUWANGI": {
+        "name": "KAB. BANYUWANGI",
+        "hash": "539fd53b59e3bb12d203f45a912eeaf2"
+      },
+      "KAB_BLITAR": {
+        "name": "KAB. BLITAR",
+        "hash": "ac1dd209cbcc5e5d1c6e28598e8cbbe8"
+      },
+      "KAB_BOJONEGORO": {
+        "name": "KAB. BOJONEGORO",
+        "hash": "555d6702c950ecb729a966504af0a635"
+      },
+      "KAB_BONDOWOSO": {
+        "name": "KAB. BONDOWOSO",
+        "hash": "335f5352088d7d9bf74191e006d8e24c"
+      },
+      "KAB_GRESIK": {
+        "name": "KAB. GRESIK",
+        "hash": "f340f1b1f65b6df5b5e3f94d95b11daf"
+      },
+      "KAB_JEMBER": {
+        "name": "KAB. JEMBER",
+        "hash": "e4a6222cdb5b34375400904f03d8e6a5"
+      },
+      "KAB_JOMBANG": {
+        "name": "KAB. JOMBANG",
+        "hash": "cb70ab375662576bd1ac5aaf16b3fca4"
+      },
+      "KAB_KEDIRI": {
+        "name": "KAB. KEDIRI",
+        "hash": "9188905e74c28e489b44e954ec0b9bca"
+      },
+      "KAB_LAMONGAN": {
+        "name": "KAB. LAMONGAN",
+        "hash": "0266e33d3f546cb5436a10798e657d97"
+      },
+      "KAB_LUMAJANG": {
+        "name": "KAB. LUMAJANG",
+        "hash": "38db3aed920cf82ab059bfccbd02be6a"
+      },
+      "KAB_MADIUN": {
+        "name": "KAB. MADIUN",
+        "hash": "3cec07e9ba5f5bb252d13f5f431e4bbb"
+      },
+      "KAB_MAGETAN": {
+        "name": "KAB. MAGETAN",
+        "hash": "621bf66ddb7c962aa0d22ac97d69b793"
+      },
+      "KAB_MALANG": {
+        "name": "KAB. MALANG",
+        "hash": "077e29b11be80ab57e1a2ecabb7da330"
+      },
+      "KAB_MOJOKERTO": {
+        "name": "KAB. MOJOKERTO",
+        "hash": "6c9882bbac1c7093bd25041881277658"
+      },
+      "KAB_NGANJUK": {
+        "name": "KAB. NGANJUK",
+        "hash": "19f3cd308f1455b3fa09a282e0d496f4"
+      },
+      "KAB_NGAWI": {
+        "name": "KAB. NGAWI",
+        "hash": "03c6b06952c750899bb03d998e631860"
+      },
+      "KAB_PACITAN": {
+        "name": "KAB. PACITAN",
+        "hash": "c24cd76e1ce41366a4bbe8a49b02a028"
+      },
+      "KAB_PAMEKASAN": {
+        "name": "KAB. PAMEKASAN",
+        "hash": "c52f1bd66cc19d05628bd8bf27af3ad6"
+      },
+      "KAB_PASURUAN": {
+        "name": "KAB. PASURUAN",
+        "hash": "fe131d7f5a6b38b23cc967316c13dae2"
+      },
+      "KAB_PONOROGO": {
+        "name": "KAB. PONOROGO",
+        "hash": "f718499c1c8cef6730f9fd03c8125cab"
+      },
+      "KAB_PROBOLINGGO": {
+        "name": "KAB. PROBOLINGGO",
+        "hash": "d96409bf894217686ba124d7356686c9"
+      },
+      "KAB_SAMPANG": {
+        "name": "KAB. SAMPANG",
+        "hash": "502e4a16930e414107ee22b6198c578f"
+      },
+      "KAB_SIDOARJO": {
+        "name": "KAB. SIDOARJO",
+        "hash": "cfa0860e83a4c3a763a7e62d825349f7"
+      },
+      "KAB_SITUBONDO": {
+        "name": "KAB. SITUBONDO",
+        "hash": "a4f23670e1833f3fdb077ca70bbd5d66"
+      },
+      "KAB_SUMENEP": {
+        "name": "KAB. SUMENEP",
+        "hash": "b1a59b315fc9a3002ce38bbe070ec3f5"
+      },
+      "KAB_TRENGGALEK": {
+        "name": "KAB. TRENGGALEK",
+        "hash": "36660e59856b4de58a219bcf4e27eba3"
+      },
+      "KAB_TUBAN": {
+        "name": "KAB. TUBAN",
+        "hash": "8c19f571e251e61cb8dd3612f26d5ecf"
+      },
+      "KAB_TULUNGAGUNG": {
+        "name": "KAB. TULUNGAGUNG",
+        "hash": "d6baf65e0b240ce177cf70da146c8dc8"
+      },
+      "KOTA_BATU": {
+        "name": "KOTA BATU",
+        "hash": "e56954b4f6347e897f954495eab16a88"
+      },
+      "KOTA_BLITAR": {
+        "name": "KOTA BLITAR",
+        "hash": "f7664060cc52bc6f3d620bcedc94a4b6"
+      },
+      "KOTA_KEDIRI": {
+        "name": "KOTA KEDIRI",
+        "hash": "eda80a3d5b344bc40f3bc04f65b7a357"
+      },
+      "KOTA_MADIUN": {
+        "name": "KOTA MADIUN",
+        "hash": "8f121ce07d74717e0b1f21d122e04521"
+      },
+      "KOTA_MALANG": {
+        "name": "KOTA MALANG",
+        "hash": "06138bc5af6023646ede0e1f7c1eac75"
+      },
+      "KOTA_MOJOKERTO": {
+        "name": "KOTA MOJOKERTO",
+        "hash": "39059724f73a9969845dfe4146c5660e"
+      },
+      "KOTA_PASURUAN": {
+        "name": "KOTA PASURUAN",
+        "hash": "7f100b7b36092fb9b06dfb4fac360931"
+      },
+      "KOTA_PROBOLINGGO": {
+        "name": "KOTA PROBOLINGGO",
+        "hash": "7a614fd06c325499f1680b9896beedeb"
+      },
+      "KOTA_SURABAYA": {
+        "name": "KOTA SURABAYA",
+        "hash": "4734ba6f3de83d861c3176a6273cac6d"
+      }
+    }
+  },
+  "BALI": {
+    "name": "BALI",
+    "hash": "70efdf2ec9b086079795c442636b55fb",
+    "cities": {
+      "KAB_BADUNG": {
+        "name": "KAB. BADUNG",
+        "hash": "d947bf06a885db0d477d707121934ff8"
+      },
+      "KAB_BANGLI": {
+        "name": "KAB. BANGLI",
+        "hash": "63923f49e5241343aa7acb6a06a751e7"
+      },
+      "KAB_BULELENG": {
+        "name": "KAB. BULELENG",
+        "hash": "db8e1af0cb3aca1ae2d0018624204529"
+      },
+      "KAB_GIANYAR": {
+        "name": "KAB. GIANYAR",
+        "hash": "20f07591c6fcb220ffe637cda29bb3f6"
+      },
+      "KAB_JEMBRANA": {
+        "name": "KAB. JEMBRANA",
+        "hash": "07cdfd23373b17c6b337251c22b7ea57"
+      },
+      "KAB_KARANGASEM": {
+        "name": "KAB. KARANGASEM",
+        "hash": "d395771085aab05244a4fb8fd91bf4ee"
+      },
+      "KAB_KLUNGKUNG": {
+        "name": "KAB. KLUNGKUNG",
+        "hash": "92c8c96e4c37100777c7190b76d28233"
+      },
+      "KAB_TABANAN": {
+        "name": "KAB. TABANAN",
+        "hash": "e3796ae838835da0b6f6ea37bcf8bcb7"
+      },
+      "KOTA_DENPASAR": {
+        "name": "KOTA DENPASAR",
+        "hash": "6a9aeddfc689c1d0e3b9ccc3ab651bc5"
+      }
+    }
+  },
+  "NUSA_TENGGARA_BARAT": {
+    "name": "NUSA TENGGARA BARAT",
+    "hash": "6f4922f45568161a8cdf4ad2299f6d23",
+    "cities": {
+      "KAB_BIMA": {
+        "name": "KAB. BIMA",
+        "hash": "0f49c89d1e7298bb9930789c8ed59d48"
+      },
+      "KAB_DOMPU": {
+        "name": "KAB. DOMPU",
+        "hash": "46ba9f2a6976570b0353203ec4474217"
+      },
+      "KAB_LOMBOK_BARAT": {
+        "name": "KAB. LOMBOK BARAT",
+        "hash": "0e01938fc48a2cfb5f2217fbfb00722d"
+      },
+      "KAB_LOMBOK_TENGAH": {
+        "name": "KAB. LOMBOK TENGAH",
+        "hash": "16a5cdae362b8d27a1d8f8c7b78b4330"
+      },
+      "KAB_LOMBOK_TIMUR": {
+        "name": "KAB. LOMBOK TIMUR",
+        "hash": "918317b57931b6b7a7d29490fe5ec9f9"
+      },
+      "KAB_LOMBOK_UTARA": {
+        "name": "KAB. LOMBOK UTARA",
+        "hash": "48aedb8880cab8c45637abc7493ecddd"
+      },
+      "KAB_SUMBAWA": {
+        "name": "KAB. SUMBAWA",
+        "hash": "839ab46820b524afda05122893c2fe8e"
+      },
+      "KAB_SUMBAWA_BARAT": {
+        "name": "KAB. SUMBAWA BARAT",
+        "hash": "f90f2aca5c640289d0a29417bcb63a37"
+      },
+      "KOTA_BIMA": {
+        "name": "KOTA BIMA",
+        "hash": "9c838d2e45b2ad1094d42f4ef36764f6"
+      },
+      "KOTA_MATARAM": {
+        "name": "KOTA MATARAM",
+        "hash": "1700002963a49da13542e0726b7bb758"
+      }
+    }
+  },
+  "NUSA_TENGGARA_TIMUR": {
+    "name": "NUSA TENGGARA TIMUR",
+    "hash": "1f0e3dad99908345f7439f8ffabdffc4",
+    "cities": {
+      "KAB_ALOR": {
+        "name": "KAB. ALOR",
+        "hash": "53c3bce66e43be4f209556518c2fcb54"
+      },
+      "KAB_BELU": {
+        "name": "KAB. BELU",
+        "hash": "6883966fd8f918a4aa29be29d2c386fb"
+      },
+      "KAB_ENDE": {
+        "name": "KAB. ENDE",
+        "hash": "49182f81e6a13cf5eaa496d51fea6406"
+      },
+      "KAB_FLORES_TIMUR": {
+        "name": "KAB. FLORES TIMUR",
+        "hash": "d296c101daa88a51f6ca8cfc1ac79b50"
+      },
+      "KAB_KUPANG": {
+        "name": "KAB. KUPANG",
+        "hash": "9fd81843ad7f202f26c1a174c7357585"
+      },
+      "KAB_LEMBATA": {
+        "name": "KAB. LEMBATA",
+        "hash": "26e359e83860db1d11b6acca57d8ea88"
+      },
+      "KAB_MALAKA": {
+        "name": "KAB. MALAKA",
+        "hash": "ef0d3930a7b6c95bd2b32ed45989c61f"
+      },
+      "KAB_MANGGARAI": {
+        "name": "KAB. MANGGARAI",
+        "hash": "94f6d7e04a4d452035300f18b984988c"
+      },
+      "KAB_MANGGARAI_BARAT": {
+        "name": "KAB. MANGGARAI BARAT",
+        "hash": "34ed066df378efacc9b924ec161e7639"
+      },
+      "KAB_MANGGARAI_TIMUR": {
+        "name": "KAB. MANGGARAI TIMUR",
+        "hash": "577bcc914f9e55d5e4e4f82f9f00e7d4"
+      },
+      "KAB_NGADA": {
+        "name": "KAB. NGADA",
+        "hash": "11b9842e0a271ff252c1903e7132cd68"
+      },
+      "KAB_NAGEKEO": {
+        "name": "KAB. NAGEKEO",
+        "hash": "37bc2f75bf1bcfe8450a1a41c200364c"
+      },
+      "KAB_ROTE_NDAO": {
+        "name": "KAB. ROTE NDAO",
+        "hash": "496e05e1aea0a9c4655800e8a7b9ea28"
+      },
+      "KAB_SABU_RAIJUA": {
+        "name": "KAB. SABU RAIJUA",
+        "hash": "b2eb7349035754953b57a32e2841bda5"
+      },
+      "KAB_SIKKA": {
+        "name": "KAB. SIKKA",
+        "hash": "8e98d81f8217304975ccb23337bb5761"
+      },
+      "KAB_SUMBA_BARAT": {
+        "name": "KAB. SUMBA BARAT",
+        "hash": "a8c88a0055f636e4a163a5e3d16adab7"
+      },
+      "KAB_SUMBA_BARAT_DAYA": {
+        "name": "KAB. SUMBA BARAT DAYA",
+        "hash": "eddea82ad2755b24c4e168c5fc2ebd40"
+      },
+      "KAB_SUMBA_TENGAH": {
+        "name": "KAB. SUMBA TENGAH",
+        "hash": "06eb61b839a0cefee4967c67ccb099dc"
+      },
+      "KAB_SUMBA_TIMUR": {
+        "name": "KAB. SUMBA TIMUR",
+        "hash": "9dfcd5e558dfa04aaf37f137a1d9d3e5"
+      },
+      "KAB_TIMOR_TENGAH_SELATAN": {
+        "name": "KAB. TIMOR TENGAH SELATAN",
+        "hash": "950a4152c2b4aa3ad78bdd6b366cc179"
+      },
+      "KAB_TIMOR_TENGAH_UTARA": {
+        "name": "KAB. TIMOR TENGAH UTARA",
+        "hash": "158f3069a435b314a80bdcb024f8e422"
+      },
+      "KOTA_KUPANG": {
+        "name": "KOTA KUPANG",
+        "hash": "758874998f5bd0c393da094e1967a72b"
+      }
+    }
+  },
+  "KALIMANTAN_BARAT": {
+    "name": "KALIMANTAN BARAT",
+    "hash": "98f13708210194c475687be6106a3b84",
+    "cities": {
+      "KAB_BENGKAYANG": {
+        "name": "KAB. BENGKAYANG",
+        "hash": "ad13a2a07ca4b7642959dc0c4c740ab6"
+      },
+      "KAB_KAPUAS_HULU": {
+        "name": "KAB. KAPUAS HULU",
+        "hash": "3fe94a002317b5f9259f82690aeea4cd"
+      },
+      "KAB_KAYONG_UTARA": {
+        "name": "KAB. KAYONG UTARA",
+        "hash": "5b8add2a5d98b1a652ea7fd72d942dac"
+      },
+      "KAB_KETAPANG": {
+        "name": "KAB. KETAPANG",
+        "hash": "432aca3a1e345e339f35a30c8f65edce"
+      },
+      "KAB_KUBU_RAYA": {
+        "name": "KAB. KUBU RAYA",
+        "hash": "8d3bba7425e7c98c50f52ca1b52d3735"
+      },
+      "KAB_LANDAK": {
+        "name": "KAB. LANDAK",
+        "hash": "320722549d1751cf3f247855f937b982"
+      },
+      "KAB_MELAWI": {
+        "name": "KAB. MELAWI",
+        "hash": "caf1a3dfb505ffed0d024130f58c5cfa"
+      },
+      "KAB_MEMPAWAH": {
+        "name": "KAB. MEMPAWAH",
+        "hash": "5737c6ec2e0716f3d8a7a5c4e0de0d9a"
+      },
+      "KAB_SAMBAS": {
+        "name": "KAB. SAMBAS",
+        "hash": "bc6dc48b743dc5d013b1abaebd2faed2"
+      },
+      "KAB_SANGGAU": {
+        "name": "KAB. SANGGAU",
+        "hash": "f2fc990265c712c49d51a18a32b39f0c"
+      },
+      "KAB_SEKADAU": {
+        "name": "KAB. SEKADAU",
+        "hash": "89f0fd5c927d466d6ec9a21b9ac34ffa"
+      },
+      "KAB_SINTANG": {
+        "name": "KAB. SINTANG",
+        "hash": "a666587afda6e89aec274a3657558a27"
+      },
+      "KOTA_PONTIANAK": {
+        "name": "KOTA PONTIANAK",
+        "hash": "b83aac23b9528732c23cc7352950e880"
+      },
+      "KOTA_SINGKAWANG": {
+        "name": "KOTA SINGKAWANG",
+        "hash": "cd00692c3bfe59267d5ecfac5310286c"
+      }
+    }
+  },
+  "KALIMANTAN_SELATAN": {
+    "name": "KALIMANTAN SELATAN",
+    "hash": "3c59dc048e8850243be8079a5c74d079",
+    "cities": {
+      "KAB_BALANGAN": {
+        "name": "KAB. BALANGAN",
+        "hash": "6faa8040da20ef399b63a72d0e4ab575"
+      },
+      "KAB_BANJAR": {
+        "name": "KAB. BANJAR",
+        "hash": "fe73f687e5bc5280214e0486b273a5f9"
+      },
+      "KAB_BARITO_KUALA": {
+        "name": "KAB. BARITO KUALA",
+        "hash": "6da37dd3139aa4d9aa55b8d237ec5d4a"
+      },
+      "KAB_HULU_SUNGAI_SELATAN": {
+        "name": "KAB. HULU SUNGAI SELATAN",
+        "hash": "c042f4db68f23406c6cecf84a7ebb0fe"
+      },
+      "KAB_HULU_SUNGAI_TENGAH": {
+        "name": "KAB. HULU SUNGAI TENGAH",
+        "hash": "310dcbbf4cce62f762a2aaa148d556bd"
+      },
+      "KAB_HULU_SUNGAI_UTARA": {
+        "name": "KAB. HULU SUNGAI UTARA",
+        "hash": "2f2b265625d76a6704b08093c652fd79"
+      },
+      "KAB_KOTABARU": {
+        "name": "KAB. KOTABARU",
+        "hash": "f9b902fc3289af4dd08de5d1de54f68f"
+      },
+      "KAB_TABALONG": {
+        "name": "KAB. TABALONG",
+        "hash": "6855456e2fe46a9d49d3d3af4f57443d"
+      },
+      "KAB_TANAH_BUMBU": {
+        "name": "KAB. TANAH BUMBU",
+        "hash": "357a6fdf7642bf815a88822c447d9dc4"
+      },
+      "KAB_TANAH_LAUT": {
+        "name": "KAB. TANAH LAUT",
+        "hash": "819f46e52c25763a55cc642422644317"
+      },
+      "KAB_TAPIN": {
+        "name": "KAB. TAPIN",
+        "hash": "04025959b191f8f9de3f924f0940515f"
+      },
+      "KOTA_BANJARBARU": {
+        "name": "KOTA BANJARBARU",
+        "hash": "40008b9a5380fcacce3976bf7c08af5b"
+      },
+      "KOTA_BANJARMASIN": {
+        "name": "KOTA BANJARMASIN",
+        "hash": "3dd48ab31d016ffcbf3314df2b3cb9ce"
+      }
+    }
+  },
+  "KALIMANTAN_TENGAH": {
+    "name": "KALIMANTAN TENGAH",
+    "hash": "b6d767d2f8ed5d21a44b0e5886680cb9",
+    "cities": {
+      "KAB_BARITO_SELATAN": {
+        "name": "KAB. BARITO SELATAN",
+        "hash": "58238e9ae2dd305d79c2ebc8c1883422"
+      },
+      "KAB_BARITO_TIMUR": {
+        "name": "KAB. BARITO TIMUR",
+        "hash": "3ad7c2ebb96fcba7cda0cf54a2e802f5"
+      },
+      "KAB_BARITO_UTARA": {
+        "name": "KAB. BARITO UTARA",
+        "hash": "b3967a0e938dc2a6340e258630febd5a"
+      },
+      "KAB_GUNUNG_MAS": {
+        "name": "KAB. GUNUNG MAS",
+        "hash": "d81f9c1be2e08964bf9f24b15f0e4900"
+      },
+      "KAB_KAPUAS": {
+        "name": "KAB. KAPUAS",
+        "hash": "13f9896df61279c928f19721878fac41"
+      },
+      "KAB_KATINGAN": {
+        "name": "KAB. KATINGAN",
+        "hash": "c5ff2543b53f4cc0ad3819a36752467b"
+      },
+      "KAB_KOTAWARINGIN_BARAT": {
+        "name": "KAB. KOTAWARINGIN BARAT",
+        "hash": "01386bd6d8e091c2ab4c7c7de644d37b"
+      },
+      "KAB_KOTAWARINGIN_TIMUR": {
+        "name": "KAB. KOTAWARINGIN TIMUR",
+        "hash": "0bb4aec1710521c12ee76289d9440817"
+      },
+      "KAB_LAMANDAU": {
+        "name": "KAB. LAMANDAU",
+        "hash": "9de6d14fff9806d4bcd1ef555be766cd"
+      },
+      "KAB_MURUNG_RAYA": {
+        "name": "KAB. MURUNG RAYA",
+        "hash": "efe937780e95574250dabe07151bdc23"
+      },
+      "KAB_PULANG_PISAU": {
+        "name": "KAB. PULANG PISAU",
+        "hash": "371bce7dc83817b7893bcdeed13799b5"
+      },
+      "KAB_SUKAMARA": {
+        "name": "KAB. SUKAMARA",
+        "hash": "138bb0696595b338afbab333c555292a"
+      },
+      "KAB_SERUYAN": {
+        "name": "KAB. SERUYAN",
+        "hash": "8dd48d6a2e2cad213179a3992c0be53c"
+      },
+      "KOTA_PALANGKARAYA": {
+        "name": "KOTA PALANGKARAYA",
+        "hash": "82cec96096d4281b7c95cd7e74623496"
+      }
+    }
+  },
+  "KALIMANTAN_TIMUR": {
+    "name": "KALIMANTAN TIMUR",
+    "hash": "37693cfc748049e45d87b8c7d8b9aacd",
+    "cities": {
+      "KAB_BERAU": {
+        "name": "KAB. BERAU",
+        "hash": "6c524f9d5d7027454a783c841250ba71"
+      },
+      "KAB_KUTAI_BARAT": {
+        "name": "KAB. KUTAI BARAT",
+        "hash": "fb7b9ffa5462084c5f4e7e85a093e6d7"
+      },
+      "KAB_KUTAI_KARTANEGARA": {
+        "name": "KAB. KUTAI KARTANEGARA",
+        "hash": "aa942ab2bfa6ebda4840e7360ce6e7ef"
+      },
+      "KAB_KUTAI_TIMUR": {
+        "name": "KAB. KUTAI TIMUR",
+        "hash": "c058f544c737782deacefa532d9add4c"
+      },
+      "KAB_MAHAKAM_ULU": {
+        "name": "KAB. MAHAKAM ULU",
+        "hash": "e7b24b112a44fdd9ee93bdf998c6ca0e"
+      },
+      "KAB_PASER": {
+        "name": "KAB. PASER",
+        "hash": "52720e003547c70561bf5e03b95aa99f"
+      },
+      "KAB_PENAJAM_PASER_UTARA": {
+        "name": "KAB. PENAJAM PASER UTARA",
+        "hash": "c3e878e27f52e2a57ace4d9a76fd9acf"
+      },
+      "KOTA_BALIKPAPAN": {
+        "name": "KOTA BALIKPAPAN",
+        "hash": "00411460f7c92d2124a67ea0f4cb5f85"
+      },
+      "KOTA_BONTANG": {
+        "name": "KOTA BONTANG",
+        "hash": "bac9162b47c56fc8a4d2a519803d51b3"
+      },
+      "KOTA_SAMARINDA": {
+        "name": "KOTA SAMARINDA",
+        "hash": "9be40cee5b0eee1462c82c6964087ff9"
+      }
+    }
+  },
+  "KALIMANTAN_UTARA": {
+    "name": "KALIMANTAN UTARA",
+    "hash": "1ff1de774005f8da13f42943881c655f",
+    "cities": {
+      "KAB_BULUNGAN": {
+        "name": "KAB. BULUNGAN",
+        "hash": "5ef698cd9fe650923ea331c15af3b160"
+      },
+      "KAB_MALINAU": {
+        "name": "KAB. MALINAU",
+        "hash": "05049e90fa4f5039a8cadc6acbb4b2cc"
+      },
+      "KAB_NUNUKAN": {
+        "name": "KAB. NUNUKAN",
+        "hash": "cf004fdc76fa1a4f25f62e0eb5261ca3"
+      },
+      "KAB_TANA_TIDUNG": {
+        "name": "KAB. TANA TIDUNG",
+        "hash": "0c74b7f78409a4022a2c4c5a5ca3ee19"
+      },
+      "KOTA_TARAKAN": {
+        "name": "KOTA TARAKAN",
+        "hash": "d709f38ef758b5066ef31b18039b8ce5"
+      }
+    }
+  },
+  "GORONTALO": {
+    "name": "GORONTALO",
+    "hash": "8e296a067a37563370ded05f5a3bf3ec",
+    "cities": {
+      "KAB_BOALEMO": {
+        "name": "KAB. BOALEMO",
+        "hash": "41f1f19176d383480afa65d325c06ed0"
+      },
+      "KAB_BONE_BOLANGO": {
+        "name": "KAB. BONE BOLANGO",
+        "hash": "24b16fede9a67c9251d3e7c7161c83ac"
+      },
+      "KAB_GORONTALO": {
+        "name": "KAB. GORONTALO",
+        "hash": "ffd52f3c7e12435a724a8f30fddadd9c"
+      },
+      "KAB_GORONTALO_UTARA": {
+        "name": "KAB. GORONTALO UTARA",
+        "hash": "ad972f10e0800b49d76fed33a21f6698"
+      },
+      "KAB_PAHUWATO": {
+        "name": "KAB. PAHUWATO",
+        "hash": "f61d6947467ccd3aa5af24db320235dd"
+      },
+      "KOTA_GORONTALO": {
+        "name": "KOTA GORONTALO",
+        "hash": "142949df56ea8ae0be8b5306971900a4"
+      }
+    }
+  },
+  "SULAWESI_SELATAN": {
+    "name": "SULAWESI SELATAN",
+    "hash": "4e732ced3463d06de0ca9a15b6153677",
+    "cities": {
+      "KAB_BANTAENG": {
+        "name": "KAB. BANTAENG",
+        "hash": "d34ab169b70c9dcd35e62896010cd9ff"
+      },
+      "KAB_BARRU": {
+        "name": "KAB. BARRU",
+        "hash": "8bf1211fd4b7b94528899de0a43b9fb3"
+      },
+      "KAB_BONE": {
+        "name": "KAB. BONE",
+        "hash": "a02ffd91ece5e7efeb46db8f10a74059"
+      },
+      "KAB_BULUKUMBA": {
+        "name": "KAB. BULUKUMBA",
+        "hash": "bca82e41ee7b0833588399b1fcd177c7"
+      },
+      "KAB_ENREKANG": {
+        "name": "KAB. ENREKANG",
+        "hash": "00ec53c4682d36f5c4359f4ae7bd7ba1"
+      },
+      "KAB_GOWA": {
+        "name": "KAB. GOWA",
+        "hash": "4f6ffe13a5d75b2d6a3923922b3922e5"
+      },
+      "KAB_JENEPONTO": {
+        "name": "KAB. JENEPONTO",
+        "hash": "beed13602b9b0e6ecb5b568ff5058f07"
+      },
+      "KAB_KEPULAUAN_SELAYAR": {
+        "name": "KAB. KEPULAUAN SELAYAR",
+        "hash": "0584ce565c824b7b7f50282d9a19945b"
+      },
+      "KAB_LUWU": {
+        "name": "KAB. LUWU",
+        "hash": "dc912a253d1e9ba40e2c597ed2376640"
+      },
+      "KAB_LUWU_TIMUR": {
+        "name": "KAB. LUWU TIMUR",
+        "hash": "39461a19e9eddfb385ea76b26521ea48"
+      },
+      "KAB_LUWU_UTARA": {
+        "name": "KAB. LUWU UTARA",
+        "hash": "8efb100a295c0c690931222ff4467bb8"
+      },
+      "KAB_MAROS": {
+        "name": "KAB. MAROS",
+        "hash": "d9fc5b73a8d78fad3d6dffe419384e70"
+      },
+      "KAB_PANGKAJENE_DAN_KEPULAUAN": {
+        "name": "KAB. PANGKAJENE DAN KEPULAUAN",
+        "hash": "c86a7ee3d8ef0b551ed58e354a836f2b"
+      },
+      "KAB_PINRANG": {
+        "name": "KAB. PINRANG",
+        "hash": "a01a0380ca3c61428c26a231f0e49a09"
+      },
+      "KAB_SIDENRENG_RAPPANG": {
+        "name": "KAB. SIDENRENG RAPPANG",
+        "hash": "5a4b25aaed25c2ee1b74de72dc03c14e"
+      },
+      "KAB_SINJAI": {
+        "name": "KAB. SINJAI",
+        "hash": "f73b76ce8949fe29bf2a537cfa420e8f"
+      },
+      "KAB_SOPPENG": {
+        "name": "KAB. SOPPENG",
+        "hash": "70c639df5e30bdee440e4cdf599fec2b"
+      },
+      "KAB_TAKALAR": {
+        "name": "KAB. TAKALAR",
+        "hash": "28f0b864598a1291557bed248a998d4e"
+      },
+      "KAB_TANA_TORAJA": {
+        "name": "KAB. TANA TORAJA",
+        "hash": "1543843a4723ed2ab08e18053ae6dc5b"
+      },
+      "KAB_TORAJA_UTARA": {
+        "name": "KAB. TORAJA UTARA",
+        "hash": "f8c1f23d6a8d8d7904fc0ea8e066b3bb"
+      },
+      "KAB_WAJO": {
+        "name": "KAB. WAJO",
+        "hash": "e46de7e1bcaaced9a54f1e9d0d2f800d"
+      },
+      "KOTA_MAKASSAR": {
+        "name": "KOTA MAKASSAR",
+        "hash": "b7b16ecf8ca53723593894116071700c"
+      },
+      "KOTA_PALOPO": {
+        "name": "KOTA PALOPO",
+        "hash": "352fe25daf686bdb4edca223c921acea"
+      },
+      "KOTA_PAREPARE": {
+        "name": "KOTA PAREPARE",
+        "hash": "18d8042386b79e2c279fd162df0205c8"
+      }
+    }
+  },
+  "SULAWESI_TENGGARA": {
+    "name": "SULAWESI TENGGARA",
+    "hash": "02e74f10e0327ad868d138f2b4fdd6f0",
+    "cities": {
+      "KAB_BOMBANA": {
+        "name": "KAB. BOMBANA",
+        "hash": "816b112c6105b3ebd537828a39af4818"
+      },
+      "KAB_BUTON": {
+        "name": "KAB. BUTON",
+        "hash": "69cb3ea317a32c4e6143e665fdb20b14"
+      },
+      "KAB_BUTON_SELATAN": {
+        "name": "KAB. BUTON SELATAN",
+        "hash": "bbf94b34eb32268ada57a3be5062fe7d"
+      },
+      "KAB_BUTON_TENGAH": {
+        "name": "KAB. BUTON TENGAH",
+        "hash": "4f4adcbf8c6f66dcfc8a3282ac2bf10a"
+      },
+      "KAB_BUTON_UTARA": {
+        "name": "KAB. BUTON UTARA",
+        "hash": "bbcbff5c1f1ded46c25d28119a85c6c2"
+      },
+      "KAB_KOLAKA": {
+        "name": "KAB. KOLAKA",
+        "hash": "8cb22bdd0b7ba1ab13d742e22eed8da2"
+      },
+      "KAB_KOLAKA_TIMUR": {
+        "name": "KAB. KOLAKA TIMUR",
+        "hash": "f4f6dce2f3a0f9dada0c2b5b66452017"
+      },
+      "KAB_KOLAKA_UTARA": {
+        "name": "KAB. KOLAKA UTARA",
+        "hash": "0d0fd7c6e093f7b804fa0150b875b868"
+      },
+      "KAB_KONAWE": {
+        "name": "KAB. KONAWE",
+        "hash": "a96b65a721e561e1e3de768ac819ffbb"
+      },
+      "KAB_KONAWE_KEPULAUAN": {
+        "name": "KAB. KONAWE KEPULAUAN",
+        "hash": "1068c6e4c8051cfd4e9ea8072e3189e2"
+      },
+      "KAB_KONAWE_SELATAN": {
+        "name": "KAB. KONAWE SELATAN",
+        "hash": "17d63b1625c816c22647a73e1482372b"
+      },
+      "KAB_KONAWE_UTARA": {
+        "name": "KAB. KONAWE UTARA",
+        "hash": "b9228e0962a78b84f3d5d92f4faa000b"
+      },
+      "KAB_MUNA": {
+        "name": "KAB. MUNA",
+        "hash": "0deb1c54814305ca9ad266f53bc82511"
+      },
+      "KAB_MUNA_BARAT": {
+        "name": "KAB. MUNA BARAT",
+        "hash": "66808e327dc79d135ba18e051673d906"
+      },
+      "KAB_WAKATOBI": {
+        "name": "KAB. WAKATOBI",
+        "hash": "42e7aaa88b48137a16a1acd04ed91125"
+      },
+      "KOTA_BAU_BAU": {
+        "name": "KOTA BAU-BAU",
+        "hash": "8fe0093bb30d6f8c31474bd0764e6ac0"
+      },
+      "KOTA_KENDARI": {
+        "name": "KOTA KENDARI",
+        "hash": "41ae36ecb9b3eee609d05b90c14222fb"
+      }
+    }
+  },
+  "SULAWESI_TENGAH": {
+    "name": "SULAWESI TENGAH",
+    "hash": "33e75ff09dd601bbe69f351039152189",
+    "cities": {
+      "KAB_BANGGAI": {
+        "name": "KAB. BANGGAI",
+        "hash": "d1f255a373a3cef72e03aa9d980c7eca"
+      },
+      "KAB_BANGGAI_KEPULAUAN": {
+        "name": "KAB. BANGGAI KEPULAUAN",
+        "hash": "7eacb532570ff6858afd2723755ff790"
+      },
+      "KAB_BANGGAI_LAUT": {
+        "name": "KAB. BANGGAI LAUT",
+        "hash": "b6f0479ae87d244975439c6124592772"
+      },
+      "KAB_BUOL": {
+        "name": "KAB. BUOL",
+        "hash": "e0c641195b27425bb056ac56f8953d24"
+      },
+      "KAB_DONGGALA": {
+        "name": "KAB. DONGGALA",
+        "hash": "f85454e8279be180185cac7d243c5eb3"
+      },
+      "KAB_MOROWALI": {
+        "name": "KAB. MOROWALI",
+        "hash": "faa9afea49ef2ff029a833cccc778fd0"
+      },
+      "KAB_MOROWALI_UTARA": {
+        "name": "KAB. MOROWALI UTARA",
+        "hash": "3c7781a36bcd6cf08c11a970fbe0e2a6"
+      },
+      "KAB_PARIGI_MOUTONG": {
+        "name": "KAB. PARIGI MOUTONG",
+        "hash": "25b2822c2f5a3230abfadd476e8b04c9"
+      },
+      "KAB_POSO": {
+        "name": "KAB. POSO",
+        "hash": "6ecbdd6ec859d284dc13885a37ce8d81"
+      },
+      "KAB_SIGI": {
+        "name": "KAB. SIGI",
+        "hash": "18997733ec258a9fcaf239cc55d53363"
+      },
+      "KAB_TOJO_UNA_UNA": {
+        "name": "KAB. TOJO UNA-UNA",
+        "hash": "8d7d8ee069cb0cbbf816bbb65d56947e"
+      },
+      "KAB_TOLI_TOLI": {
+        "name": "KAB. TOLI-TOLI",
+        "hash": "75fc093c0ee742f6dddaa13fff98f104"
+      },
+      "KOTA_PALU": {
+        "name": "KOTA PALU",
+        "hash": "f74909ace68e51891440e4da0b65a70c"
+      }
+    }
+  },
+  "SULAWESI_UTARA": {
+    "name": "SULAWESI UTARA",
+    "hash": "6ea9ab1baa0efb9e19094440c317e21b",
+    "cities": {
+      "KAB_BOLAANG_MONGONDOW": {
+        "name": "KAB. BOLAANG MONGONDOW",
+        "hash": "66368270ffd51418ec58bd793f2d9b1b"
+      },
+      "KAB_BOLAANG_MONGONDOW_SELATAN": {
+        "name": "KAB. BOLAANG MONGONDOW SELATAN",
+        "hash": "248e844336797ec98478f85e7626de4a"
+      },
+      "KAB_BOLAANG_MONGONDOW_TIMUR": {
+        "name": "KAB. BOLAANG MONGONDOW TIMUR",
+        "hash": "019d385eb67632a7e958e23f24bd07d7"
+      },
+      "KAB_BOLAANG_MONGONDOW_UTARA": {
+        "name": "KAB. BOLAANG MONGONDOW UTARA",
+        "hash": "a49e9411d64ff53eccfdd09ad10a15b3"
+      },
+      "KAB_KEPULAUAN_SANGIHE": {
+        "name": "KAB. KEPULAUAN SANGIHE",
+        "hash": "ddb30680a691d157187ee1cf9e896d03"
+      },
+      "KAB_KEPULAUAN_SIAU_TAGULANDANG_BIARO": {
+        "name": "KAB. KEPULAUAN SIAU TAGULANDANG BIARO",
+        "hash": "2421fcb1263b9530df88f7f002e78ea5"
+      },
+      "KAB_KEPULAUAN_TALAUD": {
+        "name": "KAB. KEPULAUAN TALAUD",
+        "hash": "fccb60fb512d13df5083790d64c4d5dd"
+      },
+      "KAB_MINAHASA": {
+        "name": "KAB. MINAHASA",
+        "hash": "1651cf0d2f737d7adeab84d339dbabd3"
+      },
+      "KAB_MINAHASA_SELATAN": {
+        "name": "KAB. MINAHASA SELATAN",
+        "hash": "eed5af6add95a9a6f1252739b1ad8c24"
+      },
+      "KAB_MINAHASA_TENGGARA": {
+        "name": "KAB. MINAHASA TENGGARA",
+        "hash": "a8abb4bb284b5b27aa7cb790dc20f80b"
+      },
+      "KAB_MINAHASA_UTARA": {
+        "name": "KAB. MINAHASA UTARA",
+        "hash": "15d4e891d784977cacbfcbb00c48f133"
+      },
+      "KOTA_BITUNG": {
+        "name": "KOTA BITUNG",
+        "hash": "c203d8a151612acf12457e4d67635a95"
+      },
+      "KOTA_KOTAMOBAGU": {
+        "name": "KOTA KOTAMOBAGU",
+        "hash": "13f3cf8c531952d72e5847c4183e6910"
+      },
+      "KOTA_MANADO": {
+        "name": "KOTA MANADO",
+        "hash": "550a141f12de6341fba65b0ad0433500"
+      },
+      "KOTA_TOMOHON": {
+        "name": "KOTA TOMOHON",
+        "hash": "67f7fb873eaf29526a11a9b7ac33bfac"
+      }
+    }
+  },
+  "SULAWESI_BARAT": {
+    "name": "SULAWESI BARAT",
+    "hash": "34173cb38f07f89ddbebc2ac9128303f",
+    "cities": {
+      "KAB_MAJENE": {
+        "name": "KAB. MAJENE",
+        "hash": "1a5b1e4daae265b790965a275b53ae50"
+      },
+      "KAB_MAMASA": {
+        "name": "KAB. MAMASA",
+        "hash": "9a96876e2f8f3dc4f3cf45f02c61c0c1"
+      },
+      "KAB_MAMUJU": {
+        "name": "KAB. MAMUJU",
+        "hash": "9b70e8fe62e40c570a322f1b0b659098"
+      },
+      "KAB_MAMUJU_TENGAH": {
+        "name": "KAB. MAMUJU TENGAH",
+        "hash": "d61e4bbd6393c9111e6526ea173a7c8b"
+      },
+      "KAB_MAMUJU_UTARA": {
+        "name": "KAB. MAMUJU UTARA",
+        "hash": "f5f8590cd58a54e94377e6ae2eded4d9"
+      },
+      "KAB_POLEWALI_MANDAR": {
+        "name": "KAB. POLEWALI MANDAR",
+        "hash": "941e1aaaba585b952b62c14a3a175a61"
+      }
+    }
+  },
+  "MALUKU": {
+    "name": "MALUKU",
+    "hash": "c16a5320fa475530d9583c34fd356ef5",
+    "cities": {
+      "KAB_BURU": {
+        "name": "KAB. BURU",
+        "hash": "9431c87f273e507e6040fcb07dcb4509"
+      },
+      "KAB_BURU_SELATAN": {
+        "name": "KAB. BURU SELATAN",
+        "hash": "49ae49a23f67c759bf4fc791ba842aa2"
+      },
+      "KAB_KEPULAUAN_ARU": {
+        "name": "KAB. KEPULAUAN ARU",
+        "hash": "e44fea3bec53bcea3b7513ccef5857ac"
+      },
+      "KAB_MALUKU_BARAT_DAYA": {
+        "name": "KAB. MALUKU BARAT DAYA",
+        "hash": "821fa74b50ba3f7cba1e6c53e8fa6845"
+      },
+      "KAB_MALUKU_TENGAH": {
+        "name": "KAB. MALUKU TENGAH",
+        "hash": "250cf8b51c773f3f8dc8b4be867a9a02"
+      },
+      "KAB_MALUKU_TENGGARA": {
+        "name": "KAB. MALUKU TENGGARA",
+        "hash": "42998cf32d552343bc8e460416382dca"
+      },
+      "KAB_MALUKU_TENGGARA_BARAT": {
+        "name": "KAB. MALUKU TENGGARA BARAT",
+        "hash": "d07e70efcfab08731a97e7b91be644de"
+      },
+      "KAB_SERAM_BAGIAN_BARAT": {
+        "name": "KAB. SERAM BAGIAN BARAT",
+        "hash": "7fe1f8abaad094e0b5cb1b01d712f708"
+      },
+      "KAB_SERAM_BAGIAN_TIMUR": {
+        "name": "KAB. SERAM BAGIAN TIMUR",
+        "hash": "98b297950041a42470269d56260243a1"
+      },
+      "KOTA_AMBON": {
+        "name": "KOTA AMBON",
+        "hash": "0353ab4cbed5beae847a7ff6e220b5cf"
+      },
+      "KOTA_TUAL": {
+        "name": "KOTA TUAL",
+        "hash": "51d92be1c60d1db1d2e5e7a07da55b26"
+      }
+    }
+  },
+  "MALUKU_UTARA": {
+    "name": "MALUKU UTARA",
+    "hash": "6364d3f0f495b6ab9dcf8d3b5c6e0b01",
+    "cities": {
+      "KAB_HALMAHERA_BARAT": {
+        "name": "KAB. HALMAHERA BARAT",
+        "hash": "428fca9bc1921c25c5121f9da7815cde"
+      },
+      "KAB_HALMAHERA_TENGAH": {
+        "name": "KAB. HALMAHERA TENGAH",
+        "hash": "f1b6f2857fb6d44dd73c7041e0aa0f19"
+      },
+      "KAB_HALMAHERA_UTARA": {
+        "name": "KAB. HALMAHERA UTARA",
+        "hash": "68ce199ec2c5517597ce0a4d89620f55"
+      },
+      "KAB_HALMAHERA_SELATAN": {
+        "name": "KAB. HALMAHERA SELATAN",
+        "hash": "e836d813fd184325132fca8edcdfb40e"
+      },
+      "KAB_KEPULAUAN_SULA": {
+        "name": "KAB. KEPULAUAN SULA",
+        "hash": "ab817c9349cf9c4f6877e1894a1faa00"
+      },
+      "KAB_HALMAHERA_TIMUR": {
+        "name": "KAB. HALMAHERA TIMUR",
+        "hash": "877a9ba7a98f75b90a9d49f53f15a858"
+      },
+      "KAB_PULAU_MOROTAI": {
+        "name": "KAB. PULAU MOROTAI",
+        "hash": "dc6a6489640ca02b0d42dabeb8e46bb7"
+      },
+      "KAB_PULAU_TALIABU": {
+        "name": "KAB. PULAU TALIABU",
+        "hash": "26337353b7962f533d78c762373b3318"
+      },
+      "KOTA_TERNATE": {
+        "name": "KOTA TERNATE",
+        "hash": "8e6b42f1644ecb1327dc03ab345e618b"
+      },
+      "KOTA_TIDORE_KEPULAUAN": {
+        "name": "KOTA TIDORE KEPULAUAN",
+        "hash": "ef575e8837d065a1683c022d2077d342"
+      },
+      "KOTA_SOFIFI": {
+        "name": "KOTA SOFIFI",
+        "hash": "07563a3fe3bbe7e3ba84431ad9d055af"
+      }
+    }
+  },
+  "PAPUA": {
+    "name": "PAPUA",
+    "hash": "182be0c5cdcd5072bb1864cdee4d3d6e",
+    "cities": {
+      "KAB_ASMAT": {
+        "name": "KAB. ASMAT",
+        "hash": "2050e03ca119580f74cca14cc6e97462"
+      },
+      "KAB_BIAK_NUMFOR": {
+        "name": "KAB. BIAK NUMFOR",
+        "hash": "25ddc0f8c9d3e22e03d3076f98d83cb2"
+      },
+      "KAB_BOVEN_DIGOEL": {
+        "name": "KAB. BOVEN DIGOEL",
+        "hash": "5ef0b4eba35ab2d6180b0bca7e46b6f9"
+      },
+      "KAB_DEIYAI": {
+        "name": "KAB. DEIYAI",
+        "hash": "598b3e71ec378bd83e0a727608b5db01"
+      },
+      "KAB_DOGIYAI": {
+        "name": "KAB. DOGIYAI",
+        "hash": "74071a673307ca7459bcf75fbd024e09"
+      },
+      "KAB_INTAN_JAYA": {
+        "name": "KAB. INTAN JAYA",
+        "hash": "cfee398643cbc3dc5eefc89334cacdc1"
+      },
+      "KAB_JAYAPURA": {
+        "name": "KAB. JAYAPURA",
+        "hash": "d18f655c3fce66ca401d5f38b48c89af"
+      },
+      "KAB_JAYAWIJAYA": {
+        "name": "KAB. JAYAWIJAYA",
+        "hash": "6ea2ef7311b482724a9b7b0bc0dd85c6"
+      },
+      "KAB_KEEROM": {
+        "name": "KAB. KEEROM",
+        "hash": "9461cce28ebe3e76fb4b931c35a169b0"
+      },
+      "KAB_KEPULAUAN_YAPEN": {
+        "name": "KAB. KEPULAUAN YAPEN",
+        "hash": "f770b62bc8f42a0b66751fe636fc6eb0"
+      },
+      "KAB_LANNY_JAYA": {
+        "name": "KAB. LANNY JAYA",
+        "hash": "e1e32e235eee1f970470a3a6658dfdd5"
+      },
+      "KAB_MAMBERAMO_RAYA": {
+        "name": "KAB. MAMBERAMO RAYA",
+        "hash": "eba0dc302bcd9a273f8bbb72be3a687b"
+      },
+      "KAB_MAMBERAMO_TENGAH": {
+        "name": "KAB. MAMBERAMO TENGAH",
+        "hash": "218a0aefd1d1a4be65601cc6ddc1520e"
+      },
+      "KAB_MAPPI": {
+        "name": "KAB. MAPPI",
+        "hash": "7d04bbbe5494ae9d2f5a76aa1c00fa2f"
+      },
+      "KAB_MERAUKE": {
+        "name": "KAB. MERAUKE",
+        "hash": "a516a87cfcaef229b342c437fe2b95f7"
+      },
+      "KAB_MIMIKA": {
+        "name": "KAB. MIMIKA",
+        "hash": "c3c59e5f8b3e9753913f4d435b53c308"
+      },
+      "KAB_NABIRE": {
+        "name": "KAB. NABIRE",
+        "hash": "854d9fca60b4bd07f9bb215d59ef5561"
+      },
+      "KAB_NDUGA": {
+        "name": "KAB. NDUGA",
+        "hash": "c410003ef13d451727aeff9082c29a5c"
+      },
+      "KAB_PANIAI": {
+        "name": "KAB. PANIAI",
+        "hash": "559cb990c9dffd8675f6bc2186971dc2"
+      },
+      "KAB_PEGUNUNGAN_BINTANG": {
+        "name": "KAB. PEGUNUNGAN BINTANG",
+        "hash": "55a7cf9c71f1c9c495413f934dd1a158"
+      },
+      "KAB_PUNCAK": {
+        "name": "KAB. PUNCAK",
+        "hash": "2f55707d4193dc27118a0f19a1985716"
+      },
+      "KAB_PUNCAK_JAYA": {
+        "name": "KAB. PUNCAK JAYA",
+        "hash": "1be3bc32e6564055d5ca3e5a354acbef"
+      },
+      "KAB_SARMI": {
+        "name": "KAB. SARMI",
+        "hash": "35051070e572e47d2c26c241ab88307f"
+      },
+      "KAB_SUPIORI": {
+        "name": "KAB. SUPIORI",
+        "hash": "b534ba68236ba543ae44b22bd110a1d6"
+      },
+      "KAB_TOLIKARA": {
+        "name": "KAB. TOLIKARA",
+        "hash": "7380ad8a673226ae47fce7bff88e9c33"
+      },
+      "KAB_WAROPEN": {
+        "name": "KAB. WAROPEN",
+        "hash": "05f971b5ec196b8c65b75d2ef8267331"
+      },
+      "KAB_YAHUKIMO": {
+        "name": "KAB. YAHUKIMO",
+        "hash": "3cf166c6b73f030b4f67eeaeba301103"
+      },
+      "KAB_YALIMO": {
+        "name": "KAB. YALIMO",
+        "hash": "cee631121c2ec9232f3a2f028ad5c89b"
+      },
+      "KOTA_JAYAPURA": {
+        "name": "KOTA JAYAPURA",
+        "hash": "5b69b9cb83065d403869739ae7f0995e"
+      },
+      "KAB_YAPEN_WAROPEN": {
+        "name": "KAB. YAPEN WAROPEN",
+        "hash": "2b8a61594b1f4c4db0902a8a395ced93"
+      }
+    }
+  },
+  "PAPUA_BARAT": {
+    "name": "PAPUA BARAT",
+    "hash": "e369853df766fa44e1ed0ff613f563bd",
+    "cities": {
+      "KAB_FAKFAK": {
+        "name": "KAB. FAKFAK",
+        "hash": "b5b41fac0361d157d9673ecb926af5ae"
+      },
+      "KAB_KAIMANA": {
+        "name": "KAB. KAIMANA",
+        "hash": "285e19f20beded7d215102b49d5c09a0"
+      },
+      "KAB_MANOKWARI": {
+        "name": "KAB. MANOKWARI",
+        "hash": "b337e84de8752b27eda3a12363109e80"
+      },
+      "KAB_MANOKWARI_SELATAN": {
+        "name": "KAB. MANOKWARI SELATAN",
+        "hash": "e8c0653fea13f91bf3c48159f7c24f78"
+      },
+      "KAB_MAYBRAT": {
+        "name": "KAB. MAYBRAT",
+        "hash": "ff4d5fbbafdf976cfdc032e3bde78de5"
+      },
+      "KAB_PEGUNUNGAN_ARFAK": {
+        "name": "KAB. PEGUNUNGAN ARFAK",
+        "hash": "2d6cc4b2d139a53512fb8cbb3086ae2e"
+      },
+      "KAB_RAJA_AMPAT": {
+        "name": "KAB. RAJA AMPAT",
+        "hash": "389bc7bb1e1c2a5e7e147703232a88f6"
+      },
+      "KAB_SORONG": {
+        "name": "KAB. SORONG",
+        "hash": "e2230b853516e7b05d79744fbd4c9c13"
+      },
+      "KAB_SORONG_SELATAN": {
+        "name": "KAB. SORONG SELATAN",
+        "hash": "087408522c31eeb1f982bc0eaf81d35f"
+      },
+      "KAB_TAMBRAUW": {
+        "name": "KAB. TAMBRAUW",
+        "hash": "a760880003e7ddedfef56acb3b09697f"
+      },
+      "KAB_TELUK_BINTUNI": {
+        "name": "KAB. TELUK BINTUNI",
+        "hash": "10a7cdd970fe135cf4f7bb55c0e3b59f"
+      },
+      "KAB_TELUK_WONDAMA": {
+        "name": "KAB. TELUK WONDAMA",
+        "hash": "3dc4876f3f08201c7c76cb71fa1da439"
+      },
+      "KOTA_SORONG": {
+        "name": "KOTA SORONG",
+        "hash": "59b90e1005a220e2ebc542eb9d950b1e"
+      }
+    }
+  }
+}
