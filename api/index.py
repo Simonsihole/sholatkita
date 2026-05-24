@@ -1,6 +1,5 @@
 from fastapi import FastAPI, HTTPException
 import json
-import os
 import requests
 from pathlib import Path
 
@@ -21,72 +20,63 @@ HEADERS = {
 }
 
 # ==========================
-# PATH SETUP
+# PATHS
 # ==========================
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 
-# Load locations JSON
 json_path = PROJECT_ROOT / "shalat_locations_clean.json"
-if not json_path.exists():
-    json_path = BASE_DIR / "shalat_locations_clean.json"
 
 with open(json_path, "r", encoding="utf-8") as f:
     LOCATIONS = json.load(f)
 
-# Vercel writable temp cache
 CACHE_ROOT = Path("/tmp/prayer_data")
 
 
 # ==========================
-# CACHE + FETCH
+# ROOT TEST
 # ==========================
-def get_prayer_times(
-    province_slug: str,
-    city_slug: str,
-    month: int,
-    year: int
-):
+@app.get("/")
+def root():
+    return {"message": "SholatKita API running"}
+
+
+# ==========================
+# FETCH FUNCTION
+# ==========================
+def get_prayer_times(province, city, month, year):
     cache_file = (
         CACHE_ROOT
         / str(year)
         / f"{month:02d}"
-        / province_slug
-        / f"{city_slug}.json"
+        / province
+        / f"{city}.json"
     )
 
-    # ----------------------
-    # use cache
-    # ----------------------
     if cache_file.exists():
         return json.loads(
-            cache_file.read_text(
-                encoding="utf-8"
-            )
+            cache_file.read_text(encoding="utf-8")
         )
 
-    # ----------------------
-    # fetch from Kemenag
-    # ----------------------
+    if province not in LOCATIONS:
+        raise Exception("Province not found")
+
+    if city not in LOCATIONS[province]["cities"]:
+        raise Exception("City not found")
+
+    x = LOCATIONS[province]["hash"]
+    y = LOCATIONS[province]["cities"][city]["hash"]
+
     session = requests.Session()
 
-    # important:
-    # first visit homepage to obtain cookies
+    # ambil cookie dulu
     session.get(
         "https://bimasislam.kemenag.go.id/",
-        headers=HEADERS
+        headers=HEADERS,
+        timeout=20
     )
 
-    x = LOCATIONS[
-        province_slug
-    ]["hash"]
-
-    y = LOCATIONS[
-        province_slug
-    ]["cities"][
-        city_slug
-    ]["hash"]
-
+    # request jadwal
     r = session.post(
         f"{BASE}/getShalatbln",
         data={
@@ -95,21 +85,17 @@ def get_prayer_times(
             "bln": month,
             "thn": year
         },
-        headers=HEADERS
+        headers=HEADERS,
+        timeout=20
     )
 
     payload = r.json()
 
     if payload.get("status") != 1:
-        raise Exception(
-            f"Kemenag error: {payload}"
-        )
+        raise Exception(payload)
 
     result = payload["data"]
 
-    # ----------------------
-    # save cache
-    # ----------------------
     cache_file.parent.mkdir(
         parents=True,
         exist_ok=True
@@ -118,8 +104,7 @@ def get_prayer_times(
     cache_file.write_text(
         json.dumps(
             result,
-            ensure_ascii=False,
-            indent=2
+            ensure_ascii=False
         ),
         encoding="utf-8"
     )
@@ -128,15 +113,12 @@ def get_prayer_times(
 
 
 # ==========================
-# API ROUTES
+# ROUTES
 # ==========================
-
 @app.get("/provinces")
 def provinces():
     return {
-        "data": list(
-            LOCATIONS.keys()
-        )
+        "data": list(LOCATIONS.keys())
     }
 
 
@@ -151,9 +133,7 @@ def cities(province: str):
     return {
         "province": province,
         "data": list(
-            LOCATIONS[
-                province
-            ]["cities"].keys()
+            LOCATIONS[province]["cities"].keys()
         )
     }
 
