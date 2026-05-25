@@ -123,6 +123,7 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--tp);font-
 .ll{font-size:48px;animation:lp 1.4s ease-in-out infinite;}
 .lt2{font-size:13px;color:var(--td);}
 </style>
+<base target="_blank">
 </head>
 <body>
 <div id="loading"><div class="ll">🕌</div><div class="lt2">Memuat SholatKita…</div></div>
@@ -454,7 +455,7 @@ async function onCitySelect(val){
   await calcPrayer();
 }
 // ── STATE ──
-const S={prov:'DKI_JAKARTA',city:'KOTA_JAKARTA',la:-6.2088,lo:106.8456,,lo:CITIES[0].lo,qibla:0,heading:null,active:false,acc:0,prayers:[],nextIdx:-1,isIOS:/iPad|iPhone|iPod/.test(navigator.userAgent),smooth:null,readings:[]};
+const S={prov:'DKI_JAKARTA',city:'KOTA_JAKARTA',la:-6.2088,lo:106.8456,qibla:0,heading:null,active:false,acc:0,prayers:[],nextIdx:-1,isIOS:/iPad|iPhone|iPod/.test(navigator.userAgent),smooth:null,readings:[]};
 
 // ── INIT ──
 async function init(){
