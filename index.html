@@ -13,7 +13,6 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
 html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--tp);font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;}
 #app{display:flex;flex-direction:column;height:100vh;height:-webkit-fill-available;overflow:hidden;}
-/* HEADER */
 #hdr{flex-shrink:0;background:rgba(7,13,7,0.97);border-bottom:1px solid var(--bd);padding-top:env(safe-area-inset-top,0);}
 .hi{padding:12px 16px 0;}
 .lr{display:flex;align-items:center;justify-content:space-between;}
@@ -23,18 +22,17 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--tp);font-
 .lt p{font-size:10px;color:var(--td);margin-top:1px;letter-spacing:.4px;}
 .gpsbtn{background:rgba(201,168,76,.1);border:1px solid var(--bd);color:var(--gold);border-radius:9px;padding:7px 13px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:5px;transition:all .2s;}
 .gpsbtn:active{transform:scale(.96);background:rgba(201,168,76,.2);}
-.locbar{padding:8px 16px 0;display:flex;align-items:center;gap:8px;}
+.locbar{padding:8px 16px 0;display:flex;align-items:center;gap:6px;}
 .lsw{flex:1;position:relative;}
-.lsel{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--bd);color:var(--tp);border-radius:10px;padding:8px 32px 8px 32px;font-size:13px;font-weight:500;font-family:inherit;appearance:none;-webkit-appearance:none;cursor:pointer;}
+.lsel{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--bd);color:var(--tp);border-radius:10px;padding:8px 28px 8px 28px;font-size:12px;font-weight:500;font-family:inherit;appearance:none;-webkit-appearance:none;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .lsel:focus{outline:none;border-color:var(--bds);}
-.lico{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:14px;pointer-events:none;}
-.larr{position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--td);pointer-events:none;font-size:12px;}
-/* TABS */
+.lico{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:13px;pointer-events:none;}
+.larr{position:absolute;right:9px;top:50%;transform:translateY(-50%);color:var(--td);pointer-events:none;font-size:11px;}
+.lsep{width:1px;height:28px;background:var(--bd);flex-shrink:0;}
 .tabs{display:flex;border-top:1px solid var(--bd);margin-top:8px;}
 .tb{flex:1;padding:9px 4px;background:none;border:none;color:var(--td);font-family:inherit;font-size:10px;font-weight:700;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:all .2s;letter-spacing:.5px;text-transform:uppercase;border-bottom:2px solid transparent;}
 .tb svg{width:18px;height:18px;}
 .tb.active{color:var(--gold);border-bottom-color:var(--gold);}
-/* MAIN */
 #main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;}
 #main::-webkit-scrollbar{width:2px;}
 #main::-webkit-scrollbar-thumb{background:var(--bd);border-radius:2px;}
@@ -51,6 +49,9 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--tp);font-
 .hijri-box{position:absolute;top:18px;right:18px;text-align:right;}
 .hdate{font-family:'Amiri',serif;font-size:14px;color:var(--gold);}
 .mdate{font-size:10px;color:var(--td);margin-top:2px;max-width:120px;text-align:right;}
+/* SOURCE badge */
+.src-badge{display:inline-flex;align-items:center;gap:4px;margin-top:8px;background:rgba(26,122,74,.2);border:1px solid rgba(26,122,74,.3);border-radius:6px;padding:3px 8px;font-size:10px;font-weight:600;color:#4ade80;letter-spacing:.3px;}
+.src-badge.local{background:rgba(234,179,8,.1);border-color:rgba(234,179,8,.2);color:#facc15;}
 /* PRAYER LIST */
 .stitle{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:12px;}
 .plist{display:flex;flex-direction:column;gap:7px;}
@@ -115,18 +116,25 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--tp);font-
 .dlatin{font-size:11px;color:var(--td);font-style:italic;line-height:1.7;margin-bottom:9px;}
 .dtrans{font-size:12px;color:var(--ts);line-height:1.7;}
 /* TOAST */
-#toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(12px);background:rgba(25,35,25,.97);border:1px solid var(--bds);border-radius:11px;padding:9px 16px;font-size:12px;color:var(--tp);opacity:0;transition:all .3s;pointer-events:none;z-index:99;white-space:nowrap;}
+#toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(12px);background:rgba(25,35,25,.97);border:1px solid var(--bds);border-radius:11px;padding:9px 16px;font-size:12px;color:var(--tp);opacity:0;transition:all .3s;pointer-events:none;z-index:99;white-space:nowrap;max-width:90vw;text-align:center;}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 /* LOADING */
 #loading{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;z-index:100;}
 @keyframes lp{0%,100%{transform:scale(1);opacity:.7;}50%{transform:scale(1.1);opacity:1;}}
 .ll{font-size:48px;animation:lp 1.4s ease-in-out infinite;}
 .lt2{font-size:13px;color:var(--td);}
+.lt3{font-size:11px;color:var(--td);margin-top:-6px;}
+/* LOADING spinner in prayer list */
+@keyframes spin{to{transform:rotate(360deg);}}
+.spinner{width:20px;height:20px;border:2px solid var(--bd);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;margin:20px auto;}
 </style>
-<base target="_blank">
 </head>
 <body>
-<div id="loading"><div class="ll">🕌</div><div class="lt2">Memuat SholatKita…</div></div>
+<div id="loading">
+  <div class="ll">🕌</div>
+  <div class="lt2">Memuat SholatKita…</div>
+  <div class="lt3" id="ldesc">Menghubungkan ke server…</div>
+</div>
 <div id="toast"></div>
 <div id="app" style="display:none">
   <div id="hdr">
@@ -141,10 +149,21 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--tp);font-
           GPS
         </button>
       </div>
+      <!-- Selector: Provinsi | Kota -->
       <div class="locbar">
         <div class="lsw">
+          <span class="lico">🗺️</span>
+          <select class="lsel" id="psel" onchange="onProv(this.value)">
+            <option value="">Provinsi…</option>
+          </select>
+          <span class="larr">▾</span>
+        </div>
+        <div class="lsep"></div>
+        <div class="lsw">
           <span class="lico">📍</span>
-          <select class="lsel" id="csel" onchange="onCity(this.value)"></select>
+          <select class="lsel" id="csel" onchange="onCity(this.value)">
+            <option value="">Kota/Kab…</option>
+          </select>
           <span class="larr">▾</span>
         </div>
       </div>
@@ -164,35 +183,41 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--tp);font-
       </button>
     </div>
   </div>
+
   <div id="main">
-    <!-- SHOLAT -->
+    <!-- SHOLAT TAB -->
     <div id="tab-sh" class="panel active">
       <div class="hero">
         <div class="hl">Sholat Berikutnya</div>
         <div class="hn" id="hn">—</div>
         <div class="ht" id="ht">—:—</div>
         <div class="hcd">dalam <span class="cpill" id="hcd">—</span></div>
-        <div class="hijri-box"><div class="hdate" id="hijdate">—</div><div class="mdate" id="mdate">—</div></div>
+        <div class="hijri-box">
+          <div class="hdate" id="hijdate">—</div>
+          <div class="mdate" id="mdate">—</div>
+        </div>
+        <div id="src-badge" class="src-badge" style="display:none"></div>
       </div>
       <div class="stitle">Jadwal Hari Ini</div>
-      <div class="plist" id="plist"></div>
+      <div class="plist" id="plist"><div class="spinner"></div></div>
     </div>
-    <!-- KIBLAT -->
+
+    <!-- KIBLAT TAB -->
     <div id="tab-kb" class="panel">
       <div class="kstat warn" id="kstat"><div class="sdot"></div><span id="stxt">Menunggu sensor…</span></div>
       <div id="psec" style="display:none">
         <div class="permcard">
           <div class="ptitle">🧭 Izin Kompas Diperlukan</div>
-          <div class="pdesc">Izinkan akses sensor orientasi untuk menampilkan arah Kiblat yang akurat.</div>
-          <button class="pbtn" onclick="reqPerm()">Aktifkan Kompas</button>
-        <div style="margin-top:10px;font-size:11px;color:var(--td);line-height:1.5">
-          <div style="margin-bottom:4px">📱 <strong>iPhone:</strong> Tap tombol di atas, lalu pilih "Izinkan"</div>
-          <div>🤖 <strong>Android:</strong> Pastikan lokasi & sensor aktif, lalu refresh halaman</div>
-        </div>
+          <div class="pdesc" id="pdesc">Izinkan akses sensor orientasi untuk menampilkan arah Kiblat yang akurat.</div>
+          <button class="pbtn" id="pbtn" onclick="reqPerm()">Aktifkan Kompas</button>
+          <div style="margin-top:10px;font-size:11px;color:var(--td);line-height:1.5">
+            <div style="margin-bottom:3px">📱 <strong>iPhone:</strong> Tap tombol di atas → pilih "Izinkan"</div>
+            <div>🤖 <strong>Android:</strong> Pastikan lokasi aktif lalu refresh</div>
+          </div>
         </div>
       </div>
       <div style="text-align:center">
-        <div class="cwrap" id="cwrap">
+        <div class="cwrap">
           <div class="cring"></div>
           <div class="cpulse"></div>
           <div class="aline"></div>
@@ -226,102 +251,99 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--tp);font-
         <div class="qdtxt">Arah Kiblat: <strong id="qdeg">—°</strong> dari Utara</div>
         <div class="qstats">
           <div class="qsc"><div class="qsl">Sudut Kiblat</div><div class="qsv" id="qa">—°</div><div class="qss" id="qadir">—</div></div>
-          <div class="qsc"><div class="qsl">Heading</div><div class="qsv" id="qh">—°</div><div class="qss" id="qhdir">—</div><div class="accbar"><div class="accfill" id="accf" style="width:0%;background:#e85c4a"></div></div></div>
+          <div class="qsc">
+            <div class="qsl">Heading</div>
+            <div class="qsv" id="qh">—°</div>
+            <div class="qss" id="qhdir">—</div>
+            <div class="accbar"><div class="accfill" id="accf" style="width:0%;background:#e85c4a"></div></div>
+          </div>
         </div>
-        <div class="kdist"><div class="ki">🕋</div><div class="kinfo"><div class="kl">Jarak ke Ka'bah</div><div class="kv" id="kdv">—</div><div class="ks">Makkah Al-Mukarramah</div></div></div>
+        <div class="kdist">
+          <div class="ki">🕋</div>
+          <div class="kinfo">
+            <div class="kl">Jarak ke Ka'bah</div>
+            <div class="kv" id="kdv">—</div>
+            <div class="ks">Makkah Al-Mukarramah</div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- DUA -->
+
+    <!-- DOA TAB -->
     <div id="tab-du" class="panel">
       <div class="stitle">Doa-Doa Sholat</div>
       <div class="dlist" id="dlist"></div>
     </div>
   </div>
 </div>
+
 <script>
-// ── PRAYER CALC (embedded, no CDN) ──
-const PC={
-  r:d=>d*Math.PI/180,g:r=>r*180/Math.PI,
-  fa:a=>a-360*Math.floor(a/360),fh:a=>a-24*Math.floor(a/24),
-  sun(jd){
-    const D=jd-2451545,g=this.fa(357.529+.9856003*D),q=this.fa(280.459+.9856474*D);
-    const L=this.fa(q+1.915*Math.sin(this.r(g))+.02*Math.sin(this.r(2*g)));
-    const e=23.439-.0000004*D;
-    const RA=this.g(Math.atan2(Math.cos(this.r(e))*Math.sin(this.r(L)),Math.cos(this.r(L))))/15;
-    return{dec:this.g(Math.asin(Math.sin(this.r(e))*Math.sin(this.r(L)))),EqT:q/15-this.fh(RA)};
-  },
-  jd(y,m,d){if(m<=2){y--;m+=12;}const A=Math.floor(y/100),B=2-A+Math.floor(A/4);return Math.floor(365.25*(y+4716))+Math.floor(30.6001*(m+1))+d+B-1524.5;},
-  ha(lat,dec,ang){const v=(-Math.sin(this.r(ang))-Math.sin(this.r(lat))*Math.sin(this.r(dec)))/(Math.cos(this.r(lat))*Math.cos(this.r(dec)));return v<-1?180:v>1?0:this.g(Math.acos(v))/15;},
-  asr(lat,dec){const t=this.g(Math.atan(1/(1+Math.tan(this.r(Math.abs(lat-dec))))));return this.ha(lat,dec,-t);},
-  calc(lat,lng,date,method='kemenag'){
-    const jd=this.jd(date.getFullYear(),date.getMonth()+1,date.getDate());
-    const{dec,EqT}=this.sun(jd);
-    const tz=-date.getTimezoneOffset()/60;
-    const noon=12-lng/15-EqT+tz;
-    const toD=h=>{const d=new Date(date);d.setHours(0,0,0,0);const m=Math.round(h*60);d.setMinutes(m);return d;};
+// ═══════════════════════════════════════════════════════════
+// API CONFIG — URL lengkap ke Vercel Anda
+// ═══════════════════════════════════════════════════════════
+const API = 'https://sholatkita.vercel.app';
 
-    // Method parameters: [FajrAngle, IshaAngle]
-    const methods={
-      'kemenag':[20,18],    // Kementerian Agama RI (default)
-      'mwl':[18,17],        // Muslim World League
-      'isna':[15,15],       // Islamic Society of North America
-      'egypt':[19.5,17.5],  // Egyptian General Authority
-      'karachi':[18,18],    // University of Islamic Sciences
-      'jakim':[20,18],      // Malaysia (same as Kemenag)
-    };
-
-    const[fajrAngle,ishaAngle]=methods[method]||methods['kemenag'];
-
-    return{
-      fajr:toD(noon-this.ha(lat,dec,fajrAngle)),
-      dhuhr:toD(noon+.033),
-      asr:toD(noon+this.asr(lat,dec)),
-      maghrib:toD(noon+this.ha(lat,dec,.833)),
-      isha:toD(noon-this.ha(lat,dec,ishaAngle)),  // Note: isha uses negative ha
-      method:method
-    };
-  }
+// ═══════════════════════════════════════════════════════════
+// LOCATION DATA (Provinsi → Kota/Kab)
+// ═══════════════════════════════════════════════════════════
+const LOCS = {
+  ACEH:{n:'ACEH',c:{KOTA_BANDA_ACEH:'Kota Banda Aceh',KOTA_LANGSA:'Kota Langsa',KOTA_LHOKSEUMAWE:'Kota Lhokseumawe',KOTA_SABANG:'Kota Sabang',KOTA_SUBULUSSALAM:'Kota Subulussalam',KAB_ACEH_BESAR:'Kab. Aceh Besar',KAB_ACEH_UTARA:'Kab. Aceh Utara',KAB_ACEH_TIMUR:'Kab. Aceh Timur',KAB_ACEH_TENGAH:'Kab. Aceh Tengah',KAB_ACEH_SELATAN:'Kab. Aceh Selatan',KAB_ACEH_BARAT:'Kab. Aceh Barat',KAB_ACEH_BARAT_DAYA:'Kab. Aceh Barat Daya',KAB_PIDIE:'Kab. Pidie',KAB_PIDIE_JAYA:'Kab. Pidie Jaya',KAB_BIREUEN:'Kab. Bireuen',KAB_BENER_MERIAH:'Kab. Bener Meriah',KAB_GAYO_LUES:'Kab. Gayo Lues',KAB_ACEH_SINGKIL:'Kab. Aceh Singkil',KAB_SIMEULUE:'Kab. Simeulue',KAB_NAGAN_RAYA:'Kab. Nagan Raya',KAB_ACEH_JAYA:'Kab. Aceh Jaya',KAB_ACEH_TAMIANG:'Kab. Aceh Tamiang',KAB_ACEH_TENGGARA:'Kab. Aceh Tenggara'}},
+  SUMATERA_UTARA:{n:'SUMATERA UTARA',c:{KOTA_MEDAN:'Kota Medan',KOTA_BINJAI:'Kota Binjai',KOTA_PEMATANGSIANTAR:'Kota Pematangsiantar',KOTA_SIBOLGA:'Kota Sibolga',KOTA_TANJUNGBALAI:'Kota Tanjungbalai',KOTA_PADANGSIDEMPUAN:'Kota Padangsidempuan',KOTA_GUNUNGSITOLI:'Kota Gunungsitoli',KOTA_TEBING_TINGGI:'Kota Tebing Tinggi',KAB_DELI_SERDANG:'Kab. Deli Serdang',KAB_LANGKAT:'Kab. Langkat',KAB_ASAHAN:'Kab. Asahan',KAB_SIMALUNGUN:'Kab. Simalungun',KAB_KARO:'Kab. Karo',KAB_LABUHANBATU:'Kab. Labuhanbatu',KAB_TAPANULI_UTARA:'Kab. Tapanuli Utara',KAB_TAPANULI_SELATAN:'Kab. Tapanuli Selatan',KAB_TAPANULI_TENGAH:'Kab. Tapanuli Tengah',KAB_NIAS:'Kab. Nias',KAB_MANDAILING_NATAL:'Kab. Mandailing Natal',KAB_TOBA_SAMOSIR:'Kab. Toba Samosir',KAB_SAMOSIR:'Kab. Samosir',KAB_BATU_BARA:'Kab. Batu Bara',KAB_SERDANG_BEDAGAI:'Kab. Serdang Bedagai',KAB_PADANG_LAWAS:'Kab. Padang Lawas',KAB_PADANG_LAWAS_UTARA:'Kab. Padang Lawas Utara',KAB_LABUHANBATU_SELATAN:'Kab. Labuhanbatu Selatan',KAB_LABUHANBATU_UTARA:'Kab. Labuhanbatu Utara',KAB_NIAS_UTARA:'Kab. Nias Utara',KAB_NIAS_BARAT:'Kab. Nias Barat',KAB_NIAS_SELATAN:'Kab. Nias Selatan',KAB_HUMBANG_HASUNDUTAN:'Kab. Humbang Hasundutan',KAB_PAKPAK_BHARAT:'Kab. Pakpak Bharat'}},
+  SUMATERA_BARAT:{n:'SUMATERA BARAT',c:{KOTA_PADANG:'Kota Padang',KOTA_BUKITTINGGI:'Kota Bukittinggi',KOTA_PADANGPANJANG:'Kota Padangpanjang',KOTA_PAYAKUMBUH:'Kota Payakumbuh',KOTA_SOLOK:'Kota Solok',KOTA_SAWAHLUNTO:'Kota Sawahlunto',KOTA_PARIAMAN:'Kota Pariaman',KAB_AGAM:'Kab. Agam',KAB_LIMA_PULUH_KOTA:'Kab. Lima Puluh Kota',KAB_TANAH_DATAR:'Kab. Tanah Datar',KAB_PADANG_PARIAMAN:'Kab. Padang Pariaman',KAB_SOLOK:'Kab. Solok',KAB_PASAMAN:'Kab. Pasaman',KAB_PESISIR_SELATAN:'Kab. Pesisir Selatan',KAB_SIJUNJUNG:'Kab. Sijunjung',KAB_DHARMASRAYA:'Kab. Dharmasraya',KAB_SOLOK_SELATAN:'Kab. Solok Selatan',KAB_PASAMAN_BARAT:'Kab. Pasaman Barat',KAB_KEPULAUAN_MENTAWAI:'Kab. Kepulauan Mentawai'}},
+  RIAU:{n:'RIAU',c:{KOTA_PEKANBARU:'Kota Pekanbaru',KOTA_DUMAI:'Kota Dumai',KAB_KAMPAR:'Kab. Kampar',KAB_ROKAN_HULU:'Kab. Rokan Hulu',KAB_ROKAN_HILIR:'Kab. Rokan Hilir',KAB_BENGKALIS:'Kab. Bengkalis',KAB_SIAK:'Kab. Siak',KAB_PELALAWAN:'Kab. Pelalawan',KAB_INDRAGIRI_HULU:'Kab. Indragiri Hulu',KAB_INDRAGIRI_HILIR:'Kab. Indragiri Hilir',KAB_KUANTAN_SINGINGI:'Kab. Kuantan Singingi',KAB_KEPULAUAN_MERANTI:'Kab. Kepulauan Meranti'}},
+  KEPULAUAN_RIAU:{n:'KEPULAUAN RIAU',c:{KOTA_BATAM:'Kota Batam',KOTA_TANJUNG_PINANG:'Kota Tanjung Pinang',KAB_BINTAN:'Kab. Bintan',KAB_KARIMUN:'Kab. Karimun',KAB_NATUNA:'Kab. Natuna',KAB_LINGGA:'Kab. Lingga',KAB_KEPULAUAN_ANAMBAS:'Kab. Kepulauan Anambas'}},
+  JAMBI:{n:'JAMBI',c:{KOTA_JAMBI:'Kota Jambi',KOTA_SUNGAI_PENUH:'Kota Sungai Penuh',KAB_BATANGHARI:'Kab. Batanghari',KAB_BUNGO:'Kab. Bungo',KAB_KERINCI:'Kab. Kerinci',KAB_MERANGIN:'Kab. Merangin',KAB_MUARO_JAMBI:'Kab. Muaro Jambi',KAB_SAROLANGUN:'Kab. Sarolangun',KAB_TANJUNG_JABUNG_BARAT:'Kab. Tanjung Jabung Barat',KAB_TANJUNG_JABUNG_TIMUR:'Kab. Tanjung Jabung Timur',KAB_TEBO:'Kab. Tebo'}},
+  SUMATERA_SELATAN:{n:'SUMATERA SELATAN',c:{KOTA_PALEMBANG:'Kota Palembang',KOTA_LUBUKLINGGAU:'Kota Lubuklinggau',KOTA_PAGAR_ALAM:'Kota Pagar Alam',KOTA_PRABUMULIH:'Kota Prabumulih',KAB_BANYUASIN:'Kab. Banyuasin',KAB_LAHAT:'Kab. Lahat',KAB_MUARA_ENIM:'Kab. Muara Enim',KAB_MUSI_BANYUASIN:'Kab. Musi Banyuasin',KAB_MUSI_RAWAS:'Kab. Musi Rawas',KAB_OGAN_ILIR:'Kab. Ogan Ilir',KAB_OGAN_KOMERING_ILIR:'Kab. Ogan Komering Ilir',KAB_OGAN_KOMERING_ULU:'Kab. Ogan Komering Ulu'}},
+  BENGKULU:{n:'BENGKULU',c:{KOTA_BENGKULU:'Kota Bengkulu',KAB_BENGKULU_SELATAN:'Kab. Bengkulu Selatan',KAB_BENGKULU_TENGAH:'Kab. Bengkulu Tengah',KAB_BENGKULU_UTARA:'Kab. Bengkulu Utara',KAB_KAUR:'Kab. Kaur',KAB_KEPAHIANG:'Kab. Kepahiang',KAB_LEBONG:'Kab. Lebong',KAB_MUKOMUKO:'Kab. Mukomuko',KAB_REJANG_LEBONG:'Kab. Rejang Lebong',KAB_SELUMA:'Kab. Seluma'}},
+  LAMPUNG:{n:'LAMPUNG',c:{KOTA_BANDAR_LAMPUNG:'Kota Bandar Lampung',KOTA_METRO:'Kota Metro',KAB_LAMPUNG_SELATAN:'Kab. Lampung Selatan',KAB_LAMPUNG_TENGAH:'Kab. Lampung Tengah',KAB_LAMPUNG_UTARA:'Kab. Lampung Utara',KAB_LAMPUNG_BARAT:'Kab. Lampung Barat',KAB_LAMPUNG_TIMUR:'Kab. Lampung Timur',KAB_TANGGAMUS:'Kab. Tanggamus',KAB_PESAWARAN:'Kab. Pesawaran',KAB_PRINGSEWU:'Kab. Pringsewu',KAB_WAY_KANAN:'Kab. Way Kanan',KAB_TULANG_BAWANG:'Kab. Tulang Bawang'}},
+  KEPULAUAN_BANGKA_BELITUNG:{n:'BANGKA BELITUNG',c:{KOTA_PANGKAL_PINANG:'Kota Pangkal Pinang',KAB_BANGKA:'Kab. Bangka',KAB_BANGKA_BARAT:'Kab. Bangka Barat',KAB_BANGKA_SELATAN:'Kab. Bangka Selatan',KAB_BANGKA_TENGAH:'Kab. Bangka Tengah',KAB_BELITUNG:'Kab. Belitung',KAB_BELITUNG_TIMUR:'Kab. Belitung Timur'}},
+  BANTEN:{n:'BANTEN',c:{KOTA_TANGERANG:'Kota Tangerang',KOTA_TANGERANG_SELATAN:'Kota Tangerang Selatan',KOTA_SERANG:'Kota Serang',KOTA_CILEGON:'Kota Cilegon',KAB_TANGERANG:'Kab. Tangerang',KAB_SERANG:'Kab. Serang',KAB_PANDEGLANG:'Kab. Pandeglang',KAB_LEBAK:'Kab. Lebak'}},
+  DKI_JAKARTA:{n:'DKI JAKARTA',c:{KOTA_JAKARTA:'Kota Jakarta',KAB_KEPULAUAN_SERIBU:'Kab. Kepulauan Seribu'}},
+  JAWA_BARAT:{n:'JAWA BARAT',c:{KOTA_BANDUNG:'Kota Bandung',KOTA_BEKASI:'Kota Bekasi',KOTA_BOGOR:'Kota Bogor',KOTA_DEPOK:'Kota Depok',KOTA_CIMAHI:'Kota Cimahi',KOTA_CIREBON:'Kota Cirebon',KOTA_SUKABUMI:'Kota Sukabumi',KOTA_TASIKMALAYA:'Kota Tasikmalaya',KOTA_BANJAR:'Kota Banjar',KAB_BANDUNG:'Kab. Bandung',KAB_BEKASI:'Kab. Bekasi',KAB_BOGOR:'Kab. Bogor',KAB_KARAWANG:'Kab. Karawang',KAB_GARUT:'Kab. Garut',KAB_CIAMIS:'Kab. Ciamis',KAB_CIANJUR:'Kab. Cianjur',KAB_CIREBON:'Kab. Cirebon',KAB_INDRAMAYU:'Kab. Indramayu',KAB_KUNINGAN:'Kab. Kuningan',KAB_MAJALENGKA:'Kab. Majalengka',KAB_PURWAKARTA:'Kab. Purwakarta',KAB_SUBANG:'Kab. Subang',KAB_SUKABUMI:'Kab. Sukabumi',KAB_SUMEDANG:'Kab. Sumedang',KAB_TASIKMALAYA:'Kab. Tasikmalaya',KAB_BANDUNG_BARAT:'Kab. Bandung Barat',KAB_PANGANDARAN:'Kab. Pangandaran'}},
+  JAWA_TENGAH:{n:'JAWA TENGAH',c:{KOTA_SEMARANG:'Kota Semarang',KOTA_SURAKARTA:'Kota Surakarta',KOTA_SALATIGA:'Kota Salatiga',KOTA_MAGELANG:'Kota Magelang',KOTA_PEKALONGAN:'Kota Pekalongan',KOTA_TEGAL:'Kota Tegal',KAB_BANYUMAS:'Kab. Banyumas',KAB_CILACAP:'Kab. Cilacap',KAB_SEMARANG:'Kab. Semarang',KAB_DEMAK:'Kab. Demak',KAB_KUDUS:'Kab. Kudus',KAB_JEPARA:'Kab. Jepara',KAB_PATI:'Kab. Pati',KAB_REMBANG:'Kab. Rembang',KAB_BLORA:'Kab. Blora',KAB_GROBOGAN:'Kab. Grobogan',KAB_KENDAL:'Kab. Kendal',KAB_BATANG:'Kab. Batang',KAB_PEKALONGAN:'Kab. Pekalongan',KAB_PEMALANG:'Kab. Pemalang',KAB_TEGAL:'Kab. Tegal',KAB_BREBES:'Kab. Brebes',KAB_MAGELANG:'Kab. Magelang',KAB_BOYOLALI:'Kab. Boyolali',KAB_KLATEN:'Kab. Klaten',KAB_SUKOHARJO:'Kab. Sukoharjo',KAB_SRAGEN:'Kab. Sragen',KAB_KARANGANYAR:'Kab. Karanganyar',KAB_WONOGIRI:'Kab. Wonogiri',KAB_TEMANGGUNG:'Kab. Temanggung',KAB_WONOSOBO:'Kab. Wonosobo',KAB_PURBALINGGA:'Kab. Purbalingga',KAB_BANJARNEGARA:'Kab. Banjarnegara',KAB_KEBUMEN:'Kab. Kebumen',KAB_PURWOREJO:'Kab. Purworejo'}},
+  DI_YOGYAKARTA:{n:'D.I. YOGYAKARTA',c:{KOTA_YOGYAKARTA:'Kota Yogyakarta',KAB_SLEMAN:'Kab. Sleman',KAB_BANTUL:'Kab. Bantul',KAB_GUNUNGKIDUL:'Kab. Gunungkidul',KAB_KULON_PROGO:'Kab. Kulon Progo'}},
+  JAWA_TIMUR:{n:'JAWA TIMUR',c:{KOTA_SURABAYA:'Kota Surabaya',KOTA_MALANG:'Kota Malang',KOTA_KEDIRI:'Kota Kediri',KOTA_BLITAR:'Kota Blitar',KOTA_MADIUN:'Kota Madiun',KOTA_MOJOKERTO:'Kota Mojokerto',KOTA_PASURUAN:'Kota Pasuruan',KOTA_PROBOLINGGO:'Kota Probolinggo',KOTA_BATU:'Kota Batu',KAB_MALANG:'Kab. Malang',KAB_SIDOARJO:'Kab. Sidoarjo',KAB_GRESIK:'Kab. Gresik',KAB_JEMBER:'Kab. Jember',KAB_BANYUWANGI:'Kab. Banyuwangi',KAB_BOJONEGORO:'Kab. Bojonegoro',KAB_LAMONGAN:'Kab. Lamongan',KAB_MOJOKERTO:'Kab. Mojokerto',KAB_PASURUAN:'Kab. Pasuruan',KAB_PROBOLINGGO:'Kab. Probolinggo',KAB_LUMAJANG:'Kab. Lumajang',KAB_JOMBANG:'Kab. Jombang',KAB_KEDIRI:'Kab. Kediri',KAB_NGANJUK:'Kab. Nganjuk',KAB_MADIUN:'Kab. Madiun',KAB_MAGETAN:'Kab. Magetan',KAB_NGAWI:'Kab. Ngawi',KAB_PONOROGO:'Kab. Ponorogo',KAB_TRENGGALEK:'Kab. Trenggalek',KAB_TULUNGAGUNG:'Kab. Tulungagung',KAB_BLITAR:'Kab. Blitar',KAB_PACITAN:'Kab. Pacitan',KAB_BONDOWOSO:'Kab. Bondowoso',KAB_SITUBONDO:'Kab. Situbondo',KAB_TUBAN:'Kab. Tuban',KAB_SAMPANG:'Kab. Sampang',KAB_PAMEKASAN:'Kab. Pamekasan',KAB_SUMENEP:'Kab. Sumenep',KAB_BANGKALAN:'Kab. Bangkalan'}},
+  BALI:{n:'BALI',c:{KOTA_DENPASAR:'Kota Denpasar',KAB_BADUNG:'Kab. Badung',KAB_GIANYAR:'Kab. Gianyar',KAB_TABANAN:'Kab. Tabanan',KAB_BULELENG:'Kab. Buleleng',KAB_KARANGASEM:'Kab. Karangasem',KAB_KLUNGKUNG:'Kab. Klungkung',KAB_BANGLI:'Kab. Bangli',KAB_JEMBRANA:'Kab. Jembrana'}},
+  NUSA_TENGGARA_BARAT:{n:'NUSA TENGGARA BARAT',c:{KOTA_MATARAM:'Kota Mataram',KOTA_BIMA:'Kota Bima',KAB_LOMBOK_BARAT:'Kab. Lombok Barat',KAB_LOMBOK_TENGAH:'Kab. Lombok Tengah',KAB_LOMBOK_TIMUR:'Kab. Lombok Timur',KAB_LOMBOK_UTARA:'Kab. Lombok Utara',KAB_SUMBAWA:'Kab. Sumbawa',KAB_SUMBAWA_BARAT:'Kab. Sumbawa Barat',KAB_DOMPU:'Kab. Dompu',KAB_BIMA:'Kab. Bima'}},
+  NUSA_TENGGARA_TIMUR:{n:'NUSA TENGGARA TIMUR',c:{KOTA_KUPANG:'Kota Kupang',KAB_KUPANG:'Kab. Kupang',KAB_TIMOR_TENGAH_SELATAN:'Kab. Timor Tengah Selatan',KAB_TIMOR_TENGAH_UTARA:'Kab. Timor Tengah Utara',KAB_BELU:'Kab. Belu',KAB_ALOR:'Kab. Alor',KAB_FLORES_TIMUR:'Kab. Flores Timur',KAB_SIKKA:'Kab. Sikka',KAB_ENDE:'Kab. Ende',KAB_NGADA:'Kab. Ngada',KAB_MANGGARAI:'Kab. Manggarai',KAB_MANGGARAI_BARAT:'Kab. Manggarai Barat',KAB_MANGGARAI_TIMUR:'Kab. Manggarai Timur',KAB_SUMBA_TIMUR:'Kab. Sumba Timur',KAB_SUMBA_BARAT:'Kab. Sumba Barat',KAB_SUMBA_TENGAH:'Kab. Sumba Tengah',KAB_SUMBA_BARAT_DAYA:'Kab. Sumba Barat Daya',KAB_LEMBATA:'Kab. Lembata',KAB_ROTE_NDAO:'Kab. Rote Ndao',KAB_SABU_RAIJUA:'Kab. Sabu Raijua',KAB_MALAKA:'Kab. Malaka',KAB_NAGEKEO:'Kab. Nagekeo'}},
+  KALIMANTAN_BARAT:{n:'KALIMANTAN BARAT',c:{KOTA_PONTIANAK:'Kota Pontianak',KOTA_SINGKAWANG:'Kota Singkawang',KAB_SAMBAS:'Kab. Sambas',KAB_BENGKAYANG:'Kab. Bengkayang',KAB_LANDAK:'Kab. Landak',KAB_MEMPAWAH:'Kab. Mempawah',KAB_SANGGAU:'Kab. Sanggau',KAB_SINTANG:'Kab. Sintang',KAB_KAPUAS_HULU:'Kab. Kapuas Hulu',KAB_KETAPANG:'Kab. Ketapang',KAB_KUBU_RAYA:'Kab. Kubu Raya',KAB_MELAWI:'Kab. Melawi',KAB_SEKADAU:'Kab. Sekadau',KAB_KAYONG_UTARA:'Kab. Kayong Utara'}},
+  KALIMANTAN_TENGAH:{n:'KALIMANTAN TENGAH',c:{KOTA_PALANGKARAYA:'Kota Palangkaraya',KAB_KAPUAS:'Kab. Kapuas',KAB_KOTAWARINGIN_TIMUR:'Kab. Kotawaringin Timur',KAB_KOTAWARINGIN_BARAT:'Kab. Kotawaringin Barat',KAB_KATINGAN:'Kab. Katingan',KAB_BARITO_SELATAN:'Kab. Barito Selatan',KAB_BARITO_UTARA:'Kab. Barito Utara',KAB_BARITO_TIMUR:'Kab. Barito Timur',KAB_MURUNG_RAYA:'Kab. Murung Raya',KAB_PULANG_PISAU:'Kab. Pulang Pisau',KAB_GUNUNG_MAS:'Kab. Gunung Mas',KAB_LAMANDAU:'Kab. Lamandau',KAB_SUKAMARA:'Kab. Sukamara',KAB_SERUYAN:'Kab. Seruyan'}},
+  KALIMANTAN_SELATAN:{n:'KALIMANTAN SELATAN',c:{KOTA_BANJARMASIN:'Kota Banjarmasin',KOTA_BANJARBARU:'Kota Banjarbaru',KAB_BANJAR:'Kab. Banjar',KAB_BARITO_KUALA:'Kab. Barito Kuala',KAB_TAPIN:'Kab. Tapin',KAB_HULU_SUNGAI_SELATAN:'Kab. Hulu Sungai Selatan',KAB_HULU_SUNGAI_TENGAH:'Kab. Hulu Sungai Tengah',KAB_HULU_SUNGAI_UTARA:'Kab. Hulu Sungai Utara',KAB_TABALONG:'Kab. Tabalong',KAB_TANAH_LAUT:'Kab. Tanah Laut',KAB_TANAH_BUMBU:'Kab. Tanah Bumbu',KAB_KOTABARU:'Kab. Kotabaru',KAB_BALANGAN:'Kab. Balangan'}},
+  KALIMANTAN_TIMUR:{n:'KALIMANTAN TIMUR',c:{KOTA_SAMARINDA:'Kota Samarinda',KOTA_BALIKPAPAN:'Kota Balikpapan',KOTA_BONTANG:'Kota Bontang',KAB_KUTAI_KARTANEGARA:'Kab. Kutai Kartanegara',KAB_KUTAI_TIMUR:'Kab. Kutai Timur',KAB_KUTAI_BARAT:'Kab. Kutai Barat',KAB_BERAU:'Kab. Berau',KAB_PASER:'Kab. Paser',KAB_PENAJAM_PASER_UTARA:'Kab. Penajam Paser Utara',KAB_MAHAKAM_ULU:'Kab. Mahakam Ulu'}},
+  KALIMANTAN_UTARA:{n:'KALIMANTAN UTARA',c:{KOTA_TARAKAN:'Kota Tarakan',KAB_BULUNGAN:'Kab. Bulungan',KAB_MALINAU:'Kab. Malinau',KAB_NUNUKAN:'Kab. Nunukan',KAB_TANA_TIDUNG:'Kab. Tana Tidung'}},
+  SULAWESI_UTARA:{n:'SULAWESI UTARA',c:{KOTA_MANADO:'Kota Manado',KOTA_BITUNG:'Kota Bitung',KOTA_TOMOHON:'Kota Tomohon',KOTA_KOTAMOBAGU:'Kota Kotamobagu',KAB_MINAHASA:'Kab. Minahasa',KAB_MINAHASA_SELATAN:'Kab. Minahasa Selatan',KAB_MINAHASA_UTARA:'Kab. Minahasa Utara',KAB_MINAHASA_TENGGARA:'Kab. Minahasa Tenggara',KAB_KEPULAUAN_SANGIHE:'Kab. Kepulauan Sangihe',KAB_KEPULAUAN_TALAUD:'Kab. Kepulauan Talaud',KAB_BOLAANG_MONGONDOW:'Kab. Bolaang Mongondow',KAB_BOLAANG_MONGONDOW_UTARA:'Kab. Bolaang Mongondow Utara',KAB_BOLAANG_MONGONDOW_SELATAN:'Kab. Bolaang Mongondow Selatan',KAB_BOLAANG_MONGONDOW_TIMUR:'Kab. Bolaang Mongondow Timur'}},
+  SULAWESI_TENGAH:{n:'SULAWESI TENGAH',c:{KOTA_PALU:'Kota Palu',KAB_DONGGALA:'Kab. Donggala',KAB_POSO:'Kab. Poso',KAB_MOROWALI:'Kab. Morowali',KAB_BANGGAI:'Kab. Banggai',KAB_TOLI_TOLI:'Kab. Toli-Toli',KAB_BUOL:'Kab. Buol',KAB_PARIGI_MOUTONG:'Kab. Parigi Moutong',KAB_TOJO_UNA_UNA:'Kab. Tojo Una-Una',KAB_SIGI:'Kab. Sigi',KAB_BANGGAI_KEPULAUAN:'Kab. Banggai Kepulauan',KAB_MOROWALI_UTARA:'Kab. Morowali Utara',KAB_BANGGAI_LAUT:'Kab. Banggai Laut'}},
+  SULAWESI_SELATAN:{n:'SULAWESI SELATAN',c:{KOTA_MAKASSAR:'Kota Makassar',KOTA_PAREPARE:'Kota Parepare',KOTA_PALOPO:'Kota Palopo',KAB_GOWA:'Kab. Gowa',KAB_MAROS:'Kab. Maros',KAB_BONE:'Kab. Bone',KAB_WAJO:'Kab. Wajo',KAB_BULUKUMBA:'Kab. Bulukumba',KAB_SINJAI:'Kab. Sinjai',KAB_BANTAENG:'Kab. Bantaeng',KAB_JENEPONTO:'Kab. Jeneponto',KAB_TAKALAR:'Kab. Takalar',KAB_BARRU:'Kab. Barru',KAB_PINRANG:'Kab. Pinrang',KAB_SIDENRENG_RAPPANG:'Kab. Sidenreng Rappang',KAB_LUWU:'Kab. Luwu',KAB_LUWU_TIMUR:'Kab. Luwu Timur',KAB_LUWU_UTARA:'Kab. Luwu Utara',KAB_TANA_TORAJA:'Kab. Tana Toraja',KAB_TORAJA_UTARA:'Kab. Toraja Utara',KAB_SOPPENG:'Kab. Soppeng',KAB_ENREKANG:'Kab. Enrekang',KAB_PANGKAJENE_DAN_KEPULAUAN:'Kab. Pangkep',KAB_KEPULAUAN_SELAYAR:'Kab. Kepulauan Selayar'}},
+  SULAWESI_TENGGARA:{n:'SULAWESI TENGGARA',c:{KOTA_KENDARI:'Kota Kendari',KOTA_BAU_BAU:'Kota Bau-Bau',KAB_KONAWE:'Kab. Konawe',KAB_KOLAKA:'Kab. Kolaka',KAB_MUNA:'Kab. Muna',KAB_BUTON:'Kab. Buton',KAB_WAKATOBI:'Kab. Wakatobi',KAB_BOMBANA:'Kab. Bombana',KAB_KOLAKA_UTARA:'Kab. Kolaka Utara',KAB_KONAWE_SELATAN:'Kab. Konawe Selatan',KAB_KONAWE_UTARA:'Kab. Konawe Utara',KAB_BUTON_UTARA:'Kab. Buton Utara',KAB_KOLAKA_TIMUR:'Kab. Kolaka Timur',KAB_KONAWE_KEPULAUAN:'Kab. Konawe Kepulauan',KAB_MUNA_BARAT:'Kab. Muna Barat',KAB_BUTON_TENGAH:'Kab. Buton Tengah',KAB_BUTON_SELATAN:'Kab. Buton Selatan'}},
+  GORONTALO:{n:'GORONTALO',c:{KOTA_GORONTALO:'Kota Gorontalo',KAB_GORONTALO:'Kab. Gorontalo',KAB_BOALEMO:'Kab. Boalemo',KAB_BONE_BOLANGO:'Kab. Bone Bolango',KAB_PAHUWATO:'Kab. Pahuwato',KAB_GORONTALO_UTARA:'Kab. Gorontalo Utara'}},
+  SULAWESI_BARAT:{n:'SULAWESI BARAT',c:{KAB_MAMUJU:'Kab. Mamuju',KAB_MAJENE:'Kab. Majene',KAB_POLEWALI_MANDAR:'Kab. Polewali Mandar',KAB_MAMASA:'Kab. Mamasa',KAB_MAMUJU_UTARA:'Kab. Mamuju Utara',KAB_MAMUJU_TENGAH:'Kab. Mamuju Tengah'}},
+  MALUKU:{n:'MALUKU',c:{KOTA_AMBON:'Kota Ambon',KOTA_TUAL:'Kota Tual',KAB_MALUKU_TENGAH:'Kab. Maluku Tengah',KAB_MALUKU_TENGGARA:'Kab. Maluku Tenggara',KAB_MALUKU_TENGGARA_BARAT:'Kab. Maluku Tenggara Barat',KAB_KEPULAUAN_ARU:'Kab. Kepulauan Aru',KAB_SERAM_BAGIAN_BARAT:'Kab. Seram Bagian Barat',KAB_SERAM_BAGIAN_TIMUR:'Kab. Seram Bagian Timur',KAB_BURU:'Kab. Buru',KAB_BURU_SELATAN:'Kab. Buru Selatan',KAB_MALUKU_BARAT_DAYA:'Kab. Maluku Barat Daya'}},
+  MALUKU_UTARA:{n:'MALUKU UTARA',c:{KOTA_TERNATE:'Kota Ternate',KOTA_TIDORE_KEPULAUAN:'Kota Tidore Kepulauan',KOTA_SOFIFI:'Kota Sofifi',KAB_HALMAHERA_BARAT:'Kab. Halmahera Barat',KAB_HALMAHERA_TENGAH:'Kab. Halmahera Tengah',KAB_HALMAHERA_UTARA:'Kab. Halmahera Utara',KAB_HALMAHERA_SELATAN:'Kab. Halmahera Selatan',KAB_HALMAHERA_TIMUR:'Kab. Halmahera Timur',KAB_KEPULAUAN_SULA:'Kab. Kepulauan Sula',KAB_PULAU_MOROTAI:'Kab. Pulau Morotai',KAB_PULAU_TALIABU:'Kab. Pulau Taliabu'}},
+  PAPUA_BARAT:{n:'PAPUA BARAT',c:{KOTA_SORONG:'Kota Sorong',KAB_MANOKWARI:'Kab. Manokwari',KAB_SORONG:'Kab. Sorong',KAB_RAJA_AMPAT:'Kab. Raja Ampat',KAB_FAKFAK:'Kab. Fakfak',KAB_KAIMANA:'Kab. Kaimana',KAB_TELUK_BINTUNI:'Kab. Teluk Bintuni',KAB_TELUK_WONDAMA:'Kab. Teluk Wondama',KAB_SORONG_SELATAN:'Kab. Sorong Selatan',KAB_MAYBRAT:'Kab. Maybrat',KAB_MANOKWARI_SELATAN:'Kab. Manokwari Selatan',KAB_PEGUNUNGAN_ARFAK:'Kab. Pegunungan Arfak',KAB_TAMBRAUW:'Kab. Tambrauw'}},
+  PAPUA:{n:'PAPUA',c:{KOTA_JAYAPURA:'Kota Jayapura',KAB_JAYAPURA:'Kab. Jayapura',KAB_BIAK_NUMFOR:'Kab. Biak Numfor',KAB_MERAUKE:'Kab. Merauke',KAB_MIMIKA:'Kab. Mimika',KAB_NABIRE:'Kab. Nabire',KAB_JAYAWIJAYA:'Kab. Jayawijaya',KAB_KEPULAUAN_YAPEN:'Kab. Kepulauan Yapen',KAB_SARMI:'Kab. Sarmi',KAB_KEEROM:'Kab. Keerom',KAB_WAROPEN:'Kab. Waropen',KAB_ASMAT:'Kab. Asmat',KAB_MAPPI:'Kab. Mappi',KAB_BOVEN_DIGOEL:'Kab. Boven Digoel'}}
 };
 
-// ── DATA ──
-// ── LOCATION DATA ──
-const LOCATIONS={ACEH:{name:'ACEH',cities:{KAB_ACEH_BARAT:'KAB. ACEH BARAT',KAB_ACEH_BARAT_DAYA:'KAB. ACEH BARAT DAYA',KAB_ACEH_BESAR:'KAB. ACEH BESAR',KAB_ACEH_JAYA:'KAB. ACEH JAYA',KAB_ACEH_SELATAN:'KAB. ACEH SELATAN',KAB_ACEH_SINGKIL:'KAB. ACEH SINGKIL',KAB_ACEH_TAMIANG:'KAB. ACEH TAMIANG',KAB_ACEH_TENGAH:'KAB. ACEH TENGAH',KAB_ACEH_TENGGARA:'KAB. ACEH TENGGARA',KAB_ACEH_TIMUR:'KAB. ACEH TIMUR',KAB_ACEH_UTARA:'KAB. ACEH UTARA',KAB_BENER_MERIAH:'KAB. BENER MERIAH',KAB_BIREUEN:'KAB. BIREUEN',KAB_GAYO_LUES:'KAB. GAYO LUES',KAB_NAGAN_RAYA:'KAB. NAGAN RAYA',KAB_PIDIE:'KAB. PIDIE',KAB_PIDIE_JAYA:'KAB. PIDIE JAYA',KAB_SIMEULUE:'KAB. SIMEULUE',KOTA_BANDA_ACEH:'KOTA BANDA ACEH',KOTA_LANGSA:'KOTA LANGSA',KOTA_LHOKSEUMAWE:'KOTA LHOKSEUMAWE',KOTA_SABANG:'KOTA SABANG',KOTA_SUBULUSSALAM:'KOTA SUBULUSSALAM'}},SUMATERA_UTARA:{name:'SUMATERA UTARA',cities:{KAB_ASAHAN:'KAB. ASAHAN',KAB_BATU_BARA:'KAB. BATU BARA',KAB_DAIRI:'KAB. DAIRI',KAB_DELI_SERDANG:'KAB. DELI SERDANG',KAB_HUMBANG_HASUNDUTAN:'KAB. HUMBANG HASUNDUTAN',KAB_KARO:'KAB. KARO',KAB_LABUHANBATU:'KAB. LABUHANBATU',KAB_LABUHANBATU_SELATAN:'KAB. LABUHANBATU SELATAN',KAB_LABUHANBATU_UTARA:'KAB. LABUHANBATU UTARA',KAB_LANGKAT:'KAB. LANGKAT',KAB_MANDAILING_NATAL:'KAB. MANDAILING NATAL',KAB_NIAS:'KAB. NIAS',KAB_NIAS_BARAT:'KAB. NIAS BARAT',KAB_NIAS_SELATAN:'KAB. NIAS SELATAN',KAB_NIAS_UTARA:'KAB. NIAS UTARA',KAB_PADANG_LAWAS:'KAB. PADANG LAWAS',KAB_PADANG_LAWAS_UTARA:'KAB. PADANG LAWAS UTARA',KAB_PAKPAK_BHARAT:'KAB. PAKPAK BHARAT',KAB_SAMOSIR:'KAB. SAMOSIR',KAB_SERDANG_BEDAGAI:'KAB. SERDANG BEDAGAI',KAB_SIMALUNGUN:'KAB. SIMALUNGUN',KAB_TAPANULI_SELATAN:'KAB. TAPANULI SELATAN',KAB_TAPANULI_TENGAH:'KAB. TAPANULI TENGAH',KAB_TAPANULI_UTARA:'KAB. TAPANULI UTARA',KAB_TOBA_SAMOSIR:'KAB. TOBA SAMOSIR',KOTA_BINJAI:'KOTA BINJAI',KOTA_GUNUNGSITOLI:'KOTA GUNUNGSITOLI',KOTA_MEDAN:'KOTA MEDAN',KOTA_PADANGSIDEMPUAN:'KOTA PADANGSIDEMPUAN',KOTA_PEMATANGSIANTAR:'KOTA PEMATANGSIANTAR',KOTA_SIBOLGA:'KOTA SIBOLGA',KOTA_TANJUNGBALAI:'KOTA TANJUNGBALAI',KOTA_TEBING_TINGGI:'KOTA TEBING TINGGI'}},SUMATERA_BARAT:{name:'SUMATERA BARAT',cities:{KAB_AGAM:'KAB. AGAM',KAB_DHARMASRAYA:'KAB. DHARMASRAYA',KAB_KEPULAUAN_MENTAWAI:'KAB. KEPULAUAN MENTAWAI',KAB_LIMA_PULUH_KOTA:'KAB. LIMA PULUH KOTA',KAB_PADANG_PARIAMAN:'KAB. PADANG PARIAMAN',KAB_PASAMAN:'KAB. PASAMAN',KAB_PASAMAN_BARAT:'KAB. PASAMAN BARAT',KAB_PESISIR_SELATAN:'KAB. PESISIR SELATAN',KAB_SIJUNJUNG:'KAB. SIJUNJUNG',KAB_SOLOK:'KAB. SOLOK',KAB_SOLOK_SELATAN:'KAB. SOLOK SELATAN',KAB_TANAH_DATAR:'KAB. TANAH DATAR',KOTA_BUKITTINGGI:'KOTA BUKITTINGGI',KOTA_PADANG:'KOTA PADANG',KOTA_PADANGPANJANG:'KOTA PADANGPANJANG',KOTA_PARIAMAN:'KOTA PARIAMAN',KOTA_PAYAKUMBUH:'KOTA PAYAKUMBUH',KOTA_SAWAHLUNTO:'KOTA SAWAHLUNTO',KOTA_SOLOK:'KOTA SOLOK'}},RIAU:{name:'RIAU',cities:{KAB_BENGKALIS:'KAB. BENGKALIS',KAB_INDRAGIRI_HILIR:'KAB. INDRAGIRI HILIR',KAB_INDRAGIRI_HULU:'KAB. INDRAGIRI HULU',KAB_KAMPAR:'KAB. KAMPAR',KAB_KEPULAUAN_MERANTI:'KAB. KEPULAUAN MERANTI',KAB_KUANTAN_SINGINGI:'KAB. KUANTAN SINGINGI',KAB_PELALAWAN:'KAB. PELALAWAN',KAB_ROKAN_HILIR:'KAB. ROKAN HILIR',KAB_ROKAN_HULU:'KAB. ROKAN HULU',KAB_SIAK:'KAB. SIAK',KOTA_DUMAI:'KOTA DUMAI',KOTA_PEKANBARU:'KOTA PEKANBARU'}},KEPULAUAN_RIAU:{name:'KEPULAUAN RIAU',cities:{KAB_BINTAN:'KAB. BINTAN',KAB_KARIMUN:'KAB. KARIMUN',KAB_KEPULAUAN_ANAMBAS:'KAB. KEPULAUAN ANAMBAS',KAB_LINGGA:'KAB. LINGGA',KAB_NATUNA:'KAB. NATUNA',KOTA_BATAM:'KOTA BATAM',KOTA_TANJUNG_PINANG:'KOTA TANJUNG PINANG',PULAU_TAMBELAN_KAB_BINTAN:'PULAU TAMBELAN KAB. BINTAN',PEKAJANG_KAB_LINGGA:'PEKAJANG KAB. LINGGA',PULAU_SERASAN_KAB_NATUNA:'PULAU SERASAN KAB. NATUNA',PULAU_MIDAI_KAB_NATUNA:'PULAU MIDAI KAB. NATUNA',PULAU_LAUT_KAB_NATUNA:'PULAU LAUT KAB. NATUNA'}},JAMBI:{name:'JAMBI',cities:{KAB_BATANGHARI:'KAB. BATANGHARI',KAB_BUNGO:'KAB. BUNGO',KAB_KERINCI:'KAB. KERINCI',KAB_MERANGIN:'KAB. MERANGIN',KAB_MUARO_JAMBI:'KAB. MUARO JAMBI',KAB_SAROLANGUN:'KAB. SAROLANGUN',KAB_TANJUNG_JABUNG_BARAT:'KAB. TANJUNG JABUNG BARAT',KAB_TANJUNG_JABUNG_TIMUR:'KAB. TANJUNG JABUNG TIMUR',KAB_TEBO:'KAB. TEBO',KOTA_JAMBI:'KOTA JAMBI',KOTA_SUNGAI_PENUH:'KOTA SUNGAI PENUH'}},BENGKULU:{name:'BENGKULU',cities:{KAB_BENGKULU_SELATAN:'KAB. BENGKULU SELATAN',KAB_BENGKULU_TENGAH:'KAB. BENGKULU TENGAH',KAB_BENGKULU_UTARA:'KAB. BENGKULU UTARA',KAB_KAUR:'KAB. KAUR',KAB_KEPAHIANG:'KAB. KEPAHIANG',KAB_LEBONG:'KAB. LEBONG',KAB_MUKOMUKO:'KAB. MUKOMUKO',KAB_REJANG_LEBONG:'KAB. REJANG LEBONG',KAB_SELUMA:'KAB. SELUMA',KOTA_BENGKULU:'KOTA BENGKULU'}},SUMATERA_SELATAN:{name:'SUMATERA SELATAN',cities:{KAB_BANYUASIN:'KAB. BANYUASIN',KAB_EMPAT_LAWANG:'KAB. EMPAT LAWANG',KAB_LAHAT:'KAB. LAHAT',KAB_MUARA_ENIM:'KAB. MUARA ENIM',KAB_MUSI_BANYUASIN:'KAB. MUSI BANYUASIN',KAB_MUSI_RAWAS:'KAB. MUSI RAWAS',KAB_MUSI_RAWAS_UTARA:'KAB. MUSI RAWAS UTARA',KAB_OGAN_ILIR:'KAB. OGAN ILIR',KAB_OGAN_KOMERING_ILIR:'KAB. OGAN KOMERING ILIR',KAB_OGAN_KOMERING_ULU:'KAB. OGAN KOMERING ULU',KAB_OGAN_KOMERING_ULU_SELATAN:'KAB. OGAN KOMERING ULU SELATAN',KAB_OGAN_KOMERING_ULU_TIMUR:'KAB. OGAN KOMERING ULU TIMUR',KAB_PENUKAL_ABAB_LEMATANG_ILIR:'KAB. PENUKAL ABAB LEMATANG ILIR',KOTA_LUBUKLINGGAU:'KOTA LUBUKLINGGAU',KOTA_PAGAR_ALAM:'KOTA PAGAR ALAM',KOTA_PALEMBANG:'KOTA PALEMBANG',KOTA_PRABUMULIH:'KOTA PRABUMULIH'}},KEPULAUAN_BANGKA_BELITUNG:{name:'KEPULAUAN BANGKA BELITUNG',cities:{KAB_BANGKA:'KAB. BANGKA',KAB_BANGKA_BARAT:'KAB. BANGKA BARAT',KAB_BANGKA_SELATAN:'KAB. BANGKA SELATAN',KAB_BANGKA_TENGAH:'KAB. BANGKA TENGAH',KAB_BELITUNG:'KAB. BELITUNG',KAB_BELITUNG_TIMUR:'KAB. BELITUNG TIMUR',KOTA_PANGKAL_PINANG:'KOTA PANGKAL PINANG'}},LAMPUNG:{name:'LAMPUNG',cities:{KAB_LAMPUNG_TENGAH:'KAB. LAMPUNG TENGAH',KAB_LAMPUNG_UTARA:'KAB. LAMPUNG UTARA',KAB_LAMPUNG_SELATAN:'KAB. LAMPUNG SELATAN',KAB_LAMPUNG_BARAT:'KAB. LAMPUNG BARAT',KAB_LAMPUNG_TIMUR:'KAB. LAMPUNG TIMUR',KAB_MESUJI:'KAB. MESUJI',KAB_PESAWARAN:'KAB. PESAWARAN',KAB_PESISIR_BARAT:'KAB. PESISIR BARAT',KAB_PRINGSEWU:'KAB. PRINGSEWU',KAB_TULANG_BAWANG:'KAB. TULANG BAWANG',KAB_TULANG_BAWANG_BARAT:'KAB. TULANG BAWANG BARAT',KAB_TANGGAMUS:'KAB. TANGGAMUS',KAB_WAY_KANAN:'KAB. WAY KANAN',KOTA_BANDAR_LAMPUNG:'KOTA BANDAR LAMPUNG',KOTA_METRO:'KOTA METRO'}},BANTEN:{name:'BANTEN',cities:{KAB_LEBAK:'KAB. LEBAK',KAB_PANDEGLANG:'KAB. PANDEGLANG',KAB_SERANG:'KAB. SERANG',KAB_TANGERANG:'KAB. TANGERANG',KOTA_CILEGON:'KOTA CILEGON',KOTA_SERANG:'KOTA SERANG',KOTA_TANGERANG:'KOTA TANGERANG',KOTA_TANGERANG_SELATAN:'KOTA TANGERANG SELATAN'}},JAWA_BARAT:{name:'JAWA BARAT',cities:{KAB_BANDUNG:'KAB. BANDUNG',KAB_BANDUNG_BARAT:'KAB. BANDUNG BARAT',KAB_BEKASI:'KAB. BEKASI',KAB_BOGOR:'KAB. BOGOR',KAB_CIAMIS:'KAB. CIAMIS',KAB_CIANJUR:'KAB. CIANJUR',KAB_CIREBON:'KAB. CIREBON',KAB_GARUT:'KAB. GARUT',KAB_INDRAMAYU:'KAB. INDRAMAYU',KAB_KARAWANG:'KAB. KARAWANG',KAB_KUNINGAN:'KAB. KUNINGAN',KAB_MAJALENGKA:'KAB. MAJALENGKA',KAB_PANGANDARAN:'KAB. PANGANDARAN',KAB_PURWAKARTA:'KAB. PURWAKARTA',KAB_SUBANG:'KAB. SUBANG',KAB_SUKABUMI:'KAB. SUKABUMI',KAB_SUMEDANG:'KAB. SUMEDANG',KAB_TASIKMALAYA:'KAB. TASIKMALAYA',KOTA_BANDUNG:'KOTA BANDUNG',KOTA_BANJAR:'KOTA BANJAR',KOTA_BEKASI:'KOTA BEKASI',KOTA_BOGOR:'KOTA BOGOR',KOTA_CIMAHI:'KOTA CIMAHI',KOTA_CIREBON:'KOTA CIREBON',KOTA_DEPOK:'KOTA DEPOK',KOTA_SUKABUMI:'KOTA SUKABUMI',KOTA_TASIKMALAYA:'KOTA TASIKMALAYA'}},DKI_JAKARTA:{name:'DKI JAKARTA',cities:{KOTA_JAKARTA:'KOTA JAKARTA',KAB_KEPULAUAN_SERIBU:'KAB. KEPULAUAN SERIBU'}},JAWA_TENGAH:{name:'JAWA TENGAH',cities:{KAB_BANJARNEGARA:'KAB. BANJARNEGARA',KAB_BANYUMAS:'KAB. BANYUMAS',KAB_BATANG:'KAB. BATANG',KAB_BLORA:'KAB. BLORA',KAB_BOYOLALI:'KAB. BOYOLALI',KAB_BREBES:'KAB. BREBES',KAB_CILACAP:'KAB. CILACAP',KAB_DEMAK:'KAB. DEMAK',KAB_GROBOGAN:'KAB. GROBOGAN',KAB_JEPARA:'KAB. JEPARA',KAB_KARANGANYAR:'KAB. KARANGANYAR',KAB_KEBUMEN:'KAB. KEBUMEN',KAB_KENDAL:'KAB. KENDAL',KAB_KLATEN:'KAB. KLATEN',KAB_KUDUS:'KAB. KUDUS',KAB_MAGELANG:'KAB. MAGELANG',KAB_PATI:'KAB. PATI',KAB_PEKALONGAN:'KAB. PEKALONGAN',KAB_PEMALANG:'KAB. PEMALANG',KAB_PURBALINGGA:'KAB. PURBALINGGA',KAB_PURWOREJO:'KAB. PURWOREJO',KAB_REMBANG:'KAB. REMBANG',KAB_SEMARANG:'KAB. SEMARANG',KAB_SRAGEN:'KAB. SRAGEN',KAB_SUKOHARJO:'KAB. SUKOHARJO',KAB_TEGAL:'KAB. TEGAL',KAB_TEMANGGUNG:'KAB. TEMANGGUNG',KAB_WONOGIRI:'KAB. WONOGIRI',KAB_WONOSOBO:'KAB. WONOSOBO',KOTA_MAGELANG:'KOTA MAGELANG',KOTA_PEKALONGAN:'KOTA PEKALONGAN',KOTA_SALATIGA:'KOTA SALATIGA',KOTA_SEMARANG:'KOTA SEMARANG',KOTA_SURAKARTA:'KOTA SURAKARTA',KOTA_TEGAL:'KOTA TEGAL'}},DI_YOGYAKARTA:{name:'D.I. YOGYAKARTA',cities:{KAB_BANTUL:'KAB. BANTUL',KAB_GUNUNGKIDUL:'KAB. GUNUNGKIDUL',KAB_KULON_PROGO:'KAB. KULON PROGO',KAB_SLEMAN:'KAB. SLEMAN',KOTA_YOGYAKARTA:'KOTA YOGYAKARTA'}},JAWA_TIMUR:{name:'JAWA TIMUR',cities:{KAB_BANGKALAN:'KAB. BANGKALAN',KAB_BANYUWANGI:'KAB. BANYUWANGI',KAB_BLITAR:'KAB. BLITAR',KAB_BOJONEGORO:'KAB. BOJONEGORO',KAB_BONDOWOSO:'KAB. BONDOWOSO',KAB_GRESIK:'KAB. GRESIK',KAB_JEMBER:'KAB. JEMBER',KAB_JOMBANG:'KAB. JOMBANG',KAB_KEDIRI:'KAB. KEDIRI',KAB_LAMONGAN:'KAB. LAMONGAN',KAB_LUMAJANG:'KAB. LUMAJANG',KAB_MADIUN:'KAB. MADIUN',KAB_MAGETAN:'KAB. MAGETAN',KAB_MALANG:'KAB. MALANG',KAB_MOJOKERTO:'KAB. MOJOKERTO',KAB_NGANJUK:'KAB. NGANJUK',KAB_NGAWI:'KAB. NGAWI',KAB_PACITAN:'KAB. PACITAN',KAB_PAMEKASAN:'KAB. PAMEKASAN',KAB_PASURUAN:'KAB. PASURUAN',KAB_PONOROGO:'KAB. PONOROGO',KAB_PROBOLINGGO:'KAB. PROBOLINGGO',KAB_SAMPANG:'KAB. SAMPANG',KAB_SIDOARJO:'KAB. SIDOARJO',KAB_SITUBONDO:'KAB. SITUBONDO',KAB_SUMENEP:'KAB. SUMENEP',KAB_TRENGGALEK:'KAB. TRENGGALEK',KAB_TUBAN:'KAB. TUBAN',KAB_TULUNGAGUNG:'KAB. TULUNGAGUNG',KOTA_BATU:'KOTA BATU',KOTA_BLITAR:'KOTA BLITAR',KOTA_KEDIRI:'KOTA KEDIRI',KOTA_MADIUN:'KOTA MADIUN',KOTA_MALANG:'KOTA MALANG',KOTA_MOJOKERTO:'KOTA MOJOKERTO',KOTA_PASURUAN:'KOTA PASURUAN',KOTA_PROBOLINGGO:'KOTA PROBOLINGGO',KOTA_SURABAYA:'KOTA SURABAYA'}},BALI:{name:'BALI',cities:{KAB_BADUNG:'KAB. BADUNG',KAB_BANGLI:'KAB. BANGLI',KAB_BULELENG:'KAB. BULELENG',KAB_GIANYAR:'KAB. GIANYAR',KAB_JEMBRANA:'KAB. JEMBRANA',KAB_KARANGASEM:'KAB. KARANGASEM',KAB_KLUNGKUNG:'KAB. KLUNGKUNG',KAB_TABANAN:'KAB. TABANAN',KOTA_DENPASAR:'KOTA DENPASAR'}},NUSA_TENGGARA_BARAT:{name:'NUSA TENGGARA BARAT',cities:{KAB_BIMA:'KAB. BIMA',KAB_DOMPU:'KAB. DOMPU',KAB_LOMBOK_BARAT:'KAB. LOMBOK BARAT',KAB_LOMBOK_TENGAH:'KAB. LOMBOK TENGAH',KAB_LOMBOK_TIMUR:'KAB. LOMBOK TIMUR',KAB_LOMBOK_UTARA:'KAB. LOMBOK UTARA',KAB_SUMBAWA:'KAB. SUMBAWA',KAB_SUMBAWA_BARAT:'KAB. SUMBAWA BARAT',KOTA_BIMA:'KOTA BIMA',KOTA_MATARAM:'KOTA MATARAM'}},NUSA_TENGGARA_TIMUR:{name:'NUSA TENGGARA TIMUR',cities:{KAB_ALOR:'KAB. ALOR',KAB_BELU:'KAB. BELU',KAB_ENDE:'KAB. ENDE',KAB_FLORES_TIMUR:'KAB. FLORES TIMUR',KAB_KUPANG:'KAB. KUPANG',KAB_LEMBATA:'KAB. LEMBATA',KAB_MALAKA:'KAB. MALAKA',KAB_MANGGARAI:'KAB. MANGGARAI',KAB_MANGGARAI_BARAT:'KAB. MANGGARAI BARAT',KAB_MANGGARAI_TIMUR:'KAB. MANGGARAI TIMUR',KAB_NGADA:'KAB. NGADA',KAB_NAGEKEO:'KAB. NAGEKEO',KAB_ROTE_NDAO:'KAB. ROTE NDAO',KAB_SABU_RAIJUA:'KAB. SABU RAIJUA',KAB_SIKKA:'KAB. SIKKA',KAB_SUMBA_BARAT:'KAB. SUMBA BARAT',KAB_SUMBA_BARAT_DAYA:'KAB. SUMBA BARAT DAYA',KAB_SUMBA_TENGAH:'KAB. SUMBA TENGAH',KAB_SUMBA_TIMUR:'KAB. SUMBA TIMUR',KAB_TIMOR_TENGAH_SELATAN:'KAB. TIMOR TENGAH SELATAN',KAB_TIMOR_TENGAH_UTARA:'KAB. TIMOR TENGAH UTARA',KOTA_KUPANG:'KOTA KUPANG'}},KALIMANTAN_BARAT:{name:'KALIMANTAN BARAT',cities:{KAB_BENGKAYANG:'KAB. BENGKAYANG',KAB_KAPUAS_HULU:'KAB. KAPUAS HULU',KAB_KAYONG_UTARA:'KAB. KAYONG UTARA',KAB_KETAPANG:'KAB. KETAPANG',KAB_KUBU_RAYA:'KAB. KUBU RAYA',KAB_LANDAK:'KAB. LANDAK',KAB_MELAWI:'KAB. MELAWI',KAB_MEMPAWAH:'KAB. MEMPAWAH',KAB_SAMBAS:'KAB. SAMBAS',KAB_SANGGAU:'KAB. SANGGAU',KAB_SEKADAU:'KAB. SEKADAU',KAB_SINTANG:'KAB. SINTANG',KOTA_PONTIANAK:'KOTA PONTIANAK',KOTA_SINGKAWANG:'KOTA SINGKAWANG'}},KALIMANTAN_SELATAN:{name:'KALIMANTAN SELATAN',cities:{KAB_BALANGAN:'KAB. BALANGAN',KAB_BANJAR:'KAB. BANJAR',KAB_BARITO_KUALA:'KAB. BARITO KUALA',KAB_HULU_SUNGAI_SELATAN:'KAB. HULU SUNGAI SELATAN',KAB_HULU_SUNGAI_TENGAH:'KAB. HULU SUNGAI TENGAH',KAB_HULU_SUNGAI_UTARA:'KAB. HULU SUNGAI UTARA',KAB_KOTABARU:'KAB. KOTABARU',KAB_TABALONG:'KAB. TABALONG',KAB_TANAH_BUMBU:'KAB. TANAH BUMBU',KAB_TANAH_LAUT:'KAB. TANAH LAUT',KAB_TAPIN:'KAB. TAPIN',KOTA_BANJARBARU:'KOTA BANJARBARU',KOTA_BANJARMASIN:'KOTA BANJARMASIN'}},KALIMANTAN_TENGAH:{name:'KALIMANTAN TENGAH',cities:{KAB_BARITO_SELATAN:'KAB. BARITO SELATAN',KAB_BARITO_TIMUR:'KAB. BARITO TIMUR',KAB_BARITO_UTARA:'KAB. BARITO UTARA',KAB_GUNUNG_MAS:'KAB. GUNUNG MAS',KAB_KAPUAS:'KAB. KAPUAS',KAB_KATINGAN:'KAB. KATINGAN',KAB_KOTAWARINGIN_BARAT:'KAB. KOTAWARINGIN BARAT',KAB_KOTAWARINGIN_TIMUR:'KAB. KOTAWARINGIN TIMUR',KAB_LAMANDAU:'KAB. LAMANDAU',KAB_MURUNG_RAYA:'KAB. MURUNG RAYA',KAB_PULANG_PISAU:'KAB. PULANG PISAU',KAB_SUKAMARA:'KAB. SUKAMARA',KAB_SERUYAN:'KAB. SERUYAN',KOTA_PALANGKARAYA:'KOTA PALANGKARAYA'}},KALIMANTAN_TIMUR:{name:'KALIMANTAN TIMUR',cities:{KAB_BERAU:'KAB. BERAU',KAB_KUTAI_BARAT:'KAB. KUTAI BARAT',KAB_KUTAI_KARTANEGARA:'KAB. KUTAI KARTANEGARA',KAB_KUTAI_TIMUR:'KAB. KUTAI TIMUR',KAB_MAHAKAM_ULU:'KAB. MAHAKAM ULU',KAB_PASER:'KAB. PASER',KAB_PENAJAM_PASER_UTARA:'KAB. PENAJAM PASER UTARA',KOTA_BALIKPAPAN:'KOTA BALIKPAPAN',KOTA_BONTANG:'KOTA BONTANG',KOTA_SAMARINDA:'KOTA SAMARINDA'}},KALIMANTAN_UTARA:{name:'KALIMANTAN UTARA',cities:{KAB_BULUNGAN:'KAB. BULUNGAN',KAB_MALINAU:'KAB. MALINAU',KAB_NUNUKAN:'KAB. NUNUKAN',KAB_TANA_TIDUNG:'KAB. TANA TIDUNG',KOTA_TARAKAN:'KOTA TARAKAN'}},GORONTALO:{name:'GORONTALO',cities:{KAB_BOALEMO:'KAB. BOALEMO',KAB_BONE_BOLANGO:'KAB. BONE BOLANGO',KAB_GORONTALO:'KAB. GORONTALO',KAB_GORONTALO_UTARA:'KAB. GORONTALO UTARA',KAB_PAHUWATO:'KAB. PAHUWATO',KOTA_GORONTALO:'KOTA GORONTALO'}},SULAWESI_SELATAN:{name:'SULAWESI SELATAN',cities:{KAB_BANTAENG:'KAB. BANTAENG',KAB_BARRU:'KAB. BARRU',KAB_BONE:'KAB. BONE',KAB_BULUKUMBA:'KAB. BULUKUMBA',KAB_ENREKANG:'KAB. ENREKANG',KAB_GOWA:'KAB. GOWA',KAB_JENEPONTO:'KAB. JENEPONTO',KAB_KEPULAUAN_SELAYAR:'KAB. KEPULAUAN SELAYAR',KAB_LUWU:'KAB. LUWU',KAB_LUWU_TIMUR:'KAB. LUWU TIMUR',KAB_LUWU_UTARA:'KAB. LUWU UTARA',KAB_MAROS:'KAB. MAROS',KAB_PANGKAJENE_DAN_KEPULAUAN:'KAB. PANGKAJENE DAN KEPULAUAN',KAB_PINRANG:'KAB. PINRANG',KAB_SIDENRENG_RAPPANG:'KAB. SIDENRENG RAPPANG',KAB_SINJAI:'KAB. SINJAI',KAB_SOPPENG:'KAB. SOPPENG',KAB_TAKALAR:'KAB. TAKALAR',KAB_TANA_TORAJA:'KAB. TANA TORAJA',KAB_TORAJA_UTARA:'KAB. TORAJA UTARA',KAB_WAJO:'KAB. WAJO',KOTA_MAKASSAR:'KOTA MAKASSAR',KOTA_PALOPO:'KOTA PALOPO',KOTA_PAREPARE:'KOTA PAREPARE'}},SULAWESI_TENGGARA:{name:'SULAWESI TENGGARA',cities:{KAB_BOMBANA:'KAB. BOMBANA',KAB_BUTON:'KAB. BUTON',KAB_BUTON_SELATAN:'KAB. BUTON SELATAN',KAB_BUTON_TENGAH:'KAB. BUTON TENGAH',KAB_BUTON_UTARA:'KAB. BUTON UTARA',KAB_KOLAKA:'KAB. KOLAKA',KAB_KOLAKA_TIMUR:'KAB. KOLAKA TIMUR',KAB_KOLAKA_UTARA:'KAB. KOLAKA UTARA',KAB_KONAWE:'KAB. KONAWE',KAB_KONAWE_KEPULAUAN:'KAB. KONAWE KEPULAUAN',KAB_KONAWE_SELATAN:'KAB. KONAWE SELATAN',KAB_KONAWE_UTARA:'KAB. KONAWE UTARA',KAB_MUNA:'KAB. MUNA',KAB_MUNA_BARAT:'KAB. MUNA BARAT',KAB_WAKATOBI:'KAB. WAKATOBI',KOTA_BAU_BAU:'KOTA BAU-BAU',KOTA_KENDARI:'KOTA KENDARI'}},SULAWESI_TENGAH:{name:'SULAWESI TENGAH',cities:{KAB_BANGGAI:'KAB. BANGGAI',KAB_BANGGAI_KEPULAUAN:'KAB. BANGGAI KEPULAUAN',KAB_BANGGAI_LAUT:'KAB. BANGGAI LAUT',KAB_BUOL:'KAB. BUOL',KAB_DONGGALA:'KAB. DONGGALA',KAB_MOROWALI:'KAB. MOROWALI',KAB_MOROWALI_UTARA:'KAB. MOROWALI UTARA',KAB_PARIGI_MOUTONG:'KAB. PARIGI MOUTONG',KAB_POSO:'KAB. POSO',KAB_SIGI:'KAB. SIGI',KAB_TOJO_UNA_UNA:'KAB. TOJO UNA-UNA',KAB_TOLI_TOLI:'KAB. TOLI-TOLI',KOTA_PALU:'KOTA PALU'}},SULAWESI_UTARA:{name:'SULAWESI UTARA',cities:{KAB_BOLAANG_MONGONDOW:'KAB. BOLAANG MONGONDOW',KAB_BOLAANG_MONGONDOW_SELATAN:'KAB. BOLAANG MONGONDOW SELATAN',KAB_BOLAANG_MONGONDOW_TIMUR:'KAB. BOLAANG MONGONDOW TIMUR',KAB_BOLAANG_MONGONDOW_UTARA:'KAB. BOLAANG MONGONDOW UTARA',KAB_KEPULAUAN_SANGIHE:'KAB. KEPULAUAN SANGIHE',KAB_KEPULAUAN_SIAU_TAGULANDANG_BIARO:'KAB. KEPULAUAN SIAU TAGULANDANG BIARO',KAB_KEPULAUAN_TALAUD:'KAB. KEPULAUAN TALAUD',KAB_MINAHASA:'KAB. MINAHASA',KAB_MINAHASA_SELATAN:'KAB. MINAHASA SELATAN',KAB_MINAHASA_TENGGARA:'KAB. MINAHASA TENGGARA',KAB_MINAHASA_UTARA:'KAB. MINAHASA UTARA',KOTA_BITUNG:'KOTA BITUNG',KOTA_KOTAMOBAGU:'KOTA KOTAMOBAGU',KOTA_MANADO:'KOTA MANADO',KOTA_TOMOHON:'KOTA TOMOHON'}},SULAWESI_BARAT:{name:'SULAWESI BARAT',cities:{KAB_MAJENE:'KAB. MAJENE',KAB_MAMASA:'KAB. MAMASA',KAB_MAMUJU:'KAB. MAMUJU',KAB_MAMUJU_TENGAH:'KAB. MAMUJU TENGAH',KAB_MAMUJU_UTARA:'KAB. MAMUJU UTARA',KAB_POLEWALI_MANDAR:'KAB. POLEWALI MANDAR'}},MALUKU:{name:'MALUKU',cities:{KAB_BURU:'KAB. BURU',KAB_BURU_SELATAN:'KAB. BURU SELATAN',KAB_KEPULAUAN_ARU:'KAB. KEPULAUAN ARU',KAB_MALUKU_BARAT_DAYA:'KAB. MALUKU BARAT DAYA',KAB_MALUKU_TENGAH:'KAB. MALUKU TENGAH',KAB_MALUKU_TENGGARA:'KAB. MALUKU TENGGARA',KAB_MALUKU_TENGGARA_BARAT:'KAB. MALUKU TENGGARA BARAT',KAB_SERAM_BAGIAN_BARAT:'KAB. SERAM BAGIAN BARAT',KAB_SERAM_BAGIAN_TIMUR:'KAB. SERAM BAGIAN TIMUR',KOTA_AMBON:'KOTA AMBON',KOTA_TUAL:'KOTA TUAL'}},MALUKU_UTARA:{name:'MALUKU UTARA',cities:{KAB_HALMAHERA_BARAT:'KAB. HALMAHERA BARAT',KAB_HALMAHERA_TENGAH:'KAB. HALMAHERA TENGAH',KAB_HALMAHERA_UTARA:'KAB. HALMAHERA UTARA',KAB_HALMAHERA_SELATAN:'KAB. HALMAHERA SELATAN',KAB_KEPULAUAN_SULA:'KAB. KEPULAUAN SULA',KAB_HALMAHERA_TIMUR:'KAB. HALMAHERA TIMUR',KAB_PULAU_MOROTAI:'KAB. PULAU MOROTAI',KAB_PULAU_TALIABU:'KAB. PULAU TALIABU',KOTA_TERNATE:'KOTA TERNATE',KOTA_TIDORE_KEPULAUAN:'KOTA TIDORE KEPULAUAN',KOTA_SOFIFI:'KOTA SOFIFI'}},PAPUA:{name:'PAPUA',cities:{KAB_ASMAT:'KAB. ASMAT',KAB_BIAK_NUMFOR:'KAB. BIAK NUMFOR',KAB_BOVEN_DIGOEL:'KAB. BOVEN DIGOEL',KAB_DEIYAI:'KAB. DEIYAI',KAB_DOGIYAI:'KAB. DOGIYAI',KAB_INTAN_JAYA:'KAB. INTAN JAYA',KAB_JAYAPURA:'KAB. JAYAPURA',KAB_JAYAWIJAYA:'KAB. JAYAWIJAYA',KAB_KEEROM:'KAB. KEEROM',KAB_KEPULAUAN_YAPEN:'KAB. KEPULAUAN YAPEN',KAB_LANNY_JAYA:'KAB. LANNY JAYA',KAB_MAMBERAMO_RAYA:'KAB. MAMBERAMO RAYA',KAB_MAMBERAMO_TENGAH:'KAB. MAMBERAMO TENGAH',KAB_MAPPI:'KAB. MAPPI',KAB_MERAUKE:'KAB. MERAUKE',KAB_MIMIKA:'KAB. MIMIKA',KAB_NABIRE:'KAB. NABIRE',KAB_NDUGA:'KAB. NDUGA',KAB_PANIAI:'KAB. PANIAI',KAB_PEGUNUNGAN_BINTANG:'KAB. PEGUNUNGAN BINTANG',KAB_PUNCAK:'KAB. PUNCAK',KAB_PUNCAK_JAYA:'KAB. PUNCAK JAYA',KAB_SARMI:'KAB. SARMI',KAB_SUPIORI:'KAB. SUPIORI',KAB_TOLIKARA:'KAB. TOLIKARA',KAB_WAROPEN:'KAB. WAROPEN',KAB_YAHUKIMO:'KAB. YAHUKIMO',KAB_YALIMO:'KAB. YALIMO',KOTA_JAYAPURA:'KOTA JAYAPURA',KAB_YAPEN_WAROPEN:'KAB. YAPEN WAROPEN'}},PAPUA_BARAT:{name:'PAPUA BARAT',cities:{KAB_FAKFAK:'KAB. FAKFAK',KAB_KAIMANA:'KAB. KAIMANA',KAB_MANOKWARI:'KAB. MANOKWARI',KAB_MANOKWARI_SELATAN:'KAB. MANOKWARI SELATAN',KAB_MAYBRAT:'KAB. MAYBRAT',KAB_PEGUNUNGAN_ARFAK:'KAB. PEGUNUNGAN ARFAK',KAB_RAJA_AMPAT:'KAB. RAJA AMPAT',KAB_SORONG:'KAB. SORONG',KAB_SORONG_SELATAN:'KAB. SORONG SELATAN',KAB_TAMBRAUW:'KAB. TAMBRAUW',KAB_TELUK_BINTUNI:'KAB. TELUK BINTUNI',KAB_TELUK_WONDAMA:'KAB. TELUK WONDAMA',KOTA_SORONG:'KOTA SORONG'}}};
-const CITY_LOOKUP={'ACEH BARAT':['ACEH','KAB_ACEH_BARAT'],'KAB. ACEH BARAT':['ACEH','KAB_ACEH_BARAT'],'ACEH BARAT DAYA':['ACEH','KAB_ACEH_BARAT_DAYA'],'KAB. ACEH BARAT DAYA':['ACEH','KAB_ACEH_BARAT_DAYA'],'ACEH BESAR':['ACEH','KAB_ACEH_BESAR'],'KAB. ACEH BESAR':['ACEH','KAB_ACEH_BESAR'],'ACEH JAYA':['ACEH','KAB_ACEH_JAYA'],'KAB. ACEH JAYA':['ACEH','KAB_ACEH_JAYA'],'ACEH SELATAN':['ACEH','KAB_ACEH_SELATAN'],'KAB. ACEH SELATAN':['ACEH','KAB_ACEH_SELATAN'],'ACEH SINGKIL':['ACEH','KAB_ACEH_SINGKIL'],'KAB. ACEH SINGKIL':['ACEH','KAB_ACEH_SINGKIL'],'ACEH TAMIANG':['ACEH','KAB_ACEH_TAMIANG'],'KAB. ACEH TAMIANG':['ACEH','KAB_ACEH_TAMIANG'],'ACEH TENGAH':['ACEH','KAB_ACEH_TENGAH'],'KAB. ACEH TENGAH':['ACEH','KAB_ACEH_TENGAH'],'ACEH TENGGARA':['ACEH','KAB_ACEH_TENGGARA'],'KAB. ACEH TENGGARA':['ACEH','KAB_ACEH_TENGGARA'],'ACEH TIMUR':['ACEH','KAB_ACEH_TIMUR'],'KAB. ACEH TIMUR':['ACEH','KAB_ACEH_TIMUR'],'ACEH UTARA':['ACEH','KAB_ACEH_UTARA'],'KAB. ACEH UTARA':['ACEH','KAB_ACEH_UTARA'],'BENER MERIAH':['ACEH','KAB_BENER_MERIAH'],'KAB. BENER MERIAH':['ACEH','KAB_BENER_MERIAH'],'BIREUEN':['ACEH','KAB_BIREUEN'],'KAB. BIREUEN':['ACEH','KAB_BIREUEN'],'GAYO LUES':['ACEH','KAB_GAYO_LUES'],'KAB. GAYO LUES':['ACEH','KAB_GAYO_LUES'],'NAGAN RAYA':['ACEH','KAB_NAGAN_RAYA'],'KAB. NAGAN RAYA':['ACEH','KAB_NAGAN_RAYA'],'PIDIE':['ACEH','KAB_PIDIE'],'KAB. PIDIE':['ACEH','KAB_PIDIE'],'PIDIE JAYA':['ACEH','KAB_PIDIE_JAYA'],'KAB. PIDIE JAYA':['ACEH','KAB_PIDIE_JAYA'],'SIMEULUE':['ACEH','KAB_SIMEULUE'],'KAB. SIMEULUE':['ACEH','KAB_SIMEULUE'],'BANDA ACEH':['ACEH','KOTA_BANDA_ACEH'],'KOTA BANDA ACEH':['ACEH','KOTA_BANDA_ACEH'],'LANGSA':['ACEH','KOTA_LANGSA'],'KOTA LANGSA':['ACEH','KOTA_LANGSA'],'LHOKSEUMAWE':['ACEH','KOTA_LHOKSEUMAWE'],'KOTA LHOKSEUMAWE':['ACEH','KOTA_LHOKSEUMAWE'],'SABANG':['ACEH','KOTA_SABANG'],'KOTA SABANG':['ACEH','KOTA_SABANG'],'SUBULUSSALAM':['ACEH','KOTA_SUBULUSSALAM'],'KOTA SUBULUSSALAM':['ACEH','KOTA_SUBULUSSALAM'],'ASAHAN':['SUMATERA_UTARA','KAB_ASAHAN'],'KAB. ASAHAN':['SUMATERA_UTARA','KAB_ASAHAN'],'BATU BARA':['SUMATERA_UTARA','KAB_BATU_BARA'],'KAB. BATU BARA':['SUMATERA_UTARA','KAB_BATU_BARA'],'DAIRI':['SUMATERA_UTARA','KAB_DAIRI'],'KAB. DAIRI':['SUMATERA_UTARA','KAB_DAIRI'],'DELI SERDANG':['SUMATERA_UTARA','KAB_DELI_SERDANG'],'KAB. DELI SERDANG':['SUMATERA_UTARA','KAB_DELI_SERDANG'],'HUMBANG HASUNDUTAN':['SUMATERA_UTARA','KAB_HUMBANG_HASUNDUTAN'],'KAB. HUMBANG HASUNDUTAN':['SUMATERA_UTARA','KAB_HUMBANG_HASUNDUTAN'],'KARO':['SUMATERA_UTARA','KAB_KARO'],'KAB. KARO':['SUMATERA_UTARA','KAB_KARO'],'LABUHANBATU':['SUMATERA_UTARA','KAB_LABUHANBATU'],'KAB. LABUHANBATU':['SUMATERA_UTARA','KAB_LABUHANBATU'],'LABUHANBATU SELATAN':['SUMATERA_UTARA','KAB_LABUHANBATU_SELATAN'],'KAB. LABUHANBATU SELATAN':['SUMATERA_UTARA','KAB_LABUHANBATU_SELATAN'],'LABUHANBATU UTARA':['SUMATERA_UTARA','KAB_LABUHANBATU_UTARA'],'KAB. LABUHANBATU UTARA':['SUMATERA_UTARA','KAB_LABUHANBATU_UTARA'],'LANGKAT':['SUMATERA_UTARA','KAB_LANGKAT'],'KAB. LANGKAT':['SUMATERA_UTARA','KAB_LANGKAT'],'MANDAILING NATAL':['SUMATERA_UTARA','KAB_MANDAILING_NATAL'],'KAB. MANDAILING NATAL':['SUMATERA_UTARA','KAB_MANDAILING_NATAL'],'NIAS':['SUMATERA_UTARA','KAB_NIAS'],'KAB. NIAS':['SUMATERA_UTARA','KAB_NIAS'],'NIAS BARAT':['SUMATERA_UTARA','KAB_NIAS_BARAT'],'KAB. NIAS BARAT':['SUMATERA_UTARA','KAB_NIAS_BARAT'],'NIAS SELATAN':['SUMATERA_UTARA','KAB_NIAS_SELATAN'],'KAB. NIAS SELATAN':['SUMATERA_UTARA','KAB_NIAS_SELATAN'],'NIAS UTARA':['SUMATERA_UTARA','KAB_NIAS_UTARA'],'KAB. NIAS UTARA':['SUMATERA_UTARA','KAB_NIAS_UTARA'],'PADANG LAWAS':['SUMATERA_UTARA','KAB_PADANG_LAWAS'],'KAB. PADANG LAWAS':['SUMATERA_UTARA','KAB_PADANG_LAWAS'],'PADANG LAWAS UTARA':['SUMATERA_UTARA','KAB_PADANG_LAWAS_UTARA'],'KAB. PADANG LAWAS UTARA':['SUMATERA_UTARA','KAB_PADANG_LAWAS_UTARA'],'PAKPAK BHARAT':['SUMATERA_UTARA','KAB_PAKPAK_BHARAT'],'KAB. PAKPAK BHARAT':['SUMATERA_UTARA','KAB_PAKPAK_BHARAT'],'SAMOSIR':['SUMATERA_UTARA','KAB_SAMOSIR'],'KAB. SAMOSIR':['SUMATERA_UTARA','KAB_SAMOSIR'],'SERDANG BEDAGAI':['SUMATERA_UTARA','KAB_SERDANG_BEDAGAI'],'KAB. SERDANG BEDAGAI':['SUMATERA_UTARA','KAB_SERDANG_BEDAGAI'],'SIMALUNGUN':['SUMATERA_UTARA','KAB_SIMALUNGUN'],'KAB. SIMALUNGUN':['SUMATERA_UTARA','KAB_SIMALUNGUN'],'TAPANULI SELATAN':['SUMATERA_UTARA','KAB_TAPANULI_SELATAN'],'KAB. TAPANULI SELATAN':['SUMATERA_UTARA','KAB_TAPANULI_SELATAN'],'TAPANULI TENGAH':['SUMATERA_UTARA','KAB_TAPANULI_TENGAH'],'KAB. TAPANULI TENGAH':['SUMATERA_UTARA','KAB_TAPANULI_TENGAH'],'TAPANULI UTARA':['SUMATERA_UTARA','KAB_TAPANULI_UTARA'],'KAB. TAPANULI UTARA':['SUMATERA_UTARA','KAB_TAPANULI_UTARA'],'TOBA SAMOSIR':['SUMATERA_UTARA','KAB_TOBA_SAMOSIR'],'KAB. TOBA SAMOSIR':['SUMATERA_UTARA','KAB_TOBA_SAMOSIR'],'BINJAI':['SUMATERA_UTARA','KOTA_BINJAI'],'KOTA BINJAI':['SUMATERA_UTARA','KOTA_BINJAI'],'GUNUNGSITOLI':['SUMATERA_UTARA','KOTA_GUNUNGSITOLI'],'KOTA GUNUNGSITOLI':['SUMATERA_UTARA','KOTA_GUNUNGSITOLI'],'MEDAN':['SUMATERA_UTARA','KOTA_MEDAN'],'KOTA MEDAN':['SUMATERA_UTARA','KOTA_MEDAN'],'PADANGSIDEMPUAN':['SUMATERA_UTARA','KOTA_PADANGSIDEMPUAN'],'KOTA PADANGSIDEMPUAN':['SUMATERA_UTARA','KOTA_PADANGSIDEMPUAN'],'PEMATANGSIANTAR':['SUMATERA_UTARA','KOTA_PEMATANGSIANTAR'],'KOTA PEMATANGSIANTAR':['SUMATERA_UTARA','KOTA_PEMATANGSIANTAR'],'SIBOLGA':['SUMATERA_UTARA','KOTA_SIBOLGA'],'KOTA SIBOLGA':['SUMATERA_UTARA','KOTA_SIBOLGA'],'TANJUNGBALAI':['SUMATERA_UTARA','KOTA_TANJUNGBALAI'],'KOTA TANJUNGBALAI':['SUMATERA_UTARA','KOTA_TANJUNGBALAI'],'TEBING TINGGI':['SUMATERA_UTARA','KOTA_TEBING_TINGGI'],'KOTA TEBING TINGGI':['SUMATERA_UTARA','KOTA_TEBING_TINGGI'],'AGAM':['SUMATERA_BARAT','KAB_AGAM'],'KAB. AGAM':['SUMATERA_BARAT','KAB_AGAM'],'DHARMASRAYA':['SUMATERA_BARAT','KAB_DHARMASRAYA'],'KAB. DHARMASRAYA':['SUMATERA_BARAT','KAB_DHARMASRAYA'],'KEPULAUAN MENTAWAI':['SUMATERA_BARAT','KAB_KEPULAUAN_MENTAWAI'],'KAB. KEPULAUAN MENTAWAI':['SUMATERA_BARAT','KAB_KEPULAUAN_MENTAWAI'],'LIMA PULUH KOTA':['SUMATERA_BARAT','KAB_LIMA_PULUH_KOTA'],'KAB. LIMA PULUH KOTA':['SUMATERA_BARAT','KAB_LIMA_PULUH_KOTA'],'PADANG PARIAMAN':['SUMATERA_BARAT','KAB_PADANG_PARIAMAN'],'KAB. PADANG PARIAMAN':['SUMATERA_BARAT','KAB_PADANG_PARIAMAN'],'PASAMAN':['SUMATERA_BARAT','KAB_PASAMAN'],'KAB. PASAMAN':['SUMATERA_BARAT','KAB_PASAMAN'],'PASAMAN BARAT':['SUMATERA_BARAT','KAB_PASAMAN_BARAT'],'KAB. PASAMAN BARAT':['SUMATERA_BARAT','KAB_PASAMAN_BARAT'],'PESISIR SELATAN':['SUMATERA_BARAT','KAB_PESISIR_SELATAN'],'KAB. PESISIR SELATAN':['SUMATERA_BARAT','KAB_PESISIR_SELATAN'],'SIJUNJUNG':['SUMATERA_BARAT','KAB_SIJUNJUNG'],'KAB. SIJUNJUNG':['SUMATERA_BARAT','KAB_SIJUNJUNG'],'SOLOK':['SUMATERA_BARAT','KAB_SOLOK'],'KAB. SOLOK':['SUMATERA_BARAT','KAB_SOLOK'],'SOLOK SELATAN':['SUMATERA_BARAT','KAB_SOLOK_SELATAN'],'KAB. SOLOK SELATAN':['SUMATERA_BARAT','KAB_SOLOK_SELATAN'],'TANAH DATAR':['SUMATERA_BARAT','KAB_TANAH_DATAR'],'KAB. TANAH DATAR':['SUMATERA_BARAT','KAB_TANAH_DATAR'],'BUKITTINGGI':['SUMATERA_BARAT','KOTA_BUKITTINGGI'],'KOTA BUKITTINGGI':['SUMATERA_BARAT','KOTA_BUKITTINGGI'],'PADANG':['SUMATERA_BARAT','KOTA_PADANG'],'KOTA PADANG':['SUMATERA_BARAT','KOTA_PADANG'],'PADANGPANJANG':['SUMATERA_BARAT','KOTA_PADANGPANJANG'],'KOTA PADANGPANJANG':['SUMATERA_BARAT','KOTA_PADANGPANJANG'],'PARIAMAN':['SUMATERA_BARAT','KOTA_PARIAMAN'],'KOTA PARIAMAN':['SUMATERA_BARAT','KOTA_PARIAMAN'],'PAYAKUMBUH':['SUMATERA_BARAT','KOTA_PAYAKUMBUH'],'KOTA PAYAKUMBUH':['SUMATERA_BARAT','KOTA_PAYAKUMBUH'],'SAWAHLUNTO':['SUMATERA_BARAT','KOTA_SAWAHLUNTO'],'KOTA SAWAHLUNTO':['SUMATERA_BARAT','KOTA_SAWAHLUNTO'],'SOLOK':['SUMATERA_BARAT','KOTA_SOLOK'],'KOTA SOLOK':['SUMATERA_BARAT','KOTA_SOLOK'],'BENGKALIS':['RIAU','KAB_BENGKALIS'],'KAB. BENGKALIS':['RIAU','KAB_BENGKALIS'],'INDRAGIRI HILIR':['RIAU','KAB_INDRAGIRI_HILIR'],'KAB. INDRAGIRI HILIR':['RIAU','KAB_INDRAGIRI_HILIR'],'INDRAGIRI HULU':['RIAU','KAB_INDRAGIRI_HULU'],'KAB. INDRAGIRI HULU':['RIAU','KAB_INDRAGIRI_HULU'],'KAMPAR':['RIAU','KAB_KAMPAR'],'KAB. KAMPAR':['RIAU','KAB_KAMPAR'],'KEPULAUAN MERANTI':['RIAU','KAB_KEPULAUAN_MERANTI'],'KAB. KEPULAUAN MERANTI':['RIAU','KAB_KEPULAUAN_MERANTI'],'KUANTAN SINGINGI':['RIAU','KAB_KUANTAN_SINGINGI'],'KAB. KUANTAN SINGINGI':['RIAU','KAB_KUANTAN_SINGINGI'],'PELALAWAN':['RIAU','KAB_PELALAWAN'],'KAB. PELALAWAN':['RIAU','KAB_PELALAWAN'],'ROKAN HILIR':['RIAU','KAB_ROKAN_HILIR'],'KAB. ROKAN HILIR':['RIAU','KAB_ROKAN_HILIR'],'ROKAN HULU':['RIAU','KAB_ROKAN_HULU'],'KAB. ROKAN HULU':['RIAU','KAB_ROKAN_HULU'],'SIAK':['RIAU','KAB_SIAK'],'KAB. SIAK':['RIAU','KAB_SIAK'],'DUMAI':['RIAU','KOTA_DUMAI'],'KOTA DUMAI':['RIAU','KOTA_DUMAI'],'PEKANBARU':['RIAU','KOTA_PEKANBARU'],'KOTA PEKANBARU':['RIAU','KOTA_PEKANBARU'],'BINTAN':['KEPULAUAN_RIAU','KAB_BINTAN'],'KAB. BINTAN':['KEPULAUAN_RIAU','KAB_BINTAN'],'KARIMUN':['KEPULAUAN_RIAU','KAB_KARIMUN'],'KAB. KARIMUN':['KEPULAUAN_RIAU','KAB_KARIMUN'],'KEPULAUAN ANAMBAS':['KEPULAUAN_RIAU','KAB_KEPULAUAN_ANAMBAS'],'KAB. KEPULAUAN ANAMBAS':['KEPULAUAN_RIAU','KAB_KEPULAUAN_ANAMBAS'],'LINGGA':['KEPULAUAN_RIAU','KAB_LINGGA'],'KAB. LINGGA':['KEPULAUAN_RIAU','KAB_LINGGA'],'NATUNA':['KEPULAUAN_RIAU','KAB_NATUNA'],'KAB. NATUNA':['KEPULAUAN_RIAU','KAB_NATUNA'],'BATAM':['KEPULAUAN_RIAU','KOTA_BATAM'],'KOTA BATAM':['KEPULAUAN_RIAU','KOTA_BATAM'],'TANJUNG PINANG':['KEPULAUAN_RIAU','KOTA_TANJUNG_PINANG'],'KOTA TANJUNG PINANG':['KEPULAUAN_RIAU','KOTA_TANJUNG_PINANG'],'PULAU TAMBELAN BINTAN':['KEPULAUAN_RIAU','PULAU_TAMBELAN_KAB_BINTAN'],'PULAU TAMBELAN KAB. BINTAN':['KEPULAUAN_RIAU','PULAU_TAMBELAN_KAB_BINTAN'],'PEKAJANG LINGGA':['KEPULAUAN_RIAU','PEKAJANG_KAB_LINGGA'],'PEKAJANG KAB. LINGGA':['KEPULAUAN_RIAU','PEKAJANG_KAB_LINGGA'],'PULAU SERASAN NATUNA':['KEPULAUAN_RIAU','PULAU_SERASAN_KAB_NATUNA'],'PULAU SERASAN KAB. NATUNA':['KEPULAUAN_RIAU','PULAU_SERASAN_KAB_NATUNA'],'PULAU MIDAI NATUNA':['KEPULAUAN_RIAU','PULAU_MIDAI_KAB_NATUNA'],'PULAU MIDAI KAB. NATUNA':['KEPULAUAN_RIAU','PULAU_MIDAI_KAB_NATUNA'],'PULAU LAUT NATUNA':['KEPULAUAN_RIAU','PULAU_LAUT_KAB_NATUNA'],'PULAU LAUT KAB. NATUNA':['KEPULAUAN_RIAU','PULAU_LAUT_KAB_NATUNA'],'BATANGHARI':['JAMBI','KAB_BATANGHARI'],'KAB. BATANGHARI':['JAMBI','KAB_BATANGHARI'],'BUNGO':['JAMBI','KAB_BUNGO'],'KAB. BUNGO':['JAMBI','KAB_BUNGO'],'KERINCI':['JAMBI','KAB_KERINCI'],'KAB. KERINCI':['JAMBI','KAB_KERINCI'],'MERANGIN':['JAMBI','KAB_MERANGIN'],'KAB. MERANGIN':['JAMBI','KAB_MERANGIN'],'MUARO JAMBI':['JAMBI','KAB_MUARO_JAMBI'],'KAB. MUARO JAMBI':['JAMBI','KAB_MUARO_JAMBI'],'SAROLANGUN':['JAMBI','KAB_SAROLANGUN'],'KAB. SAROLANGUN':['JAMBI','KAB_SAROLANGUN'],'TANJUNG JABUNG BARAT':['JAMBI','KAB_TANJUNG_JABUNG_BARAT'],'KAB. TANJUNG JABUNG BARAT':['JAMBI','KAB_TANJUNG_JABUNG_BARAT'],'TANJUNG JABUNG TIMUR':['JAMBI','KAB_TANJUNG_JABUNG_TIMUR'],'KAB. TANJUNG JABUNG TIMUR':['JAMBI','KAB_TANJUNG_JABUNG_TIMUR'],'TEBO':['JAMBI','KAB_TEBO'],'KAB. TEBO':['JAMBI','KAB_TEBO'],'JAMBI':['JAMBI','KOTA_JAMBI'],'KOTA JAMBI':['JAMBI','KOTA_JAMBI'],'SUNGAI PENUH':['JAMBI','KOTA_SUNGAI_PENUH'],'KOTA SUNGAI PENUH':['JAMBI','KOTA_SUNGAI_PENUH'],'BENGKULU SELATAN':['BENGKULU','KAB_BENGKULU_SELATAN'],'KAB. BENGKULU SELATAN':['BENGKULU','KAB_BENGKULU_SELATAN'],'BENGKULU TENGAH':['BENGKULU','KAB_BENGKULU_TENGAH'],'KAB. BENGKULU TENGAH':['BENGKULU','KAB_BENGKULU_TENGAH'],'BENGKULU UTARA':['BENGKULU','KAB_BENGKULU_UTARA'],'KAB. BENGKULU UTARA':['BENGKULU','KAB_BENGKULU_UTARA'],'KAUR':['BENGKULU','KAB_KAUR'],'KAB. KAUR':['BENGKULU','KAB_KAUR'],'KEPAHIANG':['BENGKULU','KAB_KEPAHIANG'],'KAB. KEPAHIANG':['BENGKULU','KAB_KEPAHIANG'],'LEBONG':['BENGKULU','KAB_LEBONG'],'KAB. LEBONG':['BENGKULU','KAB_LEBONG'],'MUKOMUKO':['BENGKULU','KAB_MUKOMUKO'],'KAB. MUKOMUKO':['BENGKULU','KAB_MUKOMUKO'],'REJANG LEBONG':['BENGKULU','KAB_REJANG_LEBONG'],'KAB. REJANG LEBONG':['BENGKULU','KAB_REJANG_LEBONG'],'SELUMA':['BENGKULU','KAB_SELUMA'],'KAB. SELUMA':['BENGKULU','KAB_SELUMA'],'BENGKULU':['BENGKULU','KOTA_BENGKULU'],'KOTA BENGKULU':['BENGKULU','KOTA_BENGKULU'],'BANYUASIN':['SUMATERA_SELATAN','KAB_BANYUASIN'],'KAB. BANYUASIN':['SUMATERA_SELATAN','KAB_BANYUASIN'],'EMPAT LAWANG':['SUMATERA_SELATAN','KAB_EMPAT_LAWANG'],'KAB. EMPAT LAWANG':['SUMATERA_SELATAN','KAB_EMPAT_LAWANG'],'LAHAT':['SUMATERA_SELATAN','KAB_LAHAT'],'KAB. LAHAT':['SUMATERA_SELATAN','KAB_LAHAT'],'MUARA ENIM':['SUMATERA_SELATAN','KAB_MUARA_ENIM'],'KAB. MUARA ENIM':['SUMATERA_SELATAN','KAB_MUARA_ENIM'],'MUSI BANYUASIN':['SUMATERA_SELATAN','KAB_MUSI_BANYUASIN'],'KAB. MUSI BANYUASIN':['SUMATERA_SELATAN','KAB_MUSI_BANYUASIN'],'MUSI RAWAS':['SUMATERA_SELATAN','KAB_MUSI_RAWAS'],'KAB. MUSI RAWAS':['SUMATERA_SELATAN','KAB_MUSI_RAWAS'],'MUSI RAWAS UTARA':['SUMATERA_SELATAN','KAB_MUSI_RAWAS_UTARA'],'KAB. MUSI RAWAS UTARA':['SUMATERA_SELATAN','KAB_MUSI_RAWAS_UTARA'],'OGAN ILIR':['SUMATERA_SELATAN','KAB_OGAN_ILIR'],'KAB. OGAN ILIR':['SUMATERA_SELATAN','KAB_OGAN_ILIR'],'OGAN KOMERING ILIR':['SUMATERA_SELATAN','KAB_OGAN_KOMERING_ILIR'],'KAB. OGAN KOMERING ILIR':['SUMATERA_SELATAN','KAB_OGAN_KOMERING_ILIR'],'OGAN KOMERING ULU':['SUMATERA_SELATAN','KAB_OGAN_KOMERING_ULU'],'KAB. OGAN KOMERING ULU':['SUMATERA_SELATAN','KAB_OGAN_KOMERING_ULU'],'OGAN KOMERING ULU SELATAN':['SUMATERA_SELATAN','KAB_OGAN_KOMERING_ULU_SELATAN'],'KAB. OGAN KOMERING ULU SELATAN':['SUMATERA_SELATAN','KAB_OGAN_KOMERING_ULU_SELATAN'],'OGAN KOMERING ULU TIMUR':['SUMATERA_SELATAN','KAB_OGAN_KOMERING_ULU_TIMUR'],'KAB. OGAN KOMERING ULU TIMUR':['SUMATERA_SELATAN','KAB_OGAN_KOMERING_ULU_TIMUR'],'PENUKAL ABAB LEMATANG ILIR':['SUMATERA_SELATAN','KAB_PENUKAL_ABAB_LEMATANG_ILIR'],'KAB. PENUKAL ABAB LEMATANG ILIR':['SUMATERA_SELATAN','KAB_PENUKAL_ABAB_LEMATANG_ILIR'],'LUBUKLINGGAU':['SUMATERA_SELATAN','KOTA_LUBUKLINGGAU'],'KOTA LUBUKLINGGAU':['SUMATERA_SELATAN','KOTA_LUBUKLINGGAU'],'PAGAR ALAM':['SUMATERA_SELATAN','KOTA_PAGAR_ALAM'],'KOTA PAGAR ALAM':['SUMATERA_SELATAN','KOTA_PAGAR_ALAM'],'PALEMBANG':['SUMATERA_SELATAN','KOTA_PALEMBANG'],'KOTA PALEMBANG':['SUMATERA_SELATAN','KOTA_PALEMBANG'],'PRABUMULIH':['SUMATERA_SELATAN','KOTA_PRABUMULIH'],'KOTA PRABUMULIH':['SUMATERA_SELATAN','KOTA_PRABUMULIH'],'BANGKA':['KEPULAUAN_BANGKA_BELITUNG','KAB_BANGKA'],'KAB. BANGKA':['KEPULAUAN_BANGKA_BELITUNG','KAB_BANGKA'],'BANGKA BARAT':['KEPULAUAN_BANGKA_BELITUNG','KAB_BANGKA_BARAT'],'KAB. BANGKA BARAT':['KEPULAUAN_BANGKA_BELITUNG','KAB_BANGKA_BARAT'],'BANGKA SELATAN':['KEPULAUAN_BANGKA_BELITUNG','KAB_BANGKA_SELATAN'],'KAB. BANGKA SELATAN':['KEPULAUAN_BANGKA_BELITUNG','KAB_BANGKA_SELATAN'],'BANGKA TENGAH':['KEPULAUAN_BANGKA_BELITUNG','KAB_BANGKA_TENGAH'],'KAB. BANGKA TENGAH':['KEPULAUAN_BANGKA_BELITUNG','KAB_BANGKA_TENGAH'],'BELITUNG':['KEPULAUAN_BANGKA_BELITUNG','KAB_BELITUNG'],'KAB. BELITUNG':['KEPULAUAN_BANGKA_BELITUNG','KAB_BELITUNG'],'BELITUNG TIMUR':['KEPULAUAN_BANGKA_BELITUNG','KAB_BELITUNG_TIMUR'],'KAB. BELITUNG TIMUR':['KEPULAUAN_BANGKA_BELITUNG','KAB_BELITUNG_TIMUR'],'PANGKAL PINANG':['KEPULAUAN_BANGKA_BELITUNG','KOTA_PANGKAL_PINANG'],'KOTA PANGKAL PINANG':['KEPULAUAN_BANGKA_BELITUNG','KOTA_PANGKAL_PINANG'],'LAMPUNG TENGAH':['LAMPUNG','KAB_LAMPUNG_TENGAH'],'KAB. LAMPUNG TENGAH':['LAMPUNG','KAB_LAMPUNG_TENGAH'],'LAMPUNG UTARA':['LAMPUNG','KAB_LAMPUNG_UTARA'],'KAB. LAMPUNG UTARA':['LAMPUNG','KAB_LAMPUNG_UTARA'],'LAMPUNG SELATAN':['LAMPUNG','KAB_LAMPUNG_SELATAN'],'KAB. LAMPUNG SELATAN':['LAMPUNG','KAB_LAMPUNG_SELATAN'],'LAMPUNG BARAT':['LAMPUNG','KAB_LAMPUNG_BARAT'],'KAB. LAMPUNG BARAT':['LAMPUNG','KAB_LAMPUNG_BARAT'],'LAMPUNG TIMUR':['LAMPUNG','KAB_LAMPUNG_TIMUR'],'KAB. LAMPUNG TIMUR':['LAMPUNG','KAB_LAMPUNG_TIMUR'],'MESUJI':['LAMPUNG','KAB_MESUJI'],'KAB. MESUJI':['LAMPUNG','KAB_MESUJI'],'PESAWARAN':['LAMPUNG','KAB_PESAWARAN'],'KAB. PESAWARAN':['LAMPUNG','KAB_PESAWARAN'],'PESISIR BARAT':['LAMPUNG','KAB_PESISIR_BARAT'],'KAB. PESISIR BARAT':['LAMPUNG','KAB_PESISIR_BARAT'],'PRINGSEWU':['LAMPUNG','KAB_PRINGSEWU'],'KAB. PRINGSEWU':['LAMPUNG','KAB_PRINGSEWU'],'TULANG BAWANG':['LAMPUNG','KAB_TULANG_BAWANG'],'KAB. TULANG BAWANG':['LAMPUNG','KAB_TULANG_BAWANG'],'TULANG BAWANG BARAT':['LAMPUNG','KAB_TULANG_BAWANG_BARAT'],'KAB. TULANG BAWANG BARAT':['LAMPUNG','KAB_TULANG_BAWANG_BARAT'],'TANGGAMUS':['LAMPUNG','KAB_TANGGAMUS'],'KAB. TANGGAMUS':['LAMPUNG','KAB_TANGGAMUS'],'WAY KANAN':['LAMPUNG','KAB_WAY_KANAN'],'KAB. WAY KANAN':['LAMPUNG','KAB_WAY_KANAN'],'BANDAR LAMPUNG':['LAMPUNG','KOTA_BANDAR_LAMPUNG'],'KOTA BANDAR LAMPUNG':['LAMPUNG','KOTA_BANDAR_LAMPUNG'],'METRO':['LAMPUNG','KOTA_METRO'],'KOTA METRO':['LAMPUNG','KOTA_METRO'],'LEBAK':['BANTEN','KAB_LEBAK'],'KAB. LEBAK':['BANTEN','KAB_LEBAK'],'PANDEGLANG':['BANTEN','KAB_PANDEGLANG'],'KAB. PANDEGLANG':['BANTEN','KAB_PANDEGLANG'],'SERANG':['BANTEN','KAB_SERANG'],'KAB. SERANG':['BANTEN','KAB_SERANG'],'TANGERANG':['BANTEN','KAB_TANGERANG'],'KAB. TANGERANG':['BANTEN','KAB_TANGERANG'],'CILEGON':['BANTEN','KOTA_CILEGON'],'KOTA CILEGON':['BANTEN','KOTA_CILEGON'],'SERANG':['BANTEN','KOTA_SERANG'],'KOTA SERANG':['BANTEN','KOTA_SERANG'],'TANGERANG':['BANTEN','KOTA_TANGERANG'],'KOTA TANGERANG':['BANTEN','KOTA_TANGERANG'],'TANGERANG SELATAN':['BANTEN','KOTA_TANGERANG_SELATAN'],'KOTA TANGERANG SELATAN':['BANTEN','KOTA_TANGERANG_SELATAN'],'BANDUNG':['JAWA_BARAT','KAB_BANDUNG'],'KAB. BANDUNG':['JAWA_BARAT','KAB_BANDUNG'],'BANDUNG BARAT':['JAWA_BARAT','KAB_BANDUNG_BARAT'],'KAB. BANDUNG BARAT':['JAWA_BARAT','KAB_BANDUNG_BARAT'],'BEKASI':['JAWA_BARAT','KAB_BEKASI'],'KAB. BEKASI':['JAWA_BARAT','KAB_BEKASI'],'BOGOR':['JAWA_BARAT','KAB_BOGOR'],'KAB. BOGOR':['JAWA_BARAT','KAB_BOGOR'],'CIAMIS':['JAWA_BARAT','KAB_CIAMIS'],'KAB. CIAMIS':['JAWA_BARAT','KAB_CIAMIS'],'CIANJUR':['JAWA_BARAT','KAB_CIANJUR'],'KAB. CIANJUR':['JAWA_BARAT','KAB_CIANJUR'],'CIREBON':['JAWA_BARAT','KAB_CIREBON'],'KAB. CIREBON':['JAWA_BARAT','KAB_CIREBON'],'GARUT':['JAWA_BARAT','KAB_GARUT'],'KAB. GARUT':['JAWA_BARAT','KAB_GARUT'],'INDRAMAYU':['JAWA_BARAT','KAB_INDRAMAYU'],'KAB. INDRAMAYU':['JAWA_BARAT','KAB_INDRAMAYU'],'KARAWANG':['JAWA_BARAT','KAB_KARAWANG'],'KAB. KARAWANG':['JAWA_BARAT','KAB_KARAWANG'],'KUNINGAN':['JAWA_BARAT','KAB_KUNINGAN'],'KAB. KUNINGAN':['JAWA_BARAT','KAB_KUNINGAN'],'MAJALENGKA':['JAWA_BARAT','KAB_MAJALENGKA'],'KAB. MAJALENGKA':['JAWA_BARAT','KAB_MAJALENGKA'],'PANGANDARAN':['JAWA_BARAT','KAB_PANGANDARAN'],'KAB. PANGANDARAN':['JAWA_BARAT','KAB_PANGANDARAN'],'PURWAKARTA':['JAWA_BARAT','KAB_PURWAKARTA'],'KAB. PURWAKARTA':['JAWA_BARAT','KAB_PURWAKARTA'],'SUBANG':['JAWA_BARAT','KAB_SUBANG'],'KAB. SUBANG':['JAWA_BARAT','KAB_SUBANG'],'SUKABUMI':['JAWA_BARAT','KAB_SUKABUMI'],'KAB. SUKABUMI':['JAWA_BARAT','KAB_SUKABUMI'],'SUMEDANG':['JAWA_BARAT','KAB_SUMEDANG'],'KAB. SUMEDANG':['JAWA_BARAT','KAB_SUMEDANG'],'TASIKMALAYA':['JAWA_BARAT','KAB_TASIKMALAYA'],'KAB. TASIKMALAYA':['JAWA_BARAT','KAB_TASIKMALAYA'],'BANDUNG':['JAWA_BARAT','KOTA_BANDUNG'],'KOTA BANDUNG':['JAWA_BARAT','KOTA_BANDUNG'],'BANJAR':['JAWA_BARAT','KOTA_BANJAR'],'KOTA BANJAR':['JAWA_BARAT','KOTA_BANJAR'],'BEKASI':['JAWA_BARAT','KOTA_BEKASI'],'KOTA BEKASI':['JAWA_BARAT','KOTA_BEKASI'],'BOGOR':['JAWA_BARAT','KOTA_BOGOR'],'KOTA BOGOR':['JAWA_BARAT','KOTA_BOGOR'],'CIMAHI':['JAWA_BARAT','KOTA_CIMAHI'],'KOTA CIMAHI':['JAWA_BARAT','KOTA_CIMAHI'],'CIREBON':['JAWA_BARAT','KOTA_CIREBON'],'KOTA CIREBON':['JAWA_BARAT','KOTA_CIREBON'],'DEPOK':['JAWA_BARAT','KOTA_DEPOK'],'KOTA DEPOK':['JAWA_BARAT','KOTA_DEPOK'],'SUKABUMI':['JAWA_BARAT','KOTA_SUKABUMI'],'KOTA SUKABUMI':['JAWA_BARAT','KOTA_SUKABUMI'],'TASIKMALAYA':['JAWA_BARAT','KOTA_TASIKMALAYA'],'KOTA TASIKMALAYA':['JAWA_BARAT','KOTA_TASIKMALAYA'],'JAKARTA':['DKI_JAKARTA','KOTA_JAKARTA'],'KOTA JAKARTA':['DKI_JAKARTA','KOTA_JAKARTA'],'KEPULAUAN SERIBU':['DKI_JAKARTA','KAB_KEPULAUAN_SERIBU'],'KAB. KEPULAUAN SERIBU':['DKI_JAKARTA','KAB_KEPULAUAN_SERIBU'],'BANJARNEGARA':['JAWA_TENGAH','KAB_BANJARNEGARA'],'KAB. BANJARNEGARA':['JAWA_TENGAH','KAB_BANJARNEGARA'],'BANYUMAS':['JAWA_TENGAH','KAB_BANYUMAS'],'KAB. BANYUMAS':['JAWA_TENGAH','KAB_BANYUMAS'],'BATANG':['JAWA_TENGAH','KAB_BATANG'],'KAB. BATANG':['JAWA_TENGAH','KAB_BATANG'],'BLORA':['JAWA_TENGAH','KAB_BLORA'],'KAB. BLORA':['JAWA_TENGAH','KAB_BLORA'],'BOYOLALI':['JAWA_TENGAH','KAB_BOYOLALI'],'KAB. BOYOLALI':['JAWA_TENGAH','KAB_BOYOLALI'],'BREBES':['JAWA_TENGAH','KAB_BREBES'],'KAB. BREBES':['JAWA_TENGAH','KAB_BREBES'],'CILACAP':['JAWA_TENGAH','KAB_CILACAP'],'KAB. CILACAP':['JAWA_TENGAH','KAB_CILACAP'],'DEMAK':['JAWA_TENGAH','KAB_DEMAK'],'KAB. DEMAK':['JAWA_TENGAH','KAB_DEMAK'],'GROBOGAN':['JAWA_TENGAH','KAB_GROBOGAN'],'KAB. GROBOGAN':['JAWA_TENGAH','KAB_GROBOGAN'],'JEPARA':['JAWA_TENGAH','KAB_JEPARA'],'KAB. JEPARA':['JAWA_TENGAH','KAB_JEPARA'],'KARANGANYAR':['JAWA_TENGAH','KAB_KARANGANYAR'],'KAB. KARANGANYAR':['JAWA_TENGAH','KAB_KARANGANYAR'],'KEBUMEN':['JAWA_TENGAH','KAB_KEBUMEN'],'KAB. KEBUMEN':['JAWA_TENGAH','KAB_KEBUMEN'],'KENDAL':['JAWA_TENGAH','KAB_KENDAL'],'KAB. KENDAL':['JAWA_TENGAH','KAB_KENDAL'],'KLATEN':['JAWA_TENGAH','KAB_KLATEN'],'KAB. KLATEN':['JAWA_TENGAH','KAB_KLATEN'],'KUDUS':['JAWA_TENGAH','KAB_KUDUS'],'KAB. KUDUS':['JAWA_TENGAH','KAB_KUDUS'],'MAGELANG':['JAWA_TENGAH','KAB_MAGELANG'],'KAB. MAGELANG':['JAWA_TENGAH','KAB_MAGELANG'],'PATI':['JAWA_TENGAH','KAB_PATI'],'KAB. PATI':['JAWA_TENGAH','KAB_PATI'],'PEKALONGAN':['JAWA_TENGAH','KAB_PEKALONGAN'],'KAB. PEKALONGAN':['JAWA_TENGAH','KAB_PEKALONGAN'],'PEMALANG':['JAWA_TENGAH','KAB_PEMALANG'],'KAB. PEMALANG':['JAWA_TENGAH','KAB_PEMALANG'],'PURBALINGGA':['JAWA_TENGAH','KAB_PURBALINGGA'],'KAB. PURBALINGGA':['JAWA_TENGAH','KAB_PURBALINGGA'],'PURWOREJO':['JAWA_TENGAH','KAB_PURWOREJO'],'KAB. PURWOREJO':['JAWA_TENGAH','KAB_PURWOREJO'],'REMBANG':['JAWA_TENGAH','KAB_REMBANG'],'KAB. REMBANG':['JAWA_TENGAH','KAB_REMBANG'],'SEMARANG':['JAWA_TENGAH','KAB_SEMARANG'],'KAB. SEMARANG':['JAWA_TENGAH','KAB_SEMARANG'],'SRAGEN':['JAWA_TENGAH','KAB_SRAGEN'],'KAB. SRAGEN':['JAWA_TENGAH','KAB_SRAGEN'],'SUKOHARJO':['JAWA_TENGAH','KAB_SUKOHARJO'],'KAB. SUKOHARJO':['JAWA_TENGAH','KAB_SUKOHARJO'],'TEGAL':['JAWA_TENGAH','KAB_TEGAL'],'KAB. TEGAL':['JAWA_TENGAH','KAB_TEGAL'],'TEMANGGUNG':['JAWA_TENGAH','KAB_TEMANGGUNG'],'KAB. TEMANGGUNG':['JAWA_TENGAH','KAB_TEMANGGUNG'],'WONOGIRI':['JAWA_TENGAH','KAB_WONOGIRI'],'KAB. WONOGIRI':['JAWA_TENGAH','KAB_WONOGIRI'],'WONOSOBO':['JAWA_TENGAH','KAB_WONOSOBO'],'KAB. WONOSOBO':['JAWA_TENGAH','KAB_WONOSOBO'],'MAGELANG':['JAWA_TENGAH','KOTA_MAGELANG'],'KOTA MAGELANG':['JAWA_TENGAH','KOTA_MAGELANG'],'PEKALONGAN':['JAWA_TENGAH','KOTA_PEKALONGAN'],'KOTA PEKALONGAN':['JAWA_TENGAH','KOTA_PEKALONGAN'],'SALATIGA':['JAWA_TENGAH','KOTA_SALATIGA'],'KOTA SALATIGA':['JAWA_TENGAH','KOTA_SALATIGA'],'SEMARANG':['JAWA_TENGAH','KOTA_SEMARANG'],'KOTA SEMARANG':['JAWA_TENGAH','KOTA_SEMARANG'],'SURAKARTA':['JAWA_TENGAH','KOTA_SURAKARTA'],'KOTA SURAKARTA':['JAWA_TENGAH','KOTA_SURAKARTA'],'TEGAL':['JAWA_TENGAH','KOTA_TEGAL'],'KOTA TEGAL':['JAWA_TENGAH','KOTA_TEGAL'],'BANTUL':['DI_YOGYAKARTA','KAB_BANTUL'],'KAB. BANTUL':['DI_YOGYAKARTA','KAB_BANTUL'],'GUNUNGKIDUL':['DI_YOGYAKARTA','KAB_GUNUNGKIDUL'],'KAB. GUNUNGKIDUL':['DI_YOGYAKARTA','KAB_GUNUNGKIDUL'],'KULON PROGO':['DI_YOGYAKARTA','KAB_KULON_PROGO'],'KAB. KULON PROGO':['DI_YOGYAKARTA','KAB_KULON_PROGO'],'SLEMAN':['DI_YOGYAKARTA','KAB_SLEMAN'],'KAB. SLEMAN':['DI_YOGYAKARTA','KAB_SLEMAN'],'YOGYAKARTA':['DI_YOGYAKARTA','KOTA_YOGYAKARTA'],'KOTA YOGYAKARTA':['DI_YOGYAKARTA','KOTA_YOGYAKARTA'],'BANGKALAN':['JAWA_TIMUR','KAB_BANGKALAN'],'KAB. BANGKALAN':['JAWA_TIMUR','KAB_BANGKALAN'],'BANYUWANGI':['JAWA_TIMUR','KAB_BANYUWANGI'],'KAB. BANYUWANGI':['JAWA_TIMUR','KAB_BANYUWANGI'],'BLITAR':['JAWA_TIMUR','KAB_BLITAR'],'KAB. BLITAR':['JAWA_TIMUR','KAB_BLITAR'],'BOJONEGORO':['JAWA_TIMUR','KAB_BOJONEGORO'],'KAB. BOJONEGORO':['JAWA_TIMUR','KAB_BOJONEGORO'],'BONDOWOSO':['JAWA_TIMUR','KAB_BONDOWOSO'],'KAB. BONDOWOSO':['JAWA_TIMUR','KAB_BONDOWOSO'],'GRESIK':['JAWA_TIMUR','KAB_GRESIK'],'KAB. GRESIK':['JAWA_TIMUR','KAB_GRESIK'],'JEMBER':['JAWA_TIMUR','KAB_JEMBER'],'KAB. JEMBER':['JAWA_TIMUR','KAB_JEMBER'],'JOMBANG':['JAWA_TIMUR','KAB_JOMBANG'],'KAB. JOMBANG':['JAWA_TIMUR','KAB_JOMBANG'],'KEDIRI':['JAWA_TIMUR','KAB_KEDIRI'],'KAB. KEDIRI':['JAWA_TIMUR','KAB_KEDIRI'],'LAMONGAN':['JAWA_TIMUR','KAB_LAMONGAN'],'KAB. LAMONGAN':['JAWA_TIMUR','KAB_LAMONGAN'],'LUMAJANG':['JAWA_TIMUR','KAB_LUMAJANG'],'KAB. LUMAJANG':['JAWA_TIMUR','KAB_LUMAJANG'],'MADIUN':['JAWA_TIMUR','KAB_MADIUN'],'KAB. MADIUN':['JAWA_TIMUR','KAB_MADIUN'],'MAGETAN':['JAWA_TIMUR','KAB_MAGETAN'],'KAB. MAGETAN':['JAWA_TIMUR','KAB_MAGETAN'],'MALANG':['JAWA_TIMUR','KAB_MALANG'],'KAB. MALANG':['JAWA_TIMUR','KAB_MALANG'],'MOJOKERTO':['JAWA_TIMUR','KAB_MOJOKERTO'],'KAB. MOJOKERTO':['JAWA_TIMUR','KAB_MOJOKERTO'],'NGANJUK':['JAWA_TIMUR','KAB_NGANJUK'],'KAB. NGANJUK':['JAWA_TIMUR','KAB_NGANJUK'],'NGAWI':['JAWA_TIMUR','KAB_NGAWI'],'KAB. NGAWI':['JAWA_TIMUR','KAB_NGAWI'],'PACITAN':['JAWA_TIMUR','KAB_PACITAN'],'KAB. PACITAN':['JAWA_TIMUR','KAB_PACITAN'],'PAMEKASAN':['JAWA_TIMUR','KAB_PAMEKASAN'],'KAB. PAMEKASAN':['JAWA_TIMUR','KAB_PAMEKASAN'],'PASURUAN':['JAWA_TIMUR','KAB_PASURUAN'],'KAB. PASURUAN':['JAWA_TIMUR','KAB_PASURUAN'],'PONOROGO':['JAWA_TIMUR','KAB_PONOROGO'],'KAB. PONOROGO':['JAWA_TIMUR','KAB_PONOROGO'],'PROBOLINGGO':['JAWA_TIMUR','KAB_PROBOLINGGO'],'KAB. PROBOLINGGO':['JAWA_TIMUR','KAB_PROBOLINGGO'],'SAMPANG':['JAWA_TIMUR','KAB_SAMPANG'],'KAB. SAMPANG':['JAWA_TIMUR','KAB_SAMPANG'],'SIDOARJO':['JAWA_TIMUR','KAB_SIDOARJO'],'KAB. SIDOARJO':['JAWA_TIMUR','KAB_SIDOARJO'],'SITUBONDO':['JAWA_TIMUR','KAB_SITUBONDO'],'KAB. SITUBONDO':['JAWA_TIMUR','KAB_SITUBONDO'],'SUMENEP':['JAWA_TIMUR','KAB_SUMENEP'],'KAB. SUMENEP':['JAWA_TIMUR','KAB_SUMENEP'],'TRENGGALEK':['JAWA_TIMUR','KAB_TRENGGALEK'],'KAB. TRENGGALEK':['JAWA_TIMUR','KAB_TRENGGALEK'],'TUBAN':['JAWA_TIMUR','KAB_TUBAN'],'KAB. TUBAN':['JAWA_TIMUR','KAB_TUBAN'],'TULUNGAGUNG':['JAWA_TIMUR','KAB_TULUNGAGUNG'],'KAB. TULUNGAGUNG':['JAWA_TIMUR','KAB_TULUNGAGUNG'],'BATU':['JAWA_TIMUR','KOTA_BATU'],'KOTA BATU':['JAWA_TIMUR','KOTA_BATU'],'BLITAR':['JAWA_TIMUR','KOTA_BLITAR'],'KOTA BLITAR':['JAWA_TIMUR','KOTA_BLITAR'],'KEDIRI':['JAWA_TIMUR','KOTA_KEDIRI'],'KOTA KEDIRI':['JAWA_TIMUR','KOTA_KEDIRI'],'MADIUN':['JAWA_TIMUR','KOTA_MADIUN'],'KOTA MADIUN':['JAWA_TIMUR','KOTA_MADIUN'],'MALANG':['JAWA_TIMUR','KOTA_MALANG'],'KOTA MALANG':['JAWA_TIMUR','KOTA_MALANG'],'MOJOKERTO':['JAWA_TIMUR','KOTA_MOJOKERTO'],'KOTA MOJOKERTO':['JAWA_TIMUR','KOTA_MOJOKERTO'],'PASURUAN':['JAWA_TIMUR','KOTA_PASURUAN'],'KOTA PASURUAN':['JAWA_TIMUR','KOTA_PASURUAN'],'PROBOLINGGO':['JAWA_TIMUR','KOTA_PROBOLINGGO'],'KOTA PROBOLINGGO':['JAWA_TIMUR','KOTA_PROBOLINGGO'],'SURABAYA':['JAWA_TIMUR','KOTA_SURABAYA'],'KOTA SURABAYA':['JAWA_TIMUR','KOTA_SURABAYA'],'BADUNG':['BALI','KAB_BADUNG'],'KAB. BADUNG':['BALI','KAB_BADUNG'],'BANGLI':['BALI','KAB_BANGLI'],'KAB. BANGLI':['BALI','KAB_BANGLI'],'BULELENG':['BALI','KAB_BULELENG'],'KAB. BULELENG':['BALI','KAB_BULELENG'],'GIANYAR':['BALI','KAB_GIANYAR'],'KAB. GIANYAR':['BALI','KAB_GIANYAR'],'JEMBRANA':['BALI','KAB_JEMBRANA'],'KAB. JEMBRANA':['BALI','KAB_JEMBRANA'],'KARANGASEM':['BALI','KAB_KARANGASEM'],'KAB. KARANGASEM':['BALI','KAB_KARANGASEM'],'KLUNGKUNG':['BALI','KAB_KLUNGKUNG'],'KAB. KLUNGKUNG':['BALI','KAB_KLUNGKUNG'],'TABANAN':['BALI','KAB_TABANAN'],'KAB. TABANAN':['BALI','KAB_TABANAN'],'DENPASAR':['BALI','KOTA_DENPASAR'],'KOTA DENPASAR':['BALI','KOTA_DENPASAR'],'BIMA':['NUSA_TENGGARA_BARAT','KAB_BIMA'],'KAB. BIMA':['NUSA_TENGGARA_BARAT','KAB_BIMA'],'DOMPU':['NUSA_TENGGARA_BARAT','KAB_DOMPU'],'KAB. DOMPU':['NUSA_TENGGARA_BARAT','KAB_DOMPU'],'LOMBOK BARAT':['NUSA_TENGGARA_BARAT','KAB_LOMBOK_BARAT'],'KAB. LOMBOK BARAT':['NUSA_TENGGARA_BARAT','KAB_LOMBOK_BARAT'],'LOMBOK TENGAH':['NUSA_TENGGARA_BARAT','KAB_LOMBOK_TENGAH'],'KAB. LOMBOK TENGAH':['NUSA_TENGGARA_BARAT','KAB_LOMBOK_TENGAH'],'LOMBOK TIMUR':['NUSA_TENGGARA_BARAT','KAB_LOMBOK_TIMUR'],'KAB. LOMBOK TIMUR':['NUSA_TENGGARA_BARAT','KAB_LOMBOK_TIMUR'],'LOMBOK UTARA':['NUSA_TENGGARA_BARAT','KAB_LOMBOK_UTARA'],'KAB. LOMBOK UTARA':['NUSA_TENGGARA_BARAT','KAB_LOMBOK_UTARA'],'SUMBAWA':['NUSA_TENGGARA_BARAT','KAB_SUMBAWA'],'KAB. SUMBAWA':['NUSA_TENGGARA_BARAT','KAB_SUMBAWA'],'SUMBAWA BARAT':['NUSA_TENGGARA_BARAT','KAB_SUMBAWA_BARAT'],'KAB. SUMBAWA BARAT':['NUSA_TENGGARA_BARAT','KAB_SUMBAWA_BARAT'],'BIMA':['NUSA_TENGGARA_BARAT','KOTA_BIMA'],'KOTA BIMA':['NUSA_TENGGARA_BARAT','KOTA_BIMA'],'MATARAM':['NUSA_TENGGARA_BARAT','KOTA_MATARAM'],'KOTA MATARAM':['NUSA_TENGGARA_BARAT','KOTA_MATARAM'],'ALOR':['NUSA_TENGGARA_TIMUR','KAB_ALOR'],'KAB. ALOR':['NUSA_TENGGARA_TIMUR','KAB_ALOR'],'BELU':['NUSA_TENGGARA_TIMUR','KAB_BELU'],'KAB. BELU':['NUSA_TENGGARA_TIMUR','KAB_BELU'],'ENDE':['NUSA_TENGGARA_TIMUR','KAB_ENDE'],'KAB. ENDE':['NUSA_TENGGARA_TIMUR','KAB_ENDE'],'FLORES TIMUR':['NUSA_TENGGARA_TIMUR','KAB_FLORES_TIMUR'],'KAB. FLORES TIMUR':['NUSA_TENGGARA_TIMUR','KAB_FLORES_TIMUR'],'KUPANG':['NUSA_TENGGARA_TIMUR','KAB_KUPANG'],'KAB. KUPANG':['NUSA_TENGGARA_TIMUR','KAB_KUPANG'],'LEMBATA':['NUSA_TENGGARA_TIMUR','KAB_LEMBATA'],'KAB. LEMBATA':['NUSA_TENGGARA_TIMUR','KAB_LEMBATA'],'MALAKA':['NUSA_TENGGARA_TIMUR','KAB_MALAKA'],'KAB. MALAKA':['NUSA_TENGGARA_TIMUR','KAB_MALAKA'],'MANGGARAI':['NUSA_TENGGARA_TIMUR','KAB_MANGGARAI'],'KAB. MANGGARAI':['NUSA_TENGGARA_TIMUR','KAB_MANGGARAI'],'MANGGARAI BARAT':['NUSA_TENGGARA_TIMUR','KAB_MANGGARAI_BARAT'],'KAB. MANGGARAI BARAT':['NUSA_TENGGARA_TIMUR','KAB_MANGGARAI_BARAT'],'MANGGARAI TIMUR':['NUSA_TENGGARA_TIMUR','KAB_MANGGARAI_TIMUR'],'KAB. MANGGARAI TIMUR':['NUSA_TENGGARA_TIMUR','KAB_MANGGARAI_TIMUR'],'NGADA':['NUSA_TENGGARA_TIMUR','KAB_NGADA'],'KAB. NGADA':['NUSA_TENGGARA_TIMUR','KAB_NGADA'],'NAGEKEO':['NUSA_TENGGARA_TIMUR','KAB_NAGEKEO'],'KAB. NAGEKEO':['NUSA_TENGGARA_TIMUR','KAB_NAGEKEO'],'ROTE NDAO':['NUSA_TENGGARA_TIMUR','KAB_ROTE_NDAO'],'KAB. ROTE NDAO':['NUSA_TENGGARA_TIMUR','KAB_ROTE_NDAO'],'SABU RAIJUA':['NUSA_TENGGARA_TIMUR','KAB_SABU_RAIJUA'],'KAB. SABU RAIJUA':['NUSA_TENGGARA_TIMUR','KAB_SABU_RAIJUA'],'SIKKA':['NUSA_TENGGARA_TIMUR','KAB_SIKKA'],'KAB. SIKKA':['NUSA_TENGGARA_TIMUR','KAB_SIKKA'],'SUMBA BARAT':['NUSA_TENGGARA_TIMUR','KAB_SUMBA_BARAT'],'KAB. SUMBA BARAT':['NUSA_TENGGARA_TIMUR','KAB_SUMBA_BARAT'],'SUMBA BARAT DAYA':['NUSA_TENGGARA_TIMUR','KAB_SUMBA_BARAT_DAYA'],'KAB. SUMBA BARAT DAYA':['NUSA_TENGGARA_TIMUR','KAB_SUMBA_BARAT_DAYA'],'SUMBA TENGAH':['NUSA_TENGGARA_TIMUR','KAB_SUMBA_TENGAH'],'KAB. SUMBA TENGAH':['NUSA_TENGGARA_TIMUR','KAB_SUMBA_TENGAH'],'SUMBA TIMUR':['NUSA_TENGGARA_TIMUR','KAB_SUMBA_TIMUR'],'KAB. SUMBA TIMUR':['NUSA_TENGGARA_TIMUR','KAB_SUMBA_TIMUR'],'TIMOR TENGAH SELATAN':['NUSA_TENGGARA_TIMUR','KAB_TIMOR_TENGAH_SELATAN'],'KAB. TIMOR TENGAH SELATAN':['NUSA_TENGGARA_TIMUR','KAB_TIMOR_TENGAH_SELATAN'],'TIMOR TENGAH UTARA':['NUSA_TENGGARA_TIMUR','KAB_TIMOR_TENGAH_UTARA'],'KAB. TIMOR TENGAH UTARA':['NUSA_TENGGARA_TIMUR','KAB_TIMOR_TENGAH_UTARA'],'KUPANG':['NUSA_TENGGARA_TIMUR','KOTA_KUPANG'],'KOTA KUPANG':['NUSA_TENGGARA_TIMUR','KOTA_KUPANG'],'BENGKAYANG':['KALIMANTAN_BARAT','KAB_BENGKAYANG'],'KAB. BENGKAYANG':['KALIMANTAN_BARAT','KAB_BENGKAYANG'],'KAPUAS HULU':['KALIMANTAN_BARAT','KAB_KAPUAS_HULU'],'KAB. KAPUAS HULU':['KALIMANTAN_BARAT','KAB_KAPUAS_HULU'],'KAYONG UTARA':['KALIMANTAN_BARAT','KAB_KAYONG_UTARA'],'KAB. KAYONG UTARA':['KALIMANTAN_BARAT','KAB_KAYONG_UTARA'],'KETAPANG':['KALIMANTAN_BARAT','KAB_KETAPANG'],'KAB. KETAPANG':['KALIMANTAN_BARAT','KAB_KETAPANG'],'KUBU RAYA':['KALIMANTAN_BARAT','KAB_KUBU_RAYA'],'KAB. KUBU RAYA':['KALIMANTAN_BARAT','KAB_KUBU_RAYA'],'LANDAK':['KALIMANTAN_BARAT','KAB_LANDAK'],'KAB. LANDAK':['KALIMANTAN_BARAT','KAB_LANDAK'],'MELAWI':['KALIMANTAN_BARAT','KAB_MELAWI'],'KAB. MELAWI':['KALIMANTAN_BARAT','KAB_MELAWI'],'MEMPAWAH':['KALIMANTAN_BARAT','KAB_MEMPAWAH'],'KAB. MEMPAWAH':['KALIMANTAN_BARAT','KAB_MEMPAWAH'],'SAMBAS':['KALIMANTAN_BARAT','KAB_SAMBAS'],'KAB. SAMBAS':['KALIMANTAN_BARAT','KAB_SAMBAS'],'SANGGAU':['KALIMANTAN_BARAT','KAB_SANGGAU'],'KAB. SANGGAU':['KALIMANTAN_BARAT','KAB_SANGGAU'],'SEKADAU':['KALIMANTAN_BARAT','KAB_SEKADAU'],'KAB. SEKADAU':['KALIMANTAN_BARAT','KAB_SEKADAU'],'SINTANG':['KALIMANTAN_BARAT','KAB_SINTANG'],'KAB. SINTANG':['KALIMANTAN_BARAT','KAB_SINTANG'],'PONTIANAK':['KALIMANTAN_BARAT','KOTA_PONTIANAK'],'KOTA PONTIANAK':['KALIMANTAN_BARAT','KOTA_PONTIANAK'],'SINGKAWANG':['KALIMANTAN_BARAT','KOTA_SINGKAWANG'],'KOTA SINGKAWANG':['KALIMANTAN_BARAT','KOTA_SINGKAWANG'],'BALANGAN':['KALIMANTAN_SELATAN','KAB_BALANGAN'],'KAB. BALANGAN':['KALIMANTAN_SELATAN','KAB_BALANGAN'],'BANJAR':['KALIMANTAN_SELATAN','KAB_BANJAR'],'KAB. BANJAR':['KALIMANTAN_SELATAN','KAB_BANJAR'],'BARITO KUALA':['KALIMANTAN_SELATAN','KAB_BARITO_KUALA'],'KAB. BARITO KUALA':['KALIMANTAN_SELATAN','KAB_BARITO_KUALA'],'HULU SUNGAI SELATAN':['KALIMANTAN_SELATAN','KAB_HULU_SUNGAI_SELATAN'],'KAB. HULU SUNGAI SELATAN':['KALIMANTAN_SELATAN','KAB_HULU_SUNGAI_SELATAN'],'HULU SUNGAI TENGAH':['KALIMANTAN_SELATAN','KAB_HULU_SUNGAI_TENGAH'],'KAB. HULU SUNGAI TENGAH':['KALIMANTAN_SELATAN','KAB_HULU_SUNGAI_TENGAH'],'HULU SUNGAI UTARA':['KALIMANTAN_SELATAN','KAB_HULU_SUNGAI_UTARA'],'KAB. HULU SUNGAI UTARA':['KALIMANTAN_SELATAN','KAB_HULU_SUNGAI_UTARA'],'KOTABARU':['KALIMANTAN_SELATAN','KAB_KOTABARU'],'KAB. KOTABARU':['KALIMANTAN_SELATAN','KAB_KOTABARU'],'TABALONG':['KALIMANTAN_SELATAN','KAB_TABALONG'],'KAB. TABALONG':['KALIMANTAN_SELATAN','KAB_TABALONG'],'TANAH BUMBU':['KALIMANTAN_SELATAN','KAB_TANAH_BUMBU'],'KAB. TANAH BUMBU':['KALIMANTAN_SELATAN','KAB_TANAH_BUMBU'],'TANAH LAUT':['KALIMANTAN_SELATAN','KAB_TANAH_LAUT'],'KAB. TANAH LAUT':['KALIMANTAN_SELATAN','KAB_TANAH_LAUT'],'TAPIN':['KALIMANTAN_SELATAN','KAB_TAPIN'],'KAB. TAPIN':['KALIMANTAN_SELATAN','KAB_TAPIN'],'BANJARBARU':['KALIMANTAN_SELATAN','KOTA_BANJARBARU'],'KOTA BANJARBARU':['KALIMANTAN_SELATAN','KOTA_BANJARBARU'],'BANJARMASIN':['KALIMANTAN_SELATAN','KOTA_BANJARMASIN'],'KOTA BANJARMASIN':['KALIMANTAN_SELATAN','KOTA_BANJARMASIN'],'BARITO SELATAN':['KALIMANTAN_TENGAH','KAB_BARITO_SELATAN'],'KAB. BARITO SELATAN':['KALIMANTAN_TENGAH','KAB_BARITO_SELATAN'],'BARITO TIMUR':['KALIMANTAN_TENGAH','KAB_BARITO_TIMUR'],'KAB. BARITO TIMUR':['KALIMANTAN_TENGAH','KAB_BARITO_TIMUR'],'BARITO UTARA':['KALIMANTAN_TENGAH','KAB_BARITO_UTARA'],'KAB. BARITO UTARA':['KALIMANTAN_TENGAH','KAB_BARITO_UTARA'],'GUNUNG MAS':['KALIMANTAN_TENGAH','KAB_GUNUNG_MAS'],'KAB. GUNUNG MAS':['KALIMANTAN_TENGAH','KAB_GUNUNG_MAS'],'KAPUAS':['KALIMANTAN_TENGAH','KAB_KAPUAS'],'KAB. KAPUAS':['KALIMANTAN_TENGAH','KAB_KAPUAS'],'KATINGAN':['KALIMANTAN_TENGAH','KAB_KATINGAN'],'KAB. KATINGAN':['KALIMANTAN_TENGAH','KAB_KATINGAN'],'KOTAWARINGIN BARAT':['KALIMANTAN_TENGAH','KAB_KOTAWARINGIN_BARAT'],'KAB. KOTAWARINGIN BARAT':['KALIMANTAN_TENGAH','KAB_KOTAWARINGIN_BARAT'],'KOTAWARINGIN TIMUR':['KALIMANTAN_TENGAH','KAB_KOTAWARINGIN_TIMUR'],'KAB. KOTAWARINGIN TIMUR':['KALIMANTAN_TENGAH','KAB_KOTAWARINGIN_TIMUR'],'LAMANDAU':['KALIMANTAN_TENGAH','KAB_LAMANDAU'],'KAB. LAMANDAU':['KALIMANTAN_TENGAH','KAB_LAMANDAU'],'MURUNG RAYA':['KALIMANTAN_TENGAH','KAB_MURUNG_RAYA'],'KAB. MURUNG RAYA':['KALIMANTAN_TENGAH','KAB_MURUNG_RAYA'],'PULANG PISAU':['KALIMANTAN_TENGAH','KAB_PULANG_PISAU'],'KAB. PULANG PISAU':['KALIMANTAN_TENGAH','KAB_PULANG_PISAU'],'SUKAMARA':['KALIMANTAN_TENGAH','KAB_SUKAMARA'],'KAB. SUKAMARA':['KALIMANTAN_TENGAH','KAB_SUKAMARA'],'SERUYAN':['KALIMANTAN_TENGAH','KAB_SERUYAN'],'KAB. SERUYAN':['KALIMANTAN_TENGAH','KAB_SERUYAN'],'PALANGKARAYA':['KALIMANTAN_TENGAH','KOTA_PALANGKARAYA'],'KOTA PALANGKARAYA':['KALIMANTAN_TENGAH','KOTA_PALANGKARAYA'],'BERAU':['KALIMANTAN_TIMUR','KAB_BERAU'],'KAB. BERAU':['KALIMANTAN_TIMUR','KAB_BERAU'],'KUTAI BARAT':['KALIMANTAN_TIMUR','KAB_KUTAI_BARAT'],'KAB. KUTAI BARAT':['KALIMANTAN_TIMUR','KAB_KUTAI_BARAT'],'KUTAI KARTANEGARA':['KALIMANTAN_TIMUR','KAB_KUTAI_KARTANEGARA'],'KAB. KUTAI KARTANEGARA':['KALIMANTAN_TIMUR','KAB_KUTAI_KARTANEGARA'],'KUTAI TIMUR':['KALIMANTAN_TIMUR','KAB_KUTAI_TIMUR'],'KAB. KUTAI TIMUR':['KALIMANTAN_TIMUR','KAB_KUTAI_TIMUR'],'MAHAKAM ULU':['KALIMANTAN_TIMUR','KAB_MAHAKAM_ULU'],'KAB. MAHAKAM ULU':['KALIMANTAN_TIMUR','KAB_MAHAKAM_ULU'],'PASER':['KALIMANTAN_TIMUR','KAB_PASER'],'KAB. PASER':['KALIMANTAN_TIMUR','KAB_PASER'],'PENAJAM PASER UTARA':['KALIMANTAN_TIMUR','KAB_PENAJAM_PASER_UTARA'],'KAB. PENAJAM PASER UTARA':['KALIMANTAN_TIMUR','KAB_PENAJAM_PASER_UTARA'],'BALIKPAPAN':['KALIMANTAN_TIMUR','KOTA_BALIKPAPAN'],'KOTA BALIKPAPAN':['KALIMANTAN_TIMUR','KOTA_BALIKPAPAN'],'BONTANG':['KALIMANTAN_TIMUR','KOTA_BONTANG'],'KOTA BONTANG':['KALIMANTAN_TIMUR','KOTA_BONTANG'],'SAMARINDA':['KALIMANTAN_TIMUR','KOTA_SAMARINDA'],'KOTA SAMARINDA':['KALIMANTAN_TIMUR','KOTA_SAMARINDA'],'BULUNGAN':['KALIMANTAN_UTARA','KAB_BULUNGAN'],'KAB. BULUNGAN':['KALIMANTAN_UTARA','KAB_BULUNGAN'],'MALINAU':['KALIMANTAN_UTARA','KAB_MALINAU'],'KAB. MALINAU':['KALIMANTAN_UTARA','KAB_MALINAU'],'NUNUKAN':['KALIMANTAN_UTARA','KAB_NUNUKAN'],'KAB. NUNUKAN':['KALIMANTAN_UTARA','KAB_NUNUKAN'],'TANA TIDUNG':['KALIMANTAN_UTARA','KAB_TANA_TIDUNG'],'KAB. TANA TIDUNG':['KALIMANTAN_UTARA','KAB_TANA_TIDUNG'],'TARAKAN':['KALIMANTAN_UTARA','KOTA_TARAKAN'],'KOTA TARAKAN':['KALIMANTAN_UTARA','KOTA_TARAKAN'],'BOALEMO':['GORONTALO','KAB_BOALEMO'],'KAB. BOALEMO':['GORONTALO','KAB_BOALEMO'],'BONE BOLANGO':['GORONTALO','KAB_BONE_BOLANGO'],'KAB. BONE BOLANGO':['GORONTALO','KAB_BONE_BOLANGO'],'GORONTALO':['GORONTALO','KAB_GORONTALO'],'KAB. GORONTALO':['GORONTALO','KAB_GORONTALO'],'GORONTALO UTARA':['GORONTALO','KAB_GORONTALO_UTARA'],'KAB. GORONTALO UTARA':['GORONTALO','KAB_GORONTALO_UTARA'],'PAHUWATO':['GORONTALO','KAB_PAHUWATO'],'KAB. PAHUWATO':['GORONTALO','KAB_PAHUWATO'],'GORONTALO':['GORONTALO','KOTA_GORONTALO'],'KOTA GORONTALO':['GORONTALO','KOTA_GORONTALO'],'BANTAENG':['SULAWESI_SELATAN','KAB_BANTAENG'],'KAB. BANTAENG':['SULAWESI_SELATAN','KAB_BANTAENG'],'BARRU':['SULAWESI_SELATAN','KAB_BARRU'],'KAB. BARRU':['SULAWESI_SELATAN','KAB_BARRU'],'BONE':['SULAWESI_SELATAN','KAB_BONE'],'KAB. BONE':['SULAWESI_SELATAN','KAB_BONE'],'BULUKUMBA':['SULAWESI_SELATAN','KAB_BULUKUMBA'],'KAB. BULUKUMBA':['SULAWESI_SELATAN','KAB_BULUKUMBA'],'ENREKANG':['SULAWESI_SELATAN','KAB_ENREKANG'],'KAB. ENREKANG':['SULAWESI_SELATAN','KAB_ENREKANG'],'GOWA':['SULAWESI_SELATAN','KAB_GOWA'],'KAB. GOWA':['SULAWESI_SELATAN','KAB_GOWA'],'JENEPONTO':['SULAWESI_SELATAN','KAB_JENEPONTO'],'KAB. JENEPONTO':['SULAWESI_SELATAN','KAB_JENEPONTO'],'KEPULAUAN SELAYAR':['SULAWESI_SELATAN','KAB_KEPULAUAN_SELAYAR'],'KAB. KEPULAUAN SELAYAR':['SULAWESI_SELATAN','KAB_KEPULAUAN_SELAYAR'],'LUWU':['SULAWESI_SELATAN','KAB_LUWU'],'KAB. LUWU':['SULAWESI_SELATAN','KAB_LUWU'],'LUWU TIMUR':['SULAWESI_SELATAN','KAB_LUWU_TIMUR'],'KAB. LUWU TIMUR':['SULAWESI_SELATAN','KAB_LUWU_TIMUR'],'LUWU UTARA':['SULAWESI_SELATAN','KAB_LUWU_UTARA'],'KAB. LUWU UTARA':['SULAWESI_SELATAN','KAB_LUWU_UTARA'],'MAROS':['SULAWESI_SELATAN','KAB_MAROS'],'KAB. MAROS':['SULAWESI_SELATAN','KAB_MAROS'],'PANGKAJENE DAN KEPULAUAN':['SULAWESI_SELATAN','KAB_PANGKAJENE_DAN_KEPULAUAN'],'KAB. PANGKAJENE DAN KEPULAUAN':['SULAWESI_SELATAN','KAB_PANGKAJENE_DAN_KEPULAUAN'],'PINRANG':['SULAWESI_SELATAN','KAB_PINRANG'],'KAB. PINRANG':['SULAWESI_SELATAN','KAB_PINRANG'],'SIDENRENG RAPPANG':['SULAWESI_SELATAN','KAB_SIDENRENG_RAPPANG'],'KAB. SIDENRENG RAPPANG':['SULAWESI_SELATAN','KAB_SIDENRENG_RAPPANG'],'SINJAI':['SULAWESI_SELATAN','KAB_SINJAI'],'KAB. SINJAI':['SULAWESI_SELATAN','KAB_SINJAI'],'SOPPENG':['SULAWESI_SELATAN','KAB_SOPPENG'],'KAB. SOPPENG':['SULAWESI_SELATAN','KAB_SOPPENG'],'TAKALAR':['SULAWESI_SELATAN','KAB_TAKALAR'],'KAB. TAKALAR':['SULAWESI_SELATAN','KAB_TAKALAR'],'TANA TORAJA':['SULAWESI_SELATAN','KAB_TANA_TORAJA'],'KAB. TANA TORAJA':['SULAWESI_SELATAN','KAB_TANA_TORAJA'],'TORAJA UTARA':['SULAWESI_SELATAN','KAB_TORAJA_UTARA'],'KAB. TORAJA UTARA':['SULAWESI_SELATAN','KAB_TORAJA_UTARA'],'WAJO':['SULAWESI_SELATAN','KAB_WAJO'],'KAB. WAJO':['SULAWESI_SELATAN','KAB_WAJO'],'MAKASSAR':['SULAWESI_SELATAN','KOTA_MAKASSAR'],'KOTA MAKASSAR':['SULAWESI_SELATAN','KOTA_MAKASSAR'],'PALOPO':['SULAWESI_SELATAN','KOTA_PALOPO'],'KOTA PALOPO':['SULAWESI_SELATAN','KOTA_PALOPO'],'PAREPARE':['SULAWESI_SELATAN','KOTA_PAREPARE'],'KOTA PAREPARE':['SULAWESI_SELATAN','KOTA_PAREPARE'],'BOMBANA':['SULAWESI_TENGGARA','KAB_BOMBANA'],'KAB. BOMBANA':['SULAWESI_TENGGARA','KAB_BOMBANA'],'BUTON':['SULAWESI_TENGGARA','KAB_BUTON'],'KAB. BUTON':['SULAWESI_TENGGARA','KAB_BUTON'],'BUTON SELATAN':['SULAWESI_TENGGARA','KAB_BUTON_SELATAN'],'KAB. BUTON SELATAN':['SULAWESI_TENGGARA','KAB_BUTON_SELATAN'],'BUTON TENGAH':['SULAWESI_TENGGARA','KAB_BUTON_TENGAH'],'KAB. BUTON TENGAH':['SULAWESI_TENGGARA','KAB_BUTON_TENGAH'],'BUTON UTARA':['SULAWESI_TENGGARA','KAB_BUTON_UTARA'],'KAB. BUTON UTARA':['SULAWESI_TENGGARA','KAB_BUTON_UTARA'],'KOLAKA':['SULAWESI_TENGGARA','KAB_KOLAKA'],'KAB. KOLAKA':['SULAWESI_TENGGARA','KAB_KOLAKA'],'KOLAKA TIMUR':['SULAWESI_TENGGARA','KAB_KOLAKA_TIMUR'],'KAB. KOLAKA TIMUR':['SULAWESI_TENGGARA','KAB_KOLAKA_TIMUR'],'KOLAKA UTARA':['SULAWESI_TENGGARA','KAB_KOLAKA_UTARA'],'KAB. KOLAKA UTARA':['SULAWESI_TENGGARA','KAB_KOLAKA_UTARA'],'KONAWE':['SULAWESI_TENGGARA','KAB_KONAWE'],'KAB. KONAWE':['SULAWESI_TENGGARA','KAB_KONAWE'],'KONAWE KEPULAUAN':['SULAWESI_TENGGARA','KAB_KONAWE_KEPULAUAN'],'KAB. KONAWE KEPULAUAN':['SULAWESI_TENGGARA','KAB_KONAWE_KEPULAUAN'],'KONAWE SELATAN':['SULAWESI_TENGGARA','KAB_KONAWE_SELATAN'],'KAB. KONAWE SELATAN':['SULAWESI_TENGGARA','KAB_KONAWE_SELATAN'],'KONAWE UTARA':['SULAWESI_TENGGARA','KAB_KONAWE_UTARA'],'KAB. KONAWE UTARA':['SULAWESI_TENGGARA','KAB_KONAWE_UTARA'],'MUNA':['SULAWESI_TENGGARA','KAB_MUNA'],'KAB. MUNA':['SULAWESI_TENGGARA','KAB_MUNA'],'MUNA BARAT':['SULAWESI_TENGGARA','KAB_MUNA_BARAT'],'KAB. MUNA BARAT':['SULAWESI_TENGGARA','KAB_MUNA_BARAT'],'WAKATOBI':['SULAWESI_TENGGARA','KAB_WAKATOBI'],'KAB. WAKATOBI':['SULAWESI_TENGGARA','KAB_WAKATOBI'],'BAU-BAU':['SULAWESI_TENGGARA','KOTA_BAU_BAU'],'KOTA BAU-BAU':['SULAWESI_TENGGARA','KOTA_BAU_BAU'],'KENDARI':['SULAWESI_TENGGARA','KOTA_KENDARI'],'KOTA KENDARI':['SULAWESI_TENGGARA','KOTA_KENDARI'],'BANGGAI':['SULAWESI_TENGAH','KAB_BANGGAI'],'KAB. BANGGAI':['SULAWESI_TENGAH','KAB_BANGGAI'],'BANGGAI KEPULAUAN':['SULAWESI_TENGAH','KAB_BANGGAI_KEPULAUAN'],'KAB. BANGGAI KEPULAUAN':['SULAWESI_TENGAH','KAB_BANGGAI_KEPULAUAN'],'BANGGAI LAUT':['SULAWESI_TENGAH','KAB_BANGGAI_LAUT'],'KAB. BANGGAI LAUT':['SULAWESI_TENGAH','KAB_BANGGAI_LAUT'],'BUOL':['SULAWESI_TENGAH','KAB_BUOL'],'KAB. BUOL':['SULAWESI_TENGAH','KAB_BUOL'],'DONGGALA':['SULAWESI_TENGAH','KAB_DONGGALA'],'KAB. DONGGALA':['SULAWESI_TENGAH','KAB_DONGGALA'],'MOROWALI':['SULAWESI_TENGAH','KAB_MOROWALI'],'KAB. MOROWALI':['SULAWESI_TENGAH','KAB_MOROWALI'],'MOROWALI UTARA':['SULAWESI_TENGAH','KAB_MOROWALI_UTARA'],'KAB. MOROWALI UTARA':['SULAWESI_TENGAH','KAB_MOROWALI_UTARA'],'PARIGI MOUTONG':['SULAWESI_TENGAH','KAB_PARIGI_MOUTONG'],'KAB. PARIGI MOUTONG':['SULAWESI_TENGAH','KAB_PARIGI_MOUTONG'],'POSO':['SULAWESI_TENGAH','KAB_POSO'],'KAB. POSO':['SULAWESI_TENGAH','KAB_POSO'],'SIGI':['SULAWESI_TENGAH','KAB_SIGI'],'KAB. SIGI':['SULAWESI_TENGAH','KAB_SIGI'],'TOJO UNA-UNA':['SULAWESI_TENGAH','KAB_TOJO_UNA_UNA'],'KAB. TOJO UNA-UNA':['SULAWESI_TENGAH','KAB_TOJO_UNA_UNA'],'TOLI-TOLI':['SULAWESI_TENGAH','KAB_TOLI_TOLI'],'KAB. TOLI-TOLI':['SULAWESI_TENGAH','KAB_TOLI_TOLI'],'PALU':['SULAWESI_TENGAH','KOTA_PALU'],'KOTA PALU':['SULAWESI_TENGAH','KOTA_PALU'],'BOLAANG MONGONDOW':['SULAWESI_UTARA','KAB_BOLAANG_MONGONDOW'],'KAB. BOLAANG MONGONDOW':['SULAWESI_UTARA','KAB_BOLAANG_MONGONDOW'],'BOLAANG MONGONDOW SELATAN':['SULAWESI_UTARA','KAB_BOLAANG_MONGONDOW_SELATAN'],'KAB. BOLAANG MONGONDOW SELATAN':['SULAWESI_UTARA','KAB_BOLAANG_MONGONDOW_SELATAN'],'BOLAANG MONGONDOW TIMUR':['SULAWESI_UTARA','KAB_BOLAANG_MONGONDOW_TIMUR'],'KAB. BOLAANG MONGONDOW TIMUR':['SULAWESI_UTARA','KAB_BOLAANG_MONGONDOW_TIMUR'],'BOLAANG MONGONDOW UTARA':['SULAWESI_UTARA','KAB_BOLAANG_MONGONDOW_UTARA'],'KAB. BOLAANG MONGONDOW UTARA':['SULAWESI_UTARA','KAB_BOLAANG_MONGONDOW_UTARA'],'KEPULAUAN SANGIHE':['SULAWESI_UTARA','KAB_KEPULAUAN_SANGIHE'],'KAB. KEPULAUAN SANGIHE':['SULAWESI_UTARA','KAB_KEPULAUAN_SANGIHE'],'KEPULAUAN SIAU TAGULANDANG BIARO':['SULAWESI_UTARA','KAB_KEPULAUAN_SIAU_TAGULANDANG_BIARO'],'KAB. KEPULAUAN SIAU TAGULANDANG BIARO':['SULAWESI_UTARA','KAB_KEPULAUAN_SIAU_TAGULANDANG_BIARO'],'KEPULAUAN TALAUD':['SULAWESI_UTARA','KAB_KEPULAUAN_TALAUD'],'KAB. KEPULAUAN TALAUD':['SULAWESI_UTARA','KAB_KEPULAUAN_TALAUD'],'MINAHASA':['SULAWESI_UTARA','KAB_MINAHASA'],'KAB. MINAHASA':['SULAWESI_UTARA','KAB_MINAHASA'],'MINAHASA SELATAN':['SULAWESI_UTARA','KAB_MINAHASA_SELATAN'],'KAB. MINAHASA SELATAN':['SULAWESI_UTARA','KAB_MINAHASA_SELATAN'],'MINAHASA TENGGARA':['SULAWESI_UTARA','KAB_MINAHASA_TENGGARA'],'KAB. MINAHASA TENGGARA':['SULAWESI_UTARA','KAB_MINAHASA_TENGGARA'],'MINAHASA UTARA':['SULAWESI_UTARA','KAB_MINAHASA_UTARA'],'KAB. MINAHASA UTARA':['SULAWESI_UTARA','KAB_MINAHASA_UTARA'],'BITUNG':['SULAWESI_UTARA','KOTA_BITUNG'],'KOTA BITUNG':['SULAWESI_UTARA','KOTA_BITUNG'],'KOTAMOBAGU':['SULAWESI_UTARA','KOTA_KOTAMOBAGU'],'KOTA KOTAMOBAGU':['SULAWESI_UTARA','KOTA_KOTAMOBAGU'],'MANADO':['SULAWESI_UTARA','KOTA_MANADO'],'KOTA MANADO':['SULAWESI_UTARA','KOTA_MANADO'],'TOMOHON':['SULAWESI_UTARA','KOTA_TOMOHON'],'KOTA TOMOHON':['SULAWESI_UTARA','KOTA_TOMOHON'],'MAJENE':['SULAWESI_BARAT','KAB_MAJENE'],'KAB. MAJENE':['SULAWESI_BARAT','KAB_MAJENE'],'MAMASA':['SULAWESI_BARAT','KAB_MAMASA'],'KAB. MAMASA':['SULAWESI_BARAT','KAB_MAMASA'],'MAMUJU':['SULAWESI_BARAT','KAB_MAMUJU'],'KAB. MAMUJU':['SULAWESI_BARAT','KAB_MAMUJU'],'MAMUJU TENGAH':['SULAWESI_BARAT','KAB_MAMUJU_TENGAH'],'KAB. MAMUJU TENGAH':['SULAWESI_BARAT','KAB_MAMUJU_TENGAH'],'MAMUJU UTARA':['SULAWESI_BARAT','KAB_MAMUJU_UTARA'],'KAB. MAMUJU UTARA':['SULAWESI_BARAT','KAB_MAMUJU_UTARA'],'POLEWALI MANDAR':['SULAWESI_BARAT','KAB_POLEWALI_MANDAR'],'KAB. POLEWALI MANDAR':['SULAWESI_BARAT','KAB_POLEWALI_MANDAR'],'BURU':['MALUKU','KAB_BURU'],'KAB. BURU':['MALUKU','KAB_BURU'],'BURU SELATAN':['MALUKU','KAB_BURU_SELATAN'],'KAB. BURU SELATAN':['MALUKU','KAB_BURU_SELATAN'],'KEPULAUAN ARU':['MALUKU','KAB_KEPULAUAN_ARU'],'KAB. KEPULAUAN ARU':['MALUKU','KAB_KEPULAUAN_ARU'],'MALUKU BARAT DAYA':['MALUKU','KAB_MALUKU_BARAT_DAYA'],'KAB. MALUKU BARAT DAYA':['MALUKU','KAB_MALUKU_BARAT_DAYA'],'MALUKU TENGAH':['MALUKU','KAB_MALUKU_TENGAH'],'KAB. MALUKU TENGAH':['MALUKU','KAB_MALUKU_TENGAH'],'MALUKU TENGGARA':['MALUKU','KAB_MALUKU_TENGGARA'],'KAB. MALUKU TENGGARA':['MALUKU','KAB_MALUKU_TENGGARA'],'MALUKU TENGGARA BARAT':['MALUKU','KAB_MALUKU_TENGGARA_BARAT'],'KAB. MALUKU TENGGARA BARAT':['MALUKU','KAB_MALUKU_TENGGARA_BARAT'],'SERAM BAGIAN BARAT':['MALUKU','KAB_SERAM_BAGIAN_BARAT'],'KAB. SERAM BAGIAN BARAT':['MALUKU','KAB_SERAM_BAGIAN_BARAT'],'SERAM BAGIAN TIMUR':['MALUKU','KAB_SERAM_BAGIAN_TIMUR'],'KAB. SERAM BAGIAN TIMUR':['MALUKU','KAB_SERAM_BAGIAN_TIMUR'],'AMBON':['MALUKU','KOTA_AMBON'],'KOTA AMBON':['MALUKU','KOTA_AMBON'],'TUAL':['MALUKU','KOTA_TUAL'],'KOTA TUAL':['MALUKU','KOTA_TUAL'],'HALMAHERA BARAT':['MALUKU_UTARA','KAB_HALMAHERA_BARAT'],'KAB. HALMAHERA BARAT':['MALUKU_UTARA','KAB_HALMAHERA_BARAT'],'HALMAHERA TENGAH':['MALUKU_UTARA','KAB_HALMAHERA_TENGAH'],'KAB. HALMAHERA TENGAH':['MALUKU_UTARA','KAB_HALMAHERA_TENGAH'],'HALMAHERA UTARA':['MALUKU_UTARA','KAB_HALMAHERA_UTARA'],'KAB. HALMAHERA UTARA':['MALUKU_UTARA','KAB_HALMAHERA_UTARA'],'HALMAHERA SELATAN':['MALUKU_UTARA','KAB_HALMAHERA_SELATAN'],'KAB. HALMAHERA SELATAN':['MALUKU_UTARA','KAB_HALMAHERA_SELATAN'],'KEPULAUAN SULA':['MALUKU_UTARA','KAB_KEPULAUAN_SULA'],'KAB. KEPULAUAN SULA':['MALUKU_UTARA','KAB_KEPULAUAN_SULA'],'HALMAHERA TIMUR':['MALUKU_UTARA','KAB_HALMAHERA_TIMUR'],'KAB. HALMAHERA TIMUR':['MALUKU_UTARA','KAB_HALMAHERA_TIMUR'],'PULAU MOROTAI':['MALUKU_UTARA','KAB_PULAU_MOROTAI'],'KAB. PULAU MOROTAI':['MALUKU_UTARA','KAB_PULAU_MOROTAI'],'PULAU TALIABU':['MALUKU_UTARA','KAB_PULAU_TALIABU'],'KAB. PULAU TALIABU':['MALUKU_UTARA','KAB_PULAU_TALIABU'],'TERNATE':['MALUKU_UTARA','KOTA_TERNATE'],'KOTA TERNATE':['MALUKU_UTARA','KOTA_TERNATE'],'TIDORE KEPULAUAN':['MALUKU_UTARA','KOTA_TIDORE_KEPULAUAN'],'KOTA TIDORE KEPULAUAN':['MALUKU_UTARA','KOTA_TIDORE_KEPULAUAN'],'SOFIFI':['MALUKU_UTARA','KOTA_SOFIFI'],'KOTA SOFIFI':['MALUKU_UTARA','KOTA_SOFIFI'],'ASMAT':['PAPUA','KAB_ASMAT'],'KAB. ASMAT':['PAPUA','KAB_ASMAT'],'BIAK NUMFOR':['PAPUA','KAB_BIAK_NUMFOR'],'KAB. BIAK NUMFOR':['PAPUA','KAB_BIAK_NUMFOR'],'BOVEN DIGOEL':['PAPUA','KAB_BOVEN_DIGOEL'],'KAB. BOVEN DIGOEL':['PAPUA','KAB_BOVEN_DIGOEL'],'DEIYAI':['PAPUA','KAB_DEIYAI'],'KAB. DEIYAI':['PAPUA','KAB_DEIYAI'],'DOGIYAI':['PAPUA','KAB_DOGIYAI'],'KAB. DOGIYAI':['PAPUA','KAB_DOGIYAI'],'INTAN JAYA':['PAPUA','KAB_INTAN_JAYA'],'KAB. INTAN JAYA':['PAPUA','KAB_INTAN_JAYA'],'JAYAPURA':['PAPUA','KAB_JAYAPURA'],'KAB. JAYAPURA':['PAPUA','KAB_JAYAPURA'],'JAYAWIJAYA':['PAPUA','KAB_JAYAWIJAYA'],'KAB. JAYAWIJAYA':['PAPUA','KAB_JAYAWIJAYA'],'KEEROM':['PAPUA','KAB_KEEROM'],'KAB. KEEROM':['PAPUA','KAB_KEEROM'],'KEPULAUAN YAPEN':['PAPUA','KAB_KEPULAUAN_YAPEN'],'KAB. KEPULAUAN YAPEN':['PAPUA','KAB_KEPULAUAN_YAPEN'],'LANNY JAYA':['PAPUA','KAB_LANNY_JAYA'],'KAB. LANNY JAYA':['PAPUA','KAB_LANNY_JAYA'],'MAMBERAMO RAYA':['PAPUA','KAB_MAMBERAMO_RAYA'],'KAB. MAMBERAMO RAYA':['PAPUA','KAB_MAMBERAMO_RAYA'],'MAMBERAMO TENGAH':['PAPUA','KAB_MAMBERAMO_TENGAH'],'KAB. MAMBERAMO TENGAH':['PAPUA','KAB_MAMBERAMO_TENGAH'],'MAPPI':['PAPUA','KAB_MAPPI'],'KAB. MAPPI':['PAPUA','KAB_MAPPI'],'MERAUKE':['PAPUA','KAB_MERAUKE'],'KAB. MERAUKE':['PAPUA','KAB_MERAUKE'],'MIMIKA':['PAPUA','KAB_MIMIKA'],'KAB. MIMIKA':['PAPUA','KAB_MIMIKA'],'NABIRE':['PAPUA','KAB_NABIRE'],'KAB. NABIRE':['PAPUA','KAB_NABIRE'],'NDUGA':['PAPUA','KAB_NDUGA'],'KAB. NDUGA':['PAPUA','KAB_NDUGA'],'PANIAI':['PAPUA','KAB_PANIAI'],'KAB. PANIAI':['PAPUA','KAB_PANIAI'],'PEGUNUNGAN BINTANG':['PAPUA','KAB_PEGUNUNGAN_BINTANG'],'KAB. PEGUNUNGAN BINTANG':['PAPUA','KAB_PEGUNUNGAN_BINTANG'],'PUNCAK':['PAPUA','KAB_PUNCAK'],'KAB. PUNCAK':['PAPUA','KAB_PUNCAK'],'PUNCAK JAYA':['PAPUA','KAB_PUNCAK_JAYA'],'KAB. PUNCAK JAYA':['PAPUA','KAB_PUNCAK_JAYA'],'SARMI':['PAPUA','KAB_SARMI'],'KAB. SARMI':['PAPUA','KAB_SARMI'],'SUPIORI':['PAPUA','KAB_SUPIORI'],'KAB. SUPIORI':['PAPUA','KAB_SUPIORI'],'TOLIKARA':['PAPUA','KAB_TOLIKARA'],'KAB. TOLIKARA':['PAPUA','KAB_TOLIKARA'],'WAROPEN':['PAPUA','KAB_WAROPEN'],'KAB. WAROPEN':['PAPUA','KAB_WAROPEN'],'YAHUKIMO':['PAPUA','KAB_YAHUKIMO'],'KAB. YAHUKIMO':['PAPUA','KAB_YAHUKIMO'],'YALIMO':['PAPUA','KAB_YALIMO'],'KAB. YALIMO':['PAPUA','KAB_YALIMO'],'JAYAPURA':['PAPUA','KOTA_JAYAPURA'],'KOTA JAYAPURA':['PAPUA','KOTA_JAYAPURA'],'YAPEN WAROPEN':['PAPUA','KAB_YAPEN_WAROPEN'],'KAB. YAPEN WAROPEN':['PAPUA','KAB_YAPEN_WAROPEN'],'FAKFAK':['PAPUA_BARAT','KAB_FAKFAK'],'KAB. FAKFAK':['PAPUA_BARAT','KAB_FAKFAK'],'KAIMANA':['PAPUA_BARAT','KAB_KAIMANA'],'KAB. KAIMANA':['PAPUA_BARAT','KAB_KAIMANA'],'MANOKWARI':['PAPUA_BARAT','KAB_MANOKWARI'],'KAB. MANOKWARI':['PAPUA_BARAT','KAB_MANOKWARI'],'MANOKWARI SELATAN':['PAPUA_BARAT','KAB_MANOKWARI_SELATAN'],'KAB. MANOKWARI SELATAN':['PAPUA_BARAT','KAB_MANOKWARI_SELATAN'],'MAYBRAT':['PAPUA_BARAT','KAB_MAYBRAT'],'KAB. MAYBRAT':['PAPUA_BARAT','KAB_MAYBRAT'],'PEGUNUNGAN ARFAK':['PAPUA_BARAT','KAB_PEGUNUNGAN_ARFAK'],'KAB. PEGUNUNGAN ARFAK':['PAPUA_BARAT','KAB_PEGUNUNGAN_ARFAK'],'RAJA AMPAT':['PAPUA_BARAT','KAB_RAJA_AMPAT'],'KAB. RAJA AMPAT':['PAPUA_BARAT','KAB_RAJA_AMPAT'],'SORONG':['PAPUA_BARAT','KAB_SORONG'],'KAB. SORONG':['PAPUA_BARAT','KAB_SORONG'],'SORONG SELATAN':['PAPUA_BARAT','KAB_SORONG_SELATAN'],'KAB. SORONG SELATAN':['PAPUA_BARAT','KAB_SORONG_SELATAN'],'TAMBRAUW':['PAPUA_BARAT','KAB_TAMBRAUW'],'KAB. TAMBRAUW':['PAPUA_BARAT','KAB_TAMBRAUW'],'TELUK BINTUNI':['PAPUA_BARAT','KAB_TELUK_BINTUNI'],'KAB. TELUK BINTUNI':['PAPUA_BARAT','KAB_TELUK_BINTUNI'],'TELUK WONDAMA':['PAPUA_BARAT','KAB_TELUK_WONDAMA'],'KAB. TELUK WONDAMA':['PAPUA_BARAT','KAB_TELUK_WONDAMA'],'SORONG':['PAPUA_BARAT','KOTA_SORONG'],'KOTA SORONG':['PAPUA_BARAT','KOTA_SORONG']};
+// Koordinat kota utama untuk kiblat
+const CITY_COORDS = {
+  KOTA_MEDAN:{la:3.5952,lo:98.6722},KOTA_JAKARTA:{la:-6.2088,lo:106.8456},
+  KOTA_SURABAYA:{la:-7.2575,lo:112.7521},KOTA_BANDUNG:{la:-6.9271,lo:107.6411},
+  KOTA_MAKASSAR:{la:-5.352,lo:119.4432},KOTA_SEMARANG:{la:-6.9666,lo:110.4038},
+  KOTA_YOGYAKARTA:{la:-7.7956,lo:110.3695},KOTA_PALEMBANG:{la:-2.9181,lo:104.7453},
+  KOTA_MALANG:{la:-7.9797,lo:112.6304},KOTA_DENPASAR:{la:-8.6705,lo:115.2126},
+  KOTA_BEKASI:{la:-6.2349,lo:106.9896},KOTA_TANGERANG:{la:-6.1725,lo:106.6345},
+  KOTA_BOGOR:{la:-6.5971,lo:106.806},KOTA_BATAM:{la:1.1291,lo:104.0065},
+  KOTA_MANADO:{la:1.4748,lo:124.8248},KOTA_BANJARMASIN:{la:-3.3277,lo:114.5898},
+  KOTA_BALIKPAPAN:{la:-1.2655,lo:116.8329},KOTA_PONTIANAK:{la:-0.0263,lo:109.3425},
+  KOTA_PADANG:{la:-0.9471,lo:100.4172},KOTA_PEKANBARU:{la:0.5071,lo:101.4472},
+  KOTA_SAMARINDA:{la:-0.502,lo:117.1536},KOTA_JAYAPURA:{la:-2.533,lo:140.7182},
+  KOTA_KUPANG:{la:-10.1718,lo:123.6071},KOTA_MATARAM:{la:-8.5833,lo:116.1167},
+  KOTA_AMBON:{la:-3.6553,lo:128.1908},KOTA_BANDA_ACEH:{la:5.5483,lo:95.3238},
+  KOTA_PALANGKARAYA:{la:-2.2136,lo:113.9108},KOTA_TERNATE:{la:0.7812,lo:127.3756},
+  KOTA_SORONG:{la:-0.8917,lo:131.2551},KOTA_PALU:{la:-0.8917,lo:119.8707},
+  KOTA_KENDARI:{la:-3.9985,lo:122.5127},KOTA_GORONTALO:{la:0.5435,lo:123.0568},
+};
 
-// ── CITIES (with coordinates for major cities) ──
-const CITIES=[
-  {n:'Medan',la:3.5952,lo:98.6722,prov:'SUMATERA_UTARA',city:'KOTA_MEDAN'},
-  {n:'Jakarta',la:-6.2088,lo:106.8456,prov:'DKI_JAKARTA',city:'KOTA_JAKARTA'},
-  {n:'Surabaya',la:-7.2575,lo:112.7521,prov:'JAWA_TIMUR',city:'KOTA_SURABAYA'},
-  {n:'Bandung',la:-6.9271,lo:107.6411,prov:'JAWA_BARAT',city:'KOTA_BANDUNG'},
-  {n:'Makassar',la:-5.352,lo:119.4432,prov:'SULAWESI_SELATAN',city:'KOTA_MAKASSAR'},
-  {n:'Semarang',la:-6.9666,lo:110.4038,prov:'JAWA_TENGAH',city:'KOTA_SEMARANG'},
-  {n:'Yogyakarta',la:-7.7956,lo:110.3695,prov:'DI_YOGYAKARTA',city:'KOTA_YOGYAKARTA'},
-  {n:'Palembang',la:-2.9181,lo:104.7453,prov:'SUMATERA_SELATAN',city:'KOTA_PALEMBANG'},
-  {n:'Malang',la:-7.9797,lo:112.6304,prov:'JAWA_TIMUR',city:'KOTA_MALANG'},
-  {n:'Denpasar',la:-8.6705,lo:115.2126,prov:'BALI',city:'KOTA_DENPASAR'},
-  {n:'Bekasi',la:-6.2349,lo:106.9896,prov:'JAWA_BARAT',city:'KOTA_BEKASI'},
-  {n:'Tangerang',la:-6.1725,lo:106.6345,prov:'BANTEN',city:'KOTA_TANGERANG'},
-  {n:'Bogor',la:-6.5971,lo:106.806,prov:'JAWA_BARAT',city:'KOTA_BOGOR'},
-  {n:'Batam',la:1.1291,lo:104.0065,prov:'KEPULAUAN_RIAU',city:'KOTA_BATAM'},
-  {n:'Manado',la:1.4748,lo:124.8248,prov:'SULAWESI_UTARA',city:'KOTA_MANADO'},
-  {n:'Banjarmasin',la:-3.3277,lo:114.5898,prov:'KALIMANTAN_SELATAN',city:'KOTA_BANJARMASIN'},
-  {n:'Balikpapan',la:-1.2655,lo:116.8329,prov:'KALIMANTAN_TIMUR',city:'KOTA_BALIKPAPAN'},
-  {n:'Pontianak',la:-0.0263,lo:109.3425,prov:'KALIMANTAN_BARAT',city:'KOTA_PONTIANAK'},
-  {n:'Padang',la:-0.9471,lo:100.4172,prov:'SUMATERA_BARAT',city:'KOTA_PADANG'},
-  {n:'Pekanbaru',la:0.5071,lo:101.4472,prov:'RIAU',city:'KOTA_PEKANBARU'},
-  {n:'Samarinda',la:-0.502,lo:117.1536,prov:'KALIMANTAN_TIMUR',city:'KOTA_SAMARINDA'},
-  {n:'Jayapura',la:-2.533,lo:140.7182,prov:'PAPUA',city:'KOTA_JAYAPURA'},
-  {n:'Kupang',la:-10.1718,lo:123.6071,prov:'NUSA_TENGGARA_TIMUR',city:'KOTA_KUPANG'},
-  {n:'Mataram',la:-8.5833,lo:116.1167,prov:'NUSA_TENGGARA_BARAT',city:'KOTA_MATARAM'},
-  {n:'Ambon',la:-3.6553,lo:128.1908,prov:'MALUKU',city:'KOTA_AMBON'}
-];
-
-// ── PROVINCE/CITY SELECTOR DATA ──
-const PROVINCES = Object.keys(LOCATIONS).map(k => ({key:k, name:LOCATIONS[k].name}));
-
-const PM=[{k:'fajr',n:'Subuh',a:'الفجر'},{k:'dhuhr',n:'Dzuhur',a:'الظهر'},{k:'asr',n:'Ashar',a:'العصر'},{k:'maghrib',n:'Maghrib',a:'المغرب'},{k:'isha',n:'Isya',a:'العشاء'}];
-const KB={la:21.4225,lo:39.8262};
+// Data doa
 const DUAS=[
   {c:'Sebelum Sholat',t:'Niat Sholat Fardhu',ar:'أُصَلِّي فَرْضَ الظُّهْرِ أَرْبَعَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ لِلَّهِ تَعَالَى',la:"Ushalli fardhaz-zhuhri arba'a raka'atin mustaqbilal qiblati lillahi ta'ala.",tr:"Aku berniat sholat fardu Dhuhur empat rakaat menghadap kiblat karena Allah Ta'ala."},
   {c:'Pembukaan',t:'Doa Iftitah',ar:'اللَّهُمَّ بَاعِدْ بَيْنِي وَبَيْنَ خَطَايَايَ كَمَا بَاعَدْتَ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ',la:"Allahumma ba'id baini wa baina khathayaya kama ba'adta bainal masyriqi wal maghrib.",tr:'Ya Allah, jauhkanlah antara aku dan kesalahanku sebagaimana Engkau menjauhkan antara timur dan barat.'},
@@ -333,190 +355,372 @@ const DUAS=[
   {c:'Perlindungan',t:'Doa Perlindungan',ar:'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ',la:"Allahumma inni a'udzubika minal hammi wal hazani.",tr:'Ya Allah, aku berlindung kepada-Mu dari kesedihan dan kesusahan.'}
 ];
 
+const PM=[{k:'subuh',n:'Subuh',a:'الفجر'},{k:'dzuhur',n:'Dzuhur',a:'الظهر'},{k:'ashar',n:'Ashar',a:'العصر'},{k:'maghrib',n:'Maghrib',a:'المغرب'},{k:'isya',n:'Isya',a:'العشاء'}];
+const KB={la:21.4225,lo:39.8262};
 
-// ── API INTEGRATION (Your FastAPI on Vercel) ──
-const API_BASE = "/api";
+// ─── STATE ───
+const S={
+  prov:'SUMATERA_UTARA', city:'KOTA_MEDAN',
+  la:3.5952, lo:98.6722,
+  qibla:0, heading:null, active:false, acc:0,
+  prayers:[], nextIdx:-1,
+  isIOS:/iPad|iPhone|iPod/.test(navigator.userAgent),
+  smooth:null, readings:[]
+};
 
-async function fetchSholatKita(province, city, date){
-  try{
-    const year = date.getFullYear();
-    const month = date.getMonth()+1;
-    const day = date.getDate();
+// ─── FETCH PRAYER DARI API ───
+async function fetchPrayer(prov, city, date) {
+  const y = date.getFullYear();
+  const m = date.getMonth() + 1;
+  const d = date.getDate();
+  const dateKey = `${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
 
-    // Your FastAPI endpoint: /api/prayer?province=XXX&city=YYY&month=MM&year=YYYY
-    const url = `${API_BASE}/prayer?province=${encodeURIComponent(province)}&city=${encodeURIComponent(city)}&month=${month}&year=${year}`;
-
-    const res = await fetch(url, {cache:'no-store'});
-    if(!res.ok){
-      console.error('API HTTP error:', res.status);
-      throw new Error('HTTP ' + res.status);
-    }
-
+  try {
+    const url = `${API}/prayer?province=${encodeURIComponent(prov)}&city=${encodeURIComponent(city)}&month=${m}&year=${y}`;
+    const res = await fetch(url, {signal: AbortSignal.timeout(8000)});
+    if (!res.ok) throw new Error('HTTP ' + res.status);
     const json = await res.json();
-    if(!json.data){
-      console.error('API no data:', json);
-      return null;
-    }
+    const t = json.data && json.data[dateKey];
+    if (!t) throw new Error('Tanggal tidak ditemukan: ' + dateKey);
 
-    // Find the prayer data for today
-    const dateKey = `${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
-    const t = json.data[dateKey];
-    if(!t){
-      console.error('No data for date:', dateKey, 'Available:', Object.keys(json.data).slice(0,3));
-      return null;
-    }
-
-    return{
-      fajr: parseTime(t.subuh || t.fajr, date),
-      dhuhr: parseTime(t.dzuhur || t.dhuhr, date),
-      asr: parseTime(t.ashar || t.asr, date),
-      maghrib: parseTime(t.maghrib, date),
-      isha: parseTime(t.isya || t.isha, date),
-      source: 'Kemenag'
+    // Parse — API fields: subuh, dzuhur, ashar, maghrib, isya
+    return {
+      subuh:   parseT(t.subuh,   date),
+      dzuhur:  parseT(t.dzuhur,  date),
+      ashar:   parseT(t.ashar,   date),
+      maghrib: parseT(t.maghrib, date),
+      isya:    parseT(t.isya,    date),
+      src: 'Kemenag RI'
     };
-
-  }catch(e){
-    console.error('SholatKita API Error:', e);
+  } catch(e) {
+    console.warn('API error:', e.message);
     return null;
   }
 }
 
-function parseTime(timeStr, baseDate){
-  if(!timeStr) return null;
-  const [h,m] = timeStr.split(':').map(Number);
-  if(isNaN(h) || isNaN(m)) return null;
-  const d = new Date(baseDate);
-  d.setHours(0,0,0,0);
-  d.setMinutes(h*60 + m);
+function parseT(str, base) {
+  if (!str) return null;
+  const [h,m] = str.split(':').map(Number);
+  const d = new Date(base); d.setHours(0,0,0,0); d.setMinutes(h*60+m);
   return d;
 }
 
-// ── LOCATION SELECTOR ──
-function buildProvCitySelectors(){
-  const locbar = document.querySelector('.locbar');
-  if(!locbar) return;
-
-  locbar.innerHTML = `
-    <div class="lsw" style="flex:1">
-      <span class="lico">📍</span>
-      <select class="lsel" id="psel" onchange="onProvince(this.value)">
-        <option value="">Pilih Provinsi</option>
-      </select>
-      <span class="larr">▾</span>
-    </div>
-    <div class="lsw" style="flex:1">
-      <span class="lico">🏙️</span>
-      <select class="lsel" id="csel2" onchange="onCitySelect(this.value)">
-        <option value="">Pilih Kota/Kab</option>
-      </select>
-      <span class="larr">▾</span>
-    </div>
-  `;
-
-  const psel = document.getElementById('psel');
-  PROVINCES.forEach(p => {
-    const o = document.createElement('option');
-    o.value = p.key;
-    o.textContent = p.name;
-    psel.appendChild(o);
-  });
-}
-
-function onProvince(provKey){
-  const csel = document.getElementById('csel2');
-  csel.innerHTML = '<option value="">Pilih Kota/Kab</option>';
-  if(!provKey || !LOCATIONS[provKey]) return;
-
-  const cities = LOCATIONS[provKey].cities;
-  Object.keys(cities).forEach(cityKey => {
-    const o = document.createElement('option');
-    o.value = JSON.stringify([provKey, cityKey]);
-    o.textContent = cities[cityKey];
-    csel.appendChild(o);
-  });
-}
-
-async function onCitySelect(val){
-  if(!val) return;
-  const [provKey, cityKey] = JSON.parse(val);
-  S.prov = provKey;
-  S.city = cityKey;
-
-  // Try to find coordinates from CITIES or use default
-  const known = CITIES.find(c => c.prov === provKey && c.city === cityKey);
-  if(known){
-    S.la = known.la;
-    S.lo = known.lo;
+// ─── FALLBACK: Hitung lokal (jika API gagal) ───
+const PC = {
+  r:d=>d*Math.PI/180, g:r=>r*180/Math.PI,
+  fa:a=>a-360*Math.floor(a/360), fh:a=>a-24*Math.floor(a/24),
+  sun(jd){
+    const D=jd-2451545,g=this.fa(357.529+.9856003*D),q=this.fa(280.459+.9856474*D);
+    const L=this.fa(q+1.915*Math.sin(this.r(g))+.02*Math.sin(this.r(2*g)));
+    const e=23.439-.0000004*D;
+    const RA=this.g(Math.atan2(Math.cos(this.r(e))*Math.sin(this.r(L)),Math.cos(this.r(L))))/15;
+    return{dec:this.g(Math.asin(Math.sin(this.r(e))*Math.sin(this.r(L)))),EqT:q/15-this.fh(RA)};
+  },
+  jd(y,m,d){if(m<=2){y--;m+=12;}const A=Math.floor(y/100),B=2-A+Math.floor(A/4);return Math.floor(365.25*(y+4716))+Math.floor(30.6001*(m+1))+d+B-1524.5;},
+  ha(lat,dec,ang){const v=(-Math.sin(this.r(ang))-Math.sin(this.r(lat))*Math.sin(this.r(dec)))/(Math.cos(this.r(lat))*Math.cos(this.r(dec)));return v<-1?180:v>1?0:this.g(Math.acos(v))/15;},
+  asr(lat,dec){const t=this.g(Math.atan(1/(1+Math.tan(this.r(Math.abs(lat-dec))))));return this.ha(lat,dec,-t);},
+  calc(lat,lng,date){
+    const jd=this.jd(date.getFullYear(),date.getMonth()+1,date.getDate());
+    const{dec,EqT}=this.sun(jd);
+    const tz=-date.getTimezoneOffset()/60;
+    const noon=12-lng/15-EqT+tz;
+    const toD=h=>{const d=new Date(date);d.setHours(0,0,0,0);d.setMinutes(Math.round(h*60));return d;};
+    return{subuh:toD(noon-this.ha(lat,dec,20)),dzuhur:toD(noon+.033),ashar:toD(noon+this.asr(lat,dec)),maghrib:toD(noon+this.ha(lat,dec,.833)),isya:toD(noon+this.ha(lat,dec,18)),src:'Lokal'};
   }
+};
 
-  S.qibla = qiblaCalc(S.la, S.lo);
-  updateNeedle();
-  updateQStats();
-  await calcPrayer();
-}
-// ── STATE ──
-const S={prov:'DKI_JAKARTA',city:'KOTA_JAKARTA',la:-6.2088,lo:106.8456,qibla:0,heading:null,active:false,acc:0,prayers:[],nextIdx:-1,isIOS:/iPad|iPhone|iPod/.test(navigator.userAgent),smooth:null,readings:[]};
-
-// ── INIT ──
-async function init(){
-  buildProvCitySelectors();
+// ─── INIT ───
+async function init() {
+  buildSelectors();
   buildDuas();
   buildRose();
 
-  // Set default (Jakarta)
-  S.prov = 'DKI_JAKARTA';
-  S.city = 'KOTA_JAKARTA';
-  S.la = -6.2088;
-  S.lo = 106.8456;
-  S.qibla = qiblaCalc(S.la, S.lo);
-  updateNeedle();
-  updateQStats();
-
-  // Set initial selector values
-  const psel = document.getElementById('psel');
-  if(psel) psel.value = 'DKI_JAKARTA';
-  onProvince('DKI_JAKARTA');
-  setTimeout(() => {
-    const csel = document.getElementById('csel2');
-    if(csel){
-      const opts = Array.from(csel.options);
-      const jkt = opts.find(o => o.textContent.includes('JAKARTA'));
-      if(jkt){
-        csel.value = jkt.value;
-        S.prov = 'DKI_JAKARTA';
-        S.city = 'KOTA_JAKARTA';
-      }
-    }
-  }, 100);
+  // Set default: Sumatera Utara → Kota Medan
+  setSelectors('SUMATERA_UTARA', 'KOTA_MEDAN');
+  updateCoords('SUMATERA_UTARA', 'KOTA_MEDAN');
 
   await calcPrayer();
   initCompass();
   setInterval(tick, 1000);
   setInterval(() => { if(S.nextIdx >= 0) findNext(); }, 60000);
+
   document.getElementById('loading').style.display = 'none';
   document.getElementById('app').style.display = 'flex';
 }
 
-function buildRose(){
+function buildSelectors() {
+  const psel = document.getElementById('psel');
+  Object.keys(LOCS).forEach(k => {
+    const o = document.createElement('option');
+    o.value = k; o.textContent = LOCS[k].n;
+    psel.appendChild(o);
+  });
+}
+
+function setSelectors(provKey, cityKey) {
+  const psel = document.getElementById('psel');
+  psel.value = provKey;
+  const csel = document.getElementById('csel');
+  csel.innerHTML = '<option value="">Kota/Kab…</option>';
+  if (LOCS[provKey]) {
+    Object.entries(LOCS[provKey].c).forEach(([k,v]) => {
+      const o = document.createElement('option');
+      o.value = k; o.textContent = v;
+      if (k === cityKey) o.selected = true;
+      csel.appendChild(o);
+    });
+  }
+}
+
+function onProv(provKey) {
+  const csel = document.getElementById('csel');
+  csel.innerHTML = '<option value="">Kota/Kab…</option>';
+  if (!provKey || !LOCS[provKey]) return;
+  Object.entries(LOCS[provKey].c).forEach(([k,v]) => {
+    const o = document.createElement('option');
+    o.value = k; o.textContent = v;
+    csel.appendChild(o);
+  });
+  S.prov = provKey;
+}
+
+async function onCity(cityKey) {
+  if (!cityKey) return;
+  const provKey = document.getElementById('psel').value;
+  if (!provKey) return;
+  S.prov = provKey;
+  S.city = cityKey;
+  updateCoords(provKey, cityKey);
+  await calcPrayer();
+}
+
+function updateCoords(prov, city) {
+  const c = CITY_COORDS[city];
+  if (c) { S.la = c.la; S.lo = c.lo; }
+  S.qibla = qiblaCalc(S.la, S.lo);
+  updateNeedle();
+  updateQStats();
+}
+
+// ─── PRAYER TIMES ───
+async function calcPrayer() {
+  document.getElementById('plist').innerHTML = '<div class="spinner"></div>';
+  const now = new Date();
+
+  // Coba API dulu
+  let p = await fetchPrayer(S.prov, S.city, now);
+  let fromAPI = true;
+
+  if (!p) {
+    // Fallback ke kalkulasi lokal
+    p = PC.calc(S.la, S.lo, now);
+    fromAPI = false;
+  }
+
+  S.prayers = PM.map(m => ({...m, time: p[m.k], ts: p[m.k] ? fmt(p[m.k]) : '—'}));
+
+  // Badge sumber data
+  const badge = document.getElementById('src-badge');
+  badge.style.display = 'inline-flex';
+  badge.className = fromAPI ? 'src-badge' : 'src-badge local';
+  badge.textContent = fromAPI ? '✓ Data Kemenag RI' : '⚠ Perhitungan Lokal';
+
+  updateHijri(now);
+  findNext();
+  renderPrayer();
+}
+
+function findNext() {
+  const now = new Date();
+  let idx = S.prayers.findIndex(p => p.time && p.time > now);
+  if (idx < 0) idx = 0;
+  S.nextIdx = idx;
+  const p = S.prayers[idx];
+  document.getElementById('hn').textContent = p.n;
+  document.getElementById('ht').textContent = p.ts;
+  tick();
+  document.querySelectorAll('.pr').forEach((el,i) => {
+    const isPast = S.prayers[i].time && S.prayers[i].time < now;
+    el.className = 'pr' + (i===idx ? ' next' : isPast ? ' past' : '');
+    const b = el.querySelector('.nbadge');
+    if (b) b.style.display = i===idx ? 'inline' : 'none';
+  });
+}
+
+function tick() {
+  if (S.nextIdx < 0) return;
+  const diff = S.prayers[S.nextIdx].time - new Date();
+  if (diff < 0) { findNext(); return; }
+  const h=Math.floor(diff/3600000), m=Math.floor((diff%3600000)/60000), s=Math.floor((diff%60000)/1000);
+  document.getElementById('hcd').textContent = h > 0 ? `${h}j ${pad(m)}m` : `${pad(m)}:${pad(s)}`;
+}
+
+function renderPrayer() {
+  const now = new Date();
+  document.getElementById('plist').innerHTML = S.prayers.map((p,i) => `
+    <div class="pr${i===S.nextIdx?' next':p.time&&p.time<now?' past':''}">
+      <div class="pdot"></div>
+      <div class="pinfo">
+        <div class="pname">${p.n}<span class="nbadge" style="display:${i===S.nextIdx?'inline':'none'}">Berikutnya</span></div>
+        <div class="par">${p.a}</div>
+      </div>
+      <div class="ptime">${p.ts}</div>
+    </div>`).join('');
+}
+
+function updateHijri(d) {
+  try { document.getElementById('hijdate').textContent = new Intl.DateTimeFormat('id-TN-u-ca-islamic',{day:'numeric',month:'long',year:'numeric'}).format(d); }
+  catch(e) { document.getElementById('hijdate').textContent = ''; }
+  document.getElementById('mdate').textContent = d.toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'short',year:'numeric'});
+}
+
+// ─── KIBLAT ───
+function qiblaCalc(la,lo) {
+  const a=rad(la),b=rad(KB.la),c=rad(KB.lo-lo);
+  const y=Math.sin(c)*Math.cos(b);
+  const x=Math.cos(a)*Math.sin(b)-Math.sin(a)*Math.cos(b)*Math.cos(c);
+  return ((deg(Math.atan2(y,x))%360)+360)%360;
+}
+function distKM(la1,lo1,la2,lo2) {
+  const R=6371,dLa=rad(la2-la1),dLo=rad(lo2-lo1);
+  const a=Math.sin(dLa/2)**2+Math.cos(rad(la1))*Math.cos(rad(la2))*Math.sin(dLo/2)**2;
+  return Math.round(R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a)));
+}
+function updateNeedle() {
+  const h=S.heading??0;
+  const angle=S.active?norm(S.qibla-h):S.qibla;
+  document.getElementById('ng_grp').style.transform=`rotate(${angle}deg)`;
+  if(S.active)document.getElementById('crose').style.transform=`rotate(${-h}deg)`;
+}
+function updateQStats() {
+  const q=S.qibla;
+  document.getElementById('qa').textContent=Math.round(q)+'°';
+  document.getElementById('qadir').textContent=bname(q);
+  document.getElementById('qdeg').textContent=Math.round(q)+'°';
+  document.getElementById('kdv').textContent=distKM(S.la,S.lo,KB.la,KB.lo).toLocaleString('id-ID')+' km';
+}
+
+// ─── COMPASS ───
+function buildRose() {
   const g=document.getElementById('rticks');
-  const CX=140,CY=140,OR=122;
-  let s='';
+  const CX=140,CY=140,OR=122;let s='';
   for(let i=0;i<72;i++){
-    const d=i*5,rad=(d-90)*Math.PI/180;
+    const d=i*5,r=(d-90)*Math.PI/180;
     const maj=d%30===0,mid=d%10===0&&!maj;
     const r1=maj?OR:mid?OR-4:OR-8;
-    const x1=CX+OR*Math.cos(rad),y1=CY+OR*Math.sin(rad);
-    const x2=CX+r1*Math.cos(rad),y2=CY+r1*Math.sin(rad);
+    const x1=CX+OR*Math.cos(r),y1=CY+OR*Math.sin(r);
+    const x2=CX+r1*Math.cos(r),y2=CY+r1*Math.sin(r);
     const col=maj?'rgba(201,168,76,0.55)':'rgba(201,168,76,0.18)';
-    const w=maj?1.5:.7;
-    s+=`<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${col}" stroke-width="${w}"/>`;
+    s+=`<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${col}" stroke-width="${maj?1.5:.7}"/>`;
   }
   g.innerHTML=s;
 }
 
-function buildDuas(){
-  const dl=document.getElementById('dlist');
-  dl.innerHTML=DUAS.map((d,i)=>`
+function initCompass() {
+  if(!('DeviceOrientationEvent' in window)){setKS('err','Sensor kompas tidak tersedia');return;}
+  if(S.isIOS && typeof DeviceOrientationEvent.requestPermission==='function'){
+    document.getElementById('psec').style.display='block';
+    setKS('warn','Tap "Aktifkan Kompas" untuk izin sensor');
+    return;
+  }
+  startC();
+}
+
+function reqPerm() {
+  if(typeof DeviceOrientationEvent.requestPermission!=='function'){
+    document.getElementById('psec').style.display='none';
+    startC(); return;
+  }
+  DeviceOrientationEvent.requestPermission().then(r => {
+    if(r==='granted'){
+      document.getElementById('psec').style.display='none';
+      startC(); toast('Sensor kompas aktif ✓');
+    } else {
+      document.getElementById('pdesc').textContent='Izin ditolak. Buka Pengaturan > Safari > Motion & Orientation Access.';
+      document.getElementById('pbtn').textContent='Refresh Halaman';
+      document.getElementById('pbtn').onclick=()=>location.reload();
+      setKS('err','Izin sensor ditolak');
+    }
+  }).catch(e => setKS('err','Error: '+e.message));
+}
+
+function startC() {
+  let gotData=false;
+  window.addEventListener('deviceorientationabsolute', e => {
+    if(e.alpha!==null){gotData=true;onOrient(e,true);}
+  },{passive:true});
+  window.addEventListener('deviceorientation', e => {
+    if(!gotData && e.alpha!==null){gotData=true;onOrient(e,false);}
+    else if(gotData && e.webkitCompassHeading!==undefined){onOrient(e,false);}
+  },{passive:true});
+  setTimeout(()=>{
+    if(!gotData) setKS('warn','Sensor tidak merespons — tampil arah kiblat statis');
+  },4000);
+}
+
+function onOrient(e,isAbs) {
+  let h;
+  if(e.webkitCompassHeading!=null&&!isNaN(e.webkitCompassHeading)){h=e.webkitCompassHeading;}
+  else if(isAbs&&e.alpha!=null){h=(360-e.alpha)%360;}
+  else if(e.alpha!=null){h=(360-e.alpha)%360;}
+  else return;
+  if(S.smooth===null)S.smooth=h;
+  let d=h-S.smooth;if(d>180)d-=360;if(d<-180)d+=360;
+  S.smooth=(S.smooth+d*.15+360)%360;
+  S.heading=S.smooth;S.active=true;
+  S.readings.push(h);if(S.readings.length>20)S.readings.shift();
+  const v=S.readings.length>=5?variance(S.readings):100;
+  S.acc=Math.max(0,Math.min(100,100-v*2));
+  updateNeedle();
+  document.getElementById('qh').textContent=Math.round(S.smooth)+'°';
+  document.getElementById('qhdir').textContent=bname(S.smooth);
+  const pct=Math.round(S.acc);
+  const f=document.getElementById('accf');
+  f.style.width=pct+'%';f.style.background=pct>70?'#22a060':pct>40?'#c9a84c':'#e85c4a';
+  if(pct>70)setKS('ok','Kompas Aktif — Akurasi Tinggi');
+  else if(pct>35)setKS('warn','Kompas Aktif — Gerakkan angka 8 untuk kalibrasi');
+  else setKS('warn','Kalibrasi: gerakkan perangkat membentuk angka 8');
+}
+function setKS(t,m){const e=document.getElementById('kstat');e.className='kstat '+t;document.getElementById('stxt').textContent=m;}
+
+// ─── GPS ───
+function doGPS() {
+  if(!navigator.geolocation){toast('GPS tidak tersedia');return;}
+  toast('Mendeteksi lokasi GPS…');
+  navigator.geolocation.getCurrentPosition(pos => {
+    S.la=pos.coords.latitude;S.lo=pos.coords.longitude;
+    // Cari kota terdekat
+    let best=null,minD=Infinity;
+    Object.keys(CITY_COORDS).forEach(ck=>{
+      const c=CITY_COORDS[ck];
+      const d=Math.hypot(c.la-S.la,c.lo-S.lo);
+      if(d<minD){minD=d;best=ck;}
+    });
+    if(best&&minD<1.5){
+      // Cari provinsi kota ini
+      let foundProv=null;
+      Object.keys(LOCS).forEach(pk=>{
+        if(LOCS[pk].c[best]) foundProv=pk;
+      });
+      if(foundProv){
+        S.prov=foundProv;S.city=best;
+        setSelectors(foundProv,best);
+        const c=CITY_COORDS[best];S.la=c.la;S.lo=c.lo;
+        toast('Lokasi: '+LOCS[foundProv].c[best]);
+        S.qibla=qiblaCalc(S.la,S.lo);updateNeedle();updateQStats();
+        calcPrayer();return;
+      }
+    }
+    // GPS coords langsung
+    S.qibla=qiblaCalc(S.la,S.lo);updateNeedle();updateQStats();
+    toast('Koordinat GPS digunakan');
+    calcPrayer();
+  }, e=>toast('GPS gagal: '+e.message), {timeout:10000,enableHighAccuracy:true});
+}
+
+// ─── DOA ───
+function buildDuas() {
+  document.getElementById('dlist').innerHTML=DUAS.map((d,i)=>`
     <div class="dcard" id="dc${i}">
       <div class="dhdr" onclick="togD(${i})">
         <div><div class="dcat">${d.c}</div><div class="dtitle">${d.t}</div></div>
@@ -529,236 +733,9 @@ function buildDuas(){
       </div>
     </div>`).join('');
 }
+function togD(i){document.getElementById('dc'+i).classList.toggle('open');}
 
-// ── PRAYER ──
-async function loadCity(idx){
-  const c = typeof idx === 'number' ? CITIES[idx] : {n:'GPS', la:S.la, lo:S.lo};
-  S.la = c.la; 
-  S.lo = c.lo;
-  if(c.prov) S.prov = c.prov;
-  if(c.city) S.city = c.city;
-  S.qibla = qiblaCalc(S.la, S.lo);
-  updateNeedle();
-  updateQStats();
-  await calcPrayer();
-}
-
-async function calcPrayer(){
-  const now = new Date();
-  let p = null;
-
-  // Try your FastAPI first
-  if(navigator.onLine && S.prov && S.city){
-    p = await fetchSholatKita(S.prov, S.city, now);
-  }
-
-  // Fallback to local calculation
-  if(!p){
-    p = PC.calc(S.la, S.lo, now, 'kemenag');
-    toast('Menggunakan perhitungan lokal (offline)');
-  } else {
-    toast('Data dari Kemenag');
-  }
-
-  S.prayers = PM.map(m => ({...m, time: p[m.k], ts: fmt(p[m.k])}));
-  updateHijri(now);
-  findNext();
-  renderPrayer();
-}
-
-function findNext(){
-  const now=new Date();
-  let idx=S.prayers.findIndex(p=>p.time>now);
-  if(idx<0)idx=0;
-  S.nextIdx=idx;
-  document.getElementById('hn').textContent=S.prayers[idx].n;
-  document.getElementById('ht').textContent=S.prayers[idx].ts;
-  tick();
-  document.querySelectorAll('.pr').forEach((el,i)=>{
-    el.className='pr'+(i===idx?' next':S.prayers[i].time<now?' past':'');
-    const b=el.querySelector('.nbadge');if(b)b.style.display=i===idx?'inline':'none';
-  });
-}
-
-function tick(){
-  if(S.nextIdx<0)return;
-  const diff=S.prayers[S.nextIdx].time-new Date();
-  if(diff<0){findNext();return;}
-  const h=Math.floor(diff/3600000),m=Math.floor((diff%3600000)/60000),sec=Math.floor((diff%60000)/1000);
-  document.getElementById('hcd').textContent=h>0?`${h}j ${pad(m)}m`:`${pad(m)}:${pad(sec)}`;
-}
-
-function renderPrayer(){
-  const now=new Date();
-  document.getElementById('plist').innerHTML=S.prayers.map((p,i)=>`
-    <div class="pr${i===S.nextIdx?' next':p.time<now?' past':''}">
-      <div class="pdot"></div>
-      <div class="pinfo"><div class="pname">${p.n}<span class="nbadge" style="display:${i===S.nextIdx?'inline':'none'}">Berikutnya</span></div><div class="par">${p.a}</div></div>
-      <div class="ptime">${p.ts}</div>
-    </div>`).join('');
-}
-
-function updateHijri(d){
-  try{document.getElementById('hijdate').textContent=new Intl.DateTimeFormat('id-TN-u-ca-islamic',{day:'numeric',month:'long',year:'numeric'}).format(d);}catch(e){document.getElementById('hijdate').textContent='';}
-  document.getElementById('mdate').textContent=d.toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'short',year:'numeric'});
-}
-
-// ── QIBLA ──
-function qiblaCalc(la,lo){
-  const a=rad(la),b=rad(KB.la),c=rad(KB.lo-lo);
-  const y=Math.sin(c)*Math.cos(b);
-  const x=Math.cos(a)*Math.sin(b)-Math.sin(a)*Math.cos(b)*Math.cos(c);
-  return((deg(Math.atan2(y,x))%360)+360)%360;
-}
-function distKM(la1,lo1,la2,lo2){
-  const R=6371,dLa=rad(la2-la1),dLo=rad(lo2-lo1);
-  const a=Math.sin(dLa/2)**2+Math.cos(rad(la1))*Math.cos(rad(la2))*Math.sin(dLo/2)**2;
-  return Math.round(R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a)));
-}
-function updateNeedle(){
-  const h=S.heading??0;
-  const angle=S.active?norm(S.qibla-h):S.qibla;
-  document.getElementById('ng_grp').style.transform=`rotate(${angle}deg)`;
-  if(S.active)document.getElementById('crose').style.transform=`rotate(${-h}deg)`;
-}
-function updateQStats(){
-  const q=S.qibla;
-  document.getElementById('qa').textContent=Math.round(q)+'°';
-  document.getElementById('qadir').textContent=bname(q);
-  document.getElementById('qdeg').textContent=Math.round(q)+'°';
-  const d=distKM(S.la,S.lo,KB.la,KB.lo);
-  document.getElementById('kdv').textContent=d.toLocaleString('id-ID')+' km';
-}
-
-// ── COMPASS (FIXED) ──
-function initCompass(){
-  const hasDeviceOrientation='DeviceOrientationEvent' in window;
-  const hasAbsoluteOrientation='AbsoluteOrientationSensor' in window;
-  if(!hasDeviceOrientation&&!hasAbsoluteOrientation){setKS('err','Sensor kompas tidak tersedia di perangkat ini');return;}
-  if(S.isIOS&&typeof DeviceOrientationEvent.requestPermission==='function'){
-    document.getElementById('psec').style.display='block';
-    setKS('warn','Tap "Aktifkan Kompas" untuk mengizinkan sensor');
-    return;
-  }
-  startC();
-}
-function reqPerm(){
-  if(typeof DeviceOrientationEvent.requestPermission!=='function'){
-    document.getElementById('psec').style.display='none';
-    startC();
-    return;
-  }
-  DeviceOrientationEvent.requestPermission().then(r=>{
-    if(r==='granted'){
-      document.getElementById('psec').style.display='none';
-      startC();
-      toast('Sensor kompas diizinkan');
-    }else{
-      setKS('err','Izin sensor ditolak. Aktifkan di Pengaturan > Safari > Motion & Orientation');
-      document.getElementById('psec').style.display='block';
-      document.querySelector('.pdesc').textContent='Izin ditolak. Buka Pengaturan > Safari > Privacy & Security > Motion & Orientation Access, lalu aktifkan untuk situs ini.';
-      document.querySelector('.pbtn').textContent='Coba Lagi';
-      document.querySelector('.pbtn').onclick=()=>location.reload();
-    }
-  }).catch(e=>{console.error('Permission error:',e);setKS('err','Error mengakses sensor: '+e.message);});
-}
-function startC(){
-  let gotReading=false;
-  let fallbackTimer=null;
-  window.addEventListener('deviceorientationabsolute',function handler(e){
-    if(e.alpha!==null||e.webkitCompassHeading!==undefined){gotReading=true;onOrient(e,true);}
-  },{passive:true});
-  window.addEventListener('deviceorientation',function handler(e){
-    if(!gotReading&&(e.alpha!==null||e.webkitCompassHeading!==undefined)){gotReading=true;onOrient(e,false);}
-  },{passive:true});
-  window.addEventListener('compassneedscalibration',function(e){toast('Kalibrasi kompas diperlukan - gerakkan perangkat membentuk angka 8');},{passive:true});
-  fallbackTimer=setTimeout(()=>{
-    if(!gotReading){
-      setKS('warn','Sensor tidak merespons. Pastikan: 1) HTTPS aktif, 2) Izin sensor diizinkan, 3) Bukan mode penyamaran. Menampilkan arah Kiblat statis.');
-      S.active=false;S.heading=0;
-      updateNeedle();
-      document.getElementById('qh').textContent='Manual';
-      document.getElementById('qhdir').textContent='Arahkan ke Utara';
-      document.getElementById('accf').style.width='0%';
-    }
-  },3500);
-  const checkInterval=setInterval(()=>{if(gotReading){clearTimeout(fallbackTimer);clearInterval(checkInterval);}},1000);
-}
-function onOrient(e,isAbs){
-  let h=null;
-  if(e.webkitCompassHeading!==undefined&&e.webkitCompassHeading!==null&&!isNaN(e.webkitCompassHeading)){h=e.webkitCompassHeading;}
-  else if(isAbs&&e.alpha!==null&&!isNaN(e.alpha)){h=(360-e.alpha)%360;if(h<0)h+=360;}
-  else if(e.alpha!==null&&!isNaN(e.alpha)){h=(360-e.alpha)%360;if(h<0)h+=360;}
-  else{return;}
-  if(S.smooth===null){S.smooth=h;}
-  let d=h-S.smooth;if(d>180)d-=360;if(d<-180)d+=360;
-  S.smooth=(S.smooth+d*.15+360)%360;
-  S.heading=S.smooth;S.active=true;
-  S.readings.push(h);if(S.readings.length>20)S.readings.shift();
-  let accuracy=0;
-  if(S.readings.length>=5){const v=variance(S.readings);accuracy=Math.max(0,Math.min(100,100-v*2));}
-  S.acc=accuracy;
-  updateNeedle();
-  document.getElementById('qh').textContent=Math.round(S.smooth)+'°';
-  document.getElementById('qhdir').textContent=bname(S.smooth);
-  const pct=Math.round(S.acc);
-  const f=document.getElementById('accf');f.style.width=pct+'%';f.style.background=pct>70?'#22a060':pct>40?'#c9a84c':'#e85c4a';
-  if(pct>70)setKS('ok','Kompas Aktif — Akurasi Tinggi');
-  else if(pct>35)setKS('warn','Kompas Aktif — Gerakkan angka 8 untuk kalibrasi');
-  else setKS('warn','Kalibrasi: gerakkan perangkat membentuk angka 8');
-}
-function setKS(t,m){const e=document.getElementById('kstat');e.className='kstat '+t;document.getElementById('stxt').textContent=m;}
-
-// ── GPS ──
-function doGPS(){
-  if(!navigator.geolocation){toast('GPS tidak tersedia');return;}
-  toast('Mendeteksi lokasi GPS…');
-  navigator.geolocation.getCurrentPosition(pos => {
-    S.la = pos.coords.latitude;
-    S.lo = pos.coords.longitude;
-
-    // Find nearest known city
-    let best = null, minD = Infinity;
-    CITIES.forEach(c => {
-      const d = Math.hypot(c.la - S.la, c.lo - S.lo);
-      if(d < minD){minD = d; best = c;}
-    });
-
-    if(best && minD < 1.5){
-      S.prov = best.prov;
-      S.city = best.city;
-      // Update selectors
-      const psel = document.getElementById('psel');
-      if(psel) psel.value = best.prov;
-      onProvince(best.prov);
-      setTimeout(() => {
-        const csel = document.getElementById('csel2');
-        if(csel){
-          const opts = Array.from(csel.options);
-          const match = opts.find(o => {
-            try{
-              const [p,c] = JSON.parse(o.value);
-              return c === best.city;
-            }catch(e){return false;}
-          });
-          if(match) csel.value = match.value;
-        }
-      }, 100);
-      toast('Lokasi: ' + best.n);
-    } else {
-      toast('Koordinat GPS digunakan');
-    }
-
-    S.qibla = qiblaCalc(S.la, S.lo);
-    updateNeedle();
-    updateQStats();
-    calcPrayer();
-  }, e => {
-    toast('GPS gagal: ' + e.message);
-  }, {timeout:10000, enableHighAccuracy:true});
-}
-
-// ── UI ──
+// ─── UI ───
 function goTab(id,btn){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));
@@ -766,19 +743,22 @@ function goTab(id,btn){
   btn.classList.add('active');
   if(id==='kb'&&S.active)updateNeedle();
 }
-function onCity(v){loadCity(parseInt(v));}
-function togD(i){document.getElementById('dc'+i).classList.toggle('open');}
-function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600);}
+function toast(m){
+  const t=document.getElementById('toast');
+  t.textContent=m;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2800);
+}
 
-// ── UTILS ──
+// ─── UTILS ───
 function fmt(d){return d.toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit',hour12:false});}
-function rad(d){return d*Math.PI/180;}function deg(r){return r*180/Math.PI;}
-function norm(a){return((a%360)+360)%360;}function pad(n){return String(n).padStart(2,'0');}
+function rad(d){return d*Math.PI/180;}
+function deg(r){return r*180/Math.PI;}
+function norm(a){return((a%360)+360)%360;}
+function pad(n){return String(n).padStart(2,'0');}
 function variance(a){const m=a.reduce((s,v)=>s+v,0)/a.length;return a.reduce((s,v)=>s+(v-m)**2,0)/a.length;}
 function bname(d){return['Utara','Timur Laut','Timur','Tenggara','Selatan','Barat Daya','Barat','Barat Laut'][Math.round(d/45)%8];}
 
-// ── BOOT ── No CDN wait, immediate start
-window.addEventListener('DOMContentLoaded',init);
+window.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
 </html>
